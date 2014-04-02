@@ -1,0 +1,1391 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Graphics
+	filename bilder/ihk_darmstadt_logo.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+[3.5ex]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Large{Abschlussprüfung Sommer 2014}
+\backslash
+
+\backslash
+[5ex]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Large{Fachinformatiker für Anwendungsentwicklung}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+LARGE{Dokumentation zur betrieblichen Projektarbeit}
+\backslash
+
+\backslash
+[8ex]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+huge{
+\backslash
+textbf{Right Livelihood App}}
+\backslash
+
+\backslash
+[1.5ex]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Large{
+\backslash
+textbf{Mobilanwendung für den Right Livelihood Award}}
+\backslash
+
+\backslash
+[8ex]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Graphics
+	filename bilder/ion2s_logo.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang english
+Prüfungsbewerber:
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang english
+Ausbildungsbetrieb:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+Thomas Stern
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+ion2s GmbH
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+Alte Darmstädter Str.
+ 4
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+Donnersbergring 16
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+64367 Mühltal
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+64295 Darmstadt
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Einleitung
+\end_layout
+
+\begin_layout Subsection
+Projektbeschreibung
+\end_layout
+
+\begin_layout Standard
+Als Unterstützung für die gemeinnützige Stiftung Right Livelihood hat mein
+ Betrieb eine Webseite erstellt.
+ Die Mobilanwendung soll diese Webseite ergänzen.
+ Die Idee für dieses Projekt kommt von meinem Betrieb.
+ Neben der Unterstützung für Right Livelihood ist das Ziel das Wissen im
+ Bereich der mobilen Geräte intern im Betrieb zu vertiefen bzw.
+ zu erweitern.
+\end_layout
+
+\begin_layout Standard
+In der Mobilanwendung sollen die Preisträger des Right Livelihood Awards,
+ die sogenannten Laureaten, multimedial präsentiert.
+ Um dieses Ziel zu erreichen sollen moderne Webtechnologien wie JavaScript,
+ HTML5 und CSS3 clientseitig verwendet werden.
+ Der Fokus dieser Mobilanwendung liegt dementsprechend auf dem Client.
+ Serverseitig sollen die statischen Resourcen bereitgestellt und eine Datenbank
+ angelegt werden, die die Daten der Preisträger beinhaltet.
+ Der Server soll mit NodeJS realisiert werden.
+ Der Vorteil ist, dass sowohl Client als auch Server in der Programmiersprache
+ JavaScript entwickelt werden.
+ Als Datenbank wird MongoDB verwendet werden.
+\end_layout
+
+\begin_layout Standard
+Ein Konzept für die Gestaltung existiert bereits.
+ Die technische Umsetzung des kompletten Konzepts würde den zeitlichen Rahmen
+ sprengen und deswegen sind folgende fünf Teile der Mobilanwendung geplant:
+\end_layout
+
+\begin_layout Enumerate
+Intro - Das Intro wird ein Ladebildschirm, welches der Mobilanwendung die
+ Zeit gibt die benötigten Daten der Laureaten herunterzuladen.
+\end_layout
+
+\begin_layout Enumerate
+Liste-Ansicht - Sobald alle Daten heruntergeladen sind wird automatisch
+ fließend vom Intro in die Liste-Ansicht gewechselt.
+ Die Liste wird scrollbar sein.
+ Jedes Listenelement beinhaltet den Namen des Laureaten und ein Zitat.
+\end_layout
+
+\begin_layout Enumerate
+Bilderwand-Ansicht - In der Bilderwand-Ansicht werden Bilder aller Preisträger
+ zufällig positioniert.
+ Der Benutzer kann die Bilderwand bewegen und auch rein- bzw.
+ rauszoomen.
+\end_layout
+
+\begin_layout Enumerate
+Weltkarte-Ansicht - Auf einer Weltkarte werden die Laureaten ihrem Herkunftsland
+ entsprechend markiert.
+\end_layout
+
+\begin_layout Enumerate
+Detail-Ansicht - Hier werden detaillierte Informationen zu den einzelnen
+ Laureaten dargestellt.
+\end_layout
+
+\begin_layout Subsection
+Zeitplan
+\end_layout
+
+\begin_layout Standard
+Die gesamte Dauer dieses Projektes sollte 70 Stunden betragen.
+ Sobald das technische Konzept steht wird mit der Umsetzung der Mobilanwendung
+ begonnen.
+ Die Umsetzung für den Client ist in folgende Unteraufgaben gegliedert:
+\end_layout
+
+\begin_layout Enumerate
+Struktur
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Verzeichnisse anlegen
+\end_layout
+
+\begin_layout Itemize
+Applikation Initiliasierung
+\end_layout
+
+\begin_layout Itemize
+Routing implementieren
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Services
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+REST Schnittstelle
+\end_layout
+
+\begin_layout Itemize
+Lokale Speicherung
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Controllers
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Intro
+\end_layout
+
+\begin_layout Itemize
+Liste
+\end_layout
+
+\begin_layout Itemize
+Bilderwand
+\end_layout
+
+\begin_layout Itemize
+Weltkarte
+\end_layout
+
+\begin_layout Itemize
+Detail
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Die Umsetzung für den Server ist in folgende Unteraufgaben gegliedert:
+\end_layout
+
+\begin_layout Enumerate
+Struktur
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Verzeichnisse anlegen
+\end_layout
+
+\begin_layout Itemize
+Server Initialisierung
+\end_layout
+
+\begin_layout Itemize
+Verteilung der Anfragen
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Module
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+REST Schnittstelle
+\end_layout
+
+\begin_layout Itemize
+Datenbankanbindung
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Das Schreiben und Ausführen von Tests ist Bestandteil der Umsetzung.
+ Dennoch sollen nach abgeschlossener Umsetzung ausführliche Tests durchgeführt
+ werden.
+ Unter anderem sollen Personen, die nicht direkt am Projekt beteiligt sind,
+ die Anwendung testen um so ein besseres und größeres Feedback zu erhalten.
+\end_layout
+
+\begin_layout Standard
+Die Dokumentation wird mit Fortschritt des Projektes wachsen und mit Fertigstell
+ung der Dokumentation gilt das Projekt als abgeschlossen.
+\end_layout
+
+\begin_layout Standard
+Aus diesen Angaben ergibt sich dieser Zeitplan:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Phase
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Beschreibung
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stunden
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+I.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Technisches Konzept
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+II.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Umsetzung
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Art der Umsetzung
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Teilstunden
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Struktur
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Services
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Controllers
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Client
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+28
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Struktur
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Module
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Server
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+III.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Testdurchführung
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IV.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dokumentation / Abschluss
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Technisches Konzept
+\end_layout
+
+\begin_layout Subsection
+Anforderung
+\end_layout
+
+\begin_layout Standard
+Die Mobilanwendung für den Right Livelihood Award soll die Preisträger multimedi
+al darstellen.
+ Zu diesem Zweck soll es folgende Darstellungsformate geben:
+\end_layout
+
+\begin_layout Itemize
+Listendarstellung aller Laureaten
+\end_layout
+
+\begin_layout Itemize
+Bilderwand mit Portraits aller Laureaten
+\end_layout
+
+\begin_layout Itemize
+Weltkarte mit Markierungen zu den Herkunftsländern aller Laureaten
+\end_layout
+
+\begin_layout Itemize
+Detailansicht eines einzelnen Laureaten
+\end_layout
+
+\begin_layout Standard
+Weitere Anforderungen sind Funktionsfähigkeit auf mobilen Geräten (iOS-
+ bzw.
+ Android-System) sowie Desktop-Rechnern und der Betrieb im offline Modus.
+\end_layout
+
+\begin_layout Subsection
+Realisierung
+\end_layout
+
+\begin_layout Subsubsection
+Client
+\end_layout
+
+\begin_layout Standard
+Um eine ansprechende Darstellung und ein angenehmes Benutzergefühl realisieren
+ zu können sollen folgende Webtechnologien eingesetzt werden:
+\end_layout
+
+\begin_layout Itemize
+JavaScript
+\end_layout
+
+\begin_layout Itemize
+HTML5
+\end_layout
+
+\begin_layout Itemize
+CSS3
+\end_layout
+
+\begin_layout Standard
+Auf Grund der genannten Technologien, die zum Einsatz kommen, sollen nur
+ moderne Browser unterstützt werden, die diese Technologien beherrschen.
+\end_layout
+
+\begin_layout Standard
+Zur Untersützung bei der Entwicklung soll das JavaScript Framework 
+\begin_inset CommandInset href
+LatexCommand href
+name "AngularJS"
+target "http://angularjs.org/"
+
+\end_inset
+
+ zum Einsatz kommen.
+ Für eine hohe Qualität der Anwendung soll das 
+\emph on
+Scaffolding Tool
+\emph default
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Yeoman"
+target "http://yeoman.io/"
+
+\end_inset
+
+ sorgen.
+ Das Tool selbst ist ein Generator, welches ein Grundgerüst für die Anwendung
+ bereitstellt.
+ Mit Yeoman kommt das 
+\emph on
+JavaScript Task Runner Tool 
+\emph default
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Grunt"
+target "http://gruntjs.com/"
+
+\end_inset
+
+ und das 
+\emph on
+Package Manager Tool
+\emph default
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Bower"
+target "http://bower.io/"
+
+\end_inset
+
+ als Unterstützung.
+ Mit Grunt lassen sich Aufgaben, wie z.
+ B.
+ automatische Ausführung von Tests bei jeder Änderung im Quellcode, beschreiben
+ und ausführen.
+ Bower ist nützlich um externe Bibliotheken in das bestehende Projekt einzubinde
+n, weil es automatisch vorhandene Abhängigkeiten externer Bibliotheken auflöst.
+\end_layout
+
+\begin_layout Standard
+Damit die Mobilanwendung auch im offline Modus funktioniert sollen die Daten
+ der Laureaten mit Hilfe der HTML5 Besonderheit 
+\emph on
+Local Storage
+\emph default
+ lokal auf dem entsprechenden Gerät gespeichert werden.
+ Außerdem müssen Bilder Base64-codiert in den 
+\emph on
+Local Storage
+\emph default
+ abgespeichert werden damit diese auch im offline Modus verfügbar sind.
+ Dies bedeutet einen höheren Aufwand der Implementierung, aber bewirkt neben
+ der Verfügbarkeit im offline Modus einen deutlichen Performancevorteil
+ beim Laden.
+\end_layout
+
+\begin_layout Subsubsection
+Server
+\end_layout
+
+\begin_layout Standard
+Der Server soll neben der Bereitstellung der statischen Dateien auch eine
+ aktuelle Versionsnummer und Informationen zu allen Laureaten liefern.
+ Für diese Aufgaben sollen folgende Technologien eingesetzt werden:
+\end_layout
+
+\begin_layout Itemize
+NodeJS (JavaScript)
+\end_layout
+
+\begin_layout Itemize
+MongoDB
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "NodeJS"
+target "http://nodejs.org/"
+
+\end_inset
+
+ ist eine serverseitige JavaScript Plattform.
+ Der Vorteil dieser Entscheidung ist, dass sowohl Client als auch Server
+ in der Skriptsprache JavaScript geschrieben werden.
+ Zur Unterstützung bei der Implementierung des Servers soll das NodeJS Framework
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "ExpressJS"
+target "http://expressjs.com/"
+
+\end_inset
+
+ eingesetzt werden.
+ Als Datenbank für die Laureaten wird die Datenbank 
+\begin_inset CommandInset href
+LatexCommand href
+name "MongoDB"
+target "https://www.mongodb.org/"
+
+\end_inset
+
+ verwendet.
+ Es soll nur eine Datenbanktabelle mit allen Informationen zu den Laureaten
+ existieren, welche mit Hilfe einer MongoDB Schnittstelle im 
+\begin_inset CommandInset href
+LatexCommand href
+name "JSON"
+target "http://www.json.org/"
+
+\end_inset
+
+ Format an den Client geliefert wird.
+\end_layout
+
+\begin_layout Subsubsection
+Test
+\end_layout
+
+\begin_layout Standard
+Es werden Unittests geschrieben, die während der Entwicklung automatisch
+ bei Änderungen im Quellcode ausgeführt werden sollen.
+ Zum Testen des Clients als auch des Servers soll das Framework 
+\begin_inset CommandInset href
+LatexCommand href
+name "Jasmine 2.0"
+target "http://jasmine.github.io/2.0/introduction.html"
+
+\end_inset
+
+ verwendet werden.
+ Die beschriebenen Tests behandeln nur die 
+\emph on
+Business Logic
+\emph default
+ der Mobilanwendung.
+ Manipulationen am 
+\emph on
+Document Object Model
+\emph default
+ werden vom JavaScript Framework AngularJS übernommen und müssen nicht getestet
+ werden.
+\end_layout
+
+\begin_layout Standard
+Kontrollen der Funktionsfähigkeit der Mobilanwendung sollen in folgenden
+ Browsern durchgeführt werden:
+\end_layout
+
+\begin_layout Itemize
+Google Chrome (aktuellste Version)
+\end_layout
+
+\begin_layout Itemize
+Mozilla Firefox (aktuellste Version)
+\end_layout
+
+\begin_layout Itemize
+Apple Safari (aktuellste Version)
+\end_layout
+
+\begin_layout Itemize
+Microsoft Internet Explorer 11
+\end_layout
+
+\begin_layout Standard
+Zusätzlich wird die Mobilanwendung auf folgenden Systemen kontrolliert:
+\end_layout
+
+\begin_layout Itemize
+iOS (Smartphone + Tablet PC)
+\end_layout
+
+\begin_layout Itemize
+Android (Smartphone + Tablet PC)
+\end_layout
+
+\begin_layout Subsubsection
+Native Applikation
+\end_layout
+
+\begin_layout Standard
+Die Mobilanwendung soll als native Applikation verfügbar sein.
+ Für diesen Fall gibt es entsprechende Container Klassen für iOS- und Android-Sy
+steme.
+ Für das iOS-System ist dies die Klasse 
+\emph on
+
+\begin_inset CommandInset href
+LatexCommand href
+name "UIWebView"
+target "https://developer.apple.com/library/ios/documentation/uikit/reference/UIWebView_Class/Reference/Reference.html"
+
+\end_inset
+
+
+\emph default
+ und für das Android-System ist dies die Klasse 
+\begin_inset CommandInset href
+LatexCommand href
+name "WebView"
+target "http://developer.android.com/reference/android/webkit/WebView.html"
+
+\end_inset
+
+.
+ Die Funktionsweise dieser Klassen basiert auf ein 
+\emph on
+Container Element
+\emph default
+.
+ Es wird dann ein 
+\emph on
+request
+\emph default
+ gesendet um die Mobilanwendung in dieses 
+\emph on
+Container Element
+\emph default
+.
+\end_layout
+
+\begin_layout Subsubsection
+Kommunikation
+\end_layout
+
+\begin_layout Standard
+Die Übertragung der Daten soll ausschließlich im JSON Format stattfinden.
+ Als Schnittstelle zwischen Client und Server soll das Programmierparadigma
+ REST (Representational State Transfer) verwendet werden.
+ Diese Entscheidung ermöglicht eine gute Erweiterung der Mobilanwendung
+ zu einem späteren Zeitpunkt.
+ Es sollen nur folgende drei REST URI implementiert werden:
+\end_layout
+
+\begin_layout Itemize
+/laureates [GET] - Liefert eine Liste von allen Laureaten mit den wichtigsten
+ Informationen.
+\end_layout
+
+\begin_layout Itemize
+/laureates/:id [GET] - Liefert alle Informationen eines einzelnen Laureaten
+ mit der übergebenen id.
+\end_layout
+
+\begin_layout Itemize
+/version [GET] - Liefert die aktuellste Versionsnummer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Gestalterisches Konzept
+\end_layout
+
+\begin_layout Standard
+Das gestalterische Konzept wurde nicht von mir erstellt.
+ Es liegt als Anhang bei.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Durchführung
+\end_layout
+
+\begin_layout Standard
+<die durchführung>
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Projektabschluss
+\end_layout
+
+\begin_layout Standard
+<mein fazit>
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Anhang
+\end_layout
+
+\end_body
+\end_document
