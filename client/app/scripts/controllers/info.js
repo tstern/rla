@@ -3,8 +3,9 @@
 
 	angular.module('rla')
 
-		.controller('InfoCtrl', function ($scope) {
-			$scope.title = 'Info';
-		});
+		.controller('InfoCtrl', ['$scope', 'ResourceService',
+			function ($scope, ResourceService) {
+				$scope.title = 'Info';
+			}]);
 
 }());

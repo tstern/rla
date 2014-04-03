@@ -3,8 +3,9 @@
 
 	angular.module('rla')
 
-		.controller('WallCtrl', function ($scope) {
-			$scope.title = 'Wall';
-		});
+		.controller('WallCtrl', ['$scope', 'ResourceService',
+			function ($scope, ResourceService) {
+				$scope.title = 'Wall';
+			}]);
 
 }());

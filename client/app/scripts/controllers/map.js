@@ -3,8 +3,9 @@
 
 	angular.module('rla')
 
-		.controller('MapCtrl', function ($scope) {
-			$scope.title = 'Map';
-		});
+		.controller('MapCtrl', ['$scope', 'ResourceService',
+			function ($scope) {
+				$scope.title = 'Map';
+			}]);
 
 }());
