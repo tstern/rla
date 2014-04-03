@@ -4,57 +4,68 @@
 (function () {
 	'use strict';
 
-	var dependencies = [];
+	angular.module('rla')
 
-	angular.module('rla.services', dependencies)
-
-		.service('ResourceService', ['$http', '$q',
-			function ($http, $q) {
-				var rest = '/rest';
-
-				this.getVersion = function getVersions() {
-					var deferred = $q.defer(),
-						request = $http({ method: 'GET', url: rest + '/version' });
-
-					request.success(function (data, status, headers, config) {
-						deferred.resolve('success');
-					});
-
-					request.error(function (data, status, headers, config) {
-						deferred.reject('error');
-					});
-
-					return deferred.promise;
-				};
+		.service('ResourceService', ['$q', 'RESTService', 'localStorageService',
+			function ($q, RESTService, localStorageService) {
+				var offline = !navigator.onLine,
+					deferredLaureates = $q.defer(),
+					laureates = null;
 
 				this.getLaureates = function getLaureates() {
-					var deferred = $q.defer(),
-						request = $http({ method: 'GET', url: rest + '/laureates' });
+					return deferredLaureates.promise;
+				};
 
-					request.success(function (data, status, headers, config) {
-						deferred.resolve('success');
-					});
+				initialize();
 
-					request.error(function (data, status, headers, config) {
-						deferred.reject('error');
+				function initialize() {
+					if (offline) {
+						resolveLaureates();
+					} else {
+						searchForUpdate()
+							.then(tryToUpdate)
+							.then(resolveLaureates);
+					}
+				}
+
+				function resolveLaureates() {
+					if (_.isNull(laureates)) {
+						laureates = localStorageService.get('laureates');
+					}
+					deferredLaureates.resolve(laureates);
+				}
+
+				function searchForUpdate() {
+					var version = localStorageService.get('version'),
+						deferred = $q.defer();
+
+					RESTService.readVersion().then(function (currentVersion) {
+						deferred.resolve(version !== currentVersion);
+					}, function (errorMsg) {
+						console.warn(errorMsg);
+						deferred.resolve(false);
 					});
 
 					return deferred.promise;
-				};
+				}
 
-				this.getLaureate = function getLaureate(id) {
-					var deferred = $q.defer(),
-						request = $http({ method: 'GET', url: rest + '/laureate/' + id });
+				function tryToUpdate(update) {
+					var deferred = $q.defer();
 
-					request.success(function (data, status, headers, config) {
-						deferred.resolve('success');
-					});
-
-					request.error(function (data, status, headers, config) {
-						deferred.reject('error');
-					});
+					if (update) {
+						RESTService.readLaureates().then(function (newLaureates) {
+							localStorageService.set('laureates', newLaureates);
+							laureates = newLaureates;
+							deferred.resolve();
+						}, function (errorMsg) {
+							console.warn(errorMsg);
+							deferred.resolve();
+						});
+					} else {
+						deferred.resolve();
+					}
 
 					return deferred.promise;
-				};
+				}
 			}]);
 }());
