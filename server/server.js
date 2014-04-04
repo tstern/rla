@@ -22,8 +22,6 @@
 	}
 
 	function dispatchREST(request, response) {
-		var answer, id;
-
 		if (request.url.match(/^\/rest\/version$/)) {
 			handleVersionRequest(request, response);
 
