@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	var VERSION = '0.1',
+	var VERSION = '0.1',	// should be increased when new laureates added to database
 		express = require('express'),
 		sqlite3 = require('sqlite3').verbose(),
 		app = express(),
@@ -10,14 +10,10 @@
 	db.serialize(init);
 
 	function init() {
-		/**
-		 * Provide static directory.
-		 */
+		// Provide static directory.
 		app.use(express.static(__dirname + '/public'));
 
-		/**
-		 * Handle REST requests.
-		 */
+		// Dispatch REST requests.
 		app.all('/rest/*', dispatchREST);
 
 		app.listen(8080);
