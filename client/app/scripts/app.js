@@ -56,30 +56,30 @@
 		.run(['$httpBackend',
 			function ($httpBackend) {
 				var laureates = [
-					{
-						id: '53453',
-						name: 'Anna Alpha',
-						quote: 'Wenn 50 Millionen Menschen etwas Dummes sagen, bleibt es trotzdem eine Dummheit.'
-					},
-					{
-						id: '92384',
-						name: 'Bob Bravo',
-						quote: 'Was dein Feind nicht wissen soll, das sage deinem Freunde nicht.'
-					},
-					{
-						id: '21389',
-						name: 'Chris Charlie',
-						quote: 'Alter ist irrelevant, es sei denn, du bist eine Flasche Wein.'
-					},
-					{
-						id: '67234',
-						name: 'Donnie Delta',
-						quote: 'Man löst keine Probleme, indem man sie auf Eis legt.'
-					},
+//					{
+//						id: '53453',
+//						name: 'Anna Alpha',
+//						quote: 'Wenn 50 Millionen Menschen etwas Dummes sagen, bleibt es trotzdem eine Dummheit.'
+//					},
+//					{
+//						id: '92384',
+//						name: 'Bob Bravo',
+//						quote: 'Was dein Feind nicht wissen soll, das sage deinem Freunde nicht.'
+//					},
+//					{
+//						id: '21389',
+//						name: 'Chris Charlie',
+//						quote: 'Alter ist irrelevant, es sei denn, du bist eine Flasche Wein.'
+//					},
+//					{
+//						id: '67234',
+//						name: 'Donnie Delta',
+//						quote: 'Man löst keine Probleme, indem man sie auf Eis legt.'
+//					},
 					{
 						id: '91238',
 						name: 'Erik Echo',
-						quote: 'Probleme kann man niemals mit derselben Denkweise lösen, durch die sie entstanden sind.'
+						quote: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.'
 					}
 				];
 

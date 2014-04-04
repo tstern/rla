@@ -17,6 +17,7 @@ nav {
 .container {
 	background: #ffffff;
 	height: 768px;
+	overflow: hidden;
 	position: relative;
 	width: 1024px;
 }
@@ -54,4 +55,29 @@ nav {
 	left: 0;
 	width: 1px;
 	height: 100%;
+}
+
+.list {
+
+}
+
+.list .item {
+	border: 1px solid black;
+	height: 200px;
+	left: 50%;
+	margin-left: -300px;
+	margin-top: -100px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 600px;
+}
+
+.list .item .quote {
+	background: blue;
+	color: white;
+}
+
+.list .item .name {
+
 }
