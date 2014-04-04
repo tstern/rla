@@ -47,7 +47,13 @@
 </nav>
 
 <!-- Add your site or application content here -->
-<div class="container" ui-view=""></div>
+<div class="container">
+	<div class="shadow north"></div>
+	<div class="shadow east"></div>
+	<div class="shadow south"></div>
+	<div class="shadow west"></div>
+	<div class="content" ui-view=""></div>
+</div>
 
 <!--[if lt IE 9]>
 <script src="bower_components/es5-shim/es5-shim.js"></script>

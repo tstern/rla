@@ -5,10 +5,8 @@
 
 		.controller('ListCtrl', ['$scope', 'ResourceService',
 			function ($scope, ResourceService) {
-				$scope.title = 'List';
-
 				ResourceService.getLaureates().then(function (laureates) {
-					console.log(laureates);
+					$scope.laureates = laureates;
 				});
 			}]);
 

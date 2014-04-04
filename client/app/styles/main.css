@@ -1,5 +1,57 @@
 /* Space out content a bit */
+html {
+	height: 100%;
+	width: 100%;
+}
+
 body {
-  padding-top: 50px;
-  padding-bottom: 50px;
+	background: linear-gradient(#550000, #000000);
+	height: 100%;
+	width: 100%;
+}
+
+nav {
+	display: none;
+}
+
+.container {
+	background: #ffffff;
+	height: 768px;
+	position: relative;
+	width: 1024px;
+}
+
+.shadow {
+	background: black;
+	box-shadow: 0 0 100px 2px black;
+	position: absolute;
+	z-index: 100;
+}
+
+.shadow.north {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+}
+
+.shadow.east {
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 100%;
+}
+
+.shadow.south {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+}
+
+.shadow.west {
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 100%;
 }
