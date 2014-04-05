@@ -39,20 +39,5 @@
 
 					return deferred.promise;
 				};
-
-				this.readLaureate = function readLaureate(id) {
-					var deferred = $q.defer(),
-						request = $http({ method: 'GET', url: REST_BASE_URL + '/laureate/' + id });
-
-					request.success(function (data, status, headers, config) {
-						deferred.resolve(data);
-					});
-
-					request.error(function (data, status, headers, config) {
-						deferred.reject('Couldn\'t read laureate with id "' + id + '".');
-					});
-
-					return deferred.promise;
-				};
 			}]);
 }());

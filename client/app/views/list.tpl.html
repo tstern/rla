@@ -1,6 +1,12 @@
 <div class="list">
-	<div ng-repeat="laureate in laureates" class="item">
-		<p class="quote">{{ laureate.quote }}</p>
-		<p class="name">{{ laureate.name }}</p>
+	<img src="images/logo100x100.png" height="120" width="120" class="logo">
+	<div class="item" ng-repeat="laureate in laureates">
+		<p class="quote-part" ng-repeat="part in laureate.quote" ng-class="{ first: $first }">
+			<span class="line">{{ part }}</span>
+		</p>
+		<p class="button">
+			<span class="text">{{ laureate.name }}, {{ laureate.year }}</span>
+			<span class="arrow"></span>
+		</p>
 	</div>
 </div>

@@ -78,8 +78,9 @@
 //					},
 					{
 						id: '91238',
-						name: 'Erik Echo',
-						quote: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.'
+						name: 'Erwin Kräutler',
+						year: 2011,
+						quote: '... for a lifetime of work for the human and environmental rights of indigenous people and for his tireless efforts to save the Amazon forest from desctruction ...'
 					}
 				];
 

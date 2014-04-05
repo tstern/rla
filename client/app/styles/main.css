@@ -1,4 +1,23 @@
-/* Space out content a bit */
+
+@font-face {
+	font-family:rla_bodoni_seventy;
+	src: url('fonts/bodoni_seventy.ttf');
+}
+@font-face {
+	font-family:rla_bodoni_seventy;
+	src: url('fonts/bodoni_seventy_bold.ttf');
+	font-weight:bold;
+}
+@font-face {
+	font-family:rla_helvetica_neue;
+	src: url('fonts/helvetica_neue.ttf');
+}
+@font-face {
+	font-family:rla_helvetica_neue;
+	src: url('fonts/helvetica_neue_bold.ttf');
+	font-weight:bold;
+}
+
 html {
 	height: 100%;
 	width: 100%;
@@ -24,13 +43,13 @@ nav {
 
 .shadow {
 	background: black;
-	box-shadow: 0 0 100px 2px black;
+	box-shadow: 0 0 100px 8px black;
 	position: absolute;
 	z-index: 100;
 }
 
 .shadow.north {
-	top: 0;
+	top: -1px;
 	left: 0;
 	width: 100%;
 	height: 1px;
@@ -38,13 +57,13 @@ nav {
 
 .shadow.east {
 	top: 0;
-	right: 0;
+	right: -1px;
 	width: 1px;
 	height: 100%;
 }
 
 .shadow.south {
-	bottom: 0;
+	bottom: -1px;
 	left: 0;
 	width: 100%;
 	height: 1px;
@@ -52,32 +71,71 @@ nav {
 
 .shadow.west {
 	top: 0;
-	left: 0;
+	left: -1px;
 	width: 1px;
 	height: 100%;
 }
 
 .list {
+	background: #ffffff;
+}
 
+.list .logo {
+	left: 150px;
+	position: absolute;
+	top: 170px;
+	z-index: 10;
 }
 
 .list .item {
-	border: 1px solid black;
 	height: 200px;
 	left: 50%;
 	margin-left: -300px;
 	margin-top: -100px;
 	position: absolute;
-	text-align: center;
 	top: 50%;
 	width: 600px;
 }
 
-.list .item .quote {
-	background: blue;
-	color: white;
+.list .item span {
+	display: inline-block;
+	font-family: rla_bodoni_seventy;
+	font-size: 24px;
+	line-height: 24px;
+	padding: 2px 5px;
 }
 
-.list .item .name {
+.list .item .quote-part.first {
+	padding-left: 100px;
+}
 
+.list .item .quote-part {
+	margin: 2px 0;
+	text-align: left;
+}
+
+.list .item .quote-part .line {
+	background: #007dbf;
+	color: #ffffff;
+}
+
+.list .item .button {
+	margin-top: 4px;
+	text-align: right;
+}
+
+.list .item .button .text {
+	background: #82bb24;
+	color: #ffffff;
+}
+
+.list .item .button .arrow {
+	border-style: solid;
+	border-width: 14px 0 14px 15px;
+	border-color: transparent transparent transparent #82bb24;
+	height: 0;
+	margin-bottom: -7px;
+	margin-left: -2px;
+	padding: 0;
+	width: 0;
 }
