@@ -76,22 +76,24 @@ nav {
 	height: 100%;
 }
 
+.content,
 .list {
-	background: #ffffff;
+	height: 100%;
+	width: 100%;
 }
 
 .list .logo {
 	left: 150px;
 	position: absolute;
-	top: 170px;
-	z-index: 10;
+	top: 180px;
+	z-index: 100;
 }
 
 .list .item {
 	height: 200px;
 	left: 50%;
 	margin-left: -300px;
-	margin-top: -100px;
+	margin-top: -50px;
 	position: absolute;
 	top: 50%;
 	width: 600px;
@@ -100,8 +102,8 @@ nav {
 .list .item span {
 	display: inline-block;
 	font-family: rla_bodoni_seventy;
-	font-size: 24px;
-	line-height: 24px;
+	font-size: 20px;
+	line-height: 20px;
 	padding: 2px 5px;
 }
 
@@ -131,10 +133,10 @@ nav {
 
 .list .item .button .arrow {
 	border-style: solid;
-	border-width: 14px 0 14px 15px;
+	border-width: 12px 0 12px 15px;
 	border-color: transparent transparent transparent #82bb24;
 	height: 0;
-	margin-bottom: -7px;
+	margin-bottom: -6px;
 	margin-left: -2px;
 	padding: 0;
 	width: 0;

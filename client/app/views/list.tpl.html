@@ -1,6 +1,6 @@
-<div class="list">
+<div class="list" ts-scroller="">
 	<img src="images/logo100x100.png" height="120" width="120" class="logo">
-	<div class="item" ng-repeat="laureate in laureates">
+	<div id="item{{ $index }}" class="item" ng-repeat="laureate in laureates">
 		<p class="quote-part" ng-repeat="part in laureate.quote" ng-class="{ first: $first }">
 			<span class="line">{{ part }}</span>
 		</p>

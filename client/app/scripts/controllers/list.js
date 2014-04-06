@@ -3,10 +3,13 @@
 
 	angular.module('rla')
 
-		.controller('ListCtrl', ['$scope', 'ResourceService',
-			function ($scope, ResourceService) {
+		.controller('ListCtrl', ['$scope', '$timeout', 'ResourceService',
+			function ($scope, $timeout, ResourceService) {
 				ResourceService.getLaureates().then(function (laureates) {
 					$scope.laureates = prepareLaureates(laureates);
+					$timeout(function () {
+						$scope.$broadcast('laureates:loaded');
+					});
 				});
 
 				function prepareLaureates(laureates) {
@@ -18,10 +21,10 @@
 
 				function splitQuote(quote) {
 					var parts = [],
-						max = 45;
+						max = 50;
 
 					while (splitting(max)) {
-						max = 55;
+						max = 65;
 					}
 
 					function splitting(max) {

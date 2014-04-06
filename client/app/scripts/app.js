@@ -53,33 +53,47 @@
 				$rootScope.$stateParams = $stateParams;
 			}])
 
+		.run(['$window',
+			function ($window) {
+				// handle vendor specific requestAnimationFrame functions
+				$window.requestAnimationFrame =
+					$window.requestAnimationFrame ||
+					$window.mozRequestAnimationFrame ||
+					$window.webkitRequestAnimationFrame ||
+					$window.msRequestAnimationFrame;
+			}])
+
 		.run(['$httpBackend',
 			function ($httpBackend) {
 				var laureates = [
-//					{
-//						id: '53453',
-//						name: 'Anna Alpha',
-//						quote: 'Wenn 50 Millionen Menschen etwas Dummes sagen, bleibt es trotzdem eine Dummheit.'
-//					},
-//					{
-//						id: '92384',
-//						name: 'Bob Bravo',
-//						quote: 'Was dein Feind nicht wissen soll, das sage deinem Freunde nicht.'
-//					},
-//					{
-//						id: '21389',
-//						name: 'Chris Charlie',
-//						quote: 'Alter ist irrelevant, es sei denn, du bist eine Flasche Wein.'
-//					},
-//					{
-//						id: '67234',
-//						name: 'Donnie Delta',
-//						quote: 'Man löst keine Probleme, indem man sie auf Eis legt.'
-//					},
+					{
+						id: '53453',
+						name: 'Anton Alpha',
+						year: 2011,
+						quote: '... for a lifetime of work for the human and environmental rights of indigenous people and for his tireless efforts to save the Amazon forest from desctruction ...'
+					},
+					{
+						id: '92384',
+						name: 'Berta Bravo',
+						year: 2012,
+						quote: '... for a lifetime of work for the human and environmental rights of indigenous people and for his tireless efforts to save the Amazon forest from desctruction ...'
+					},
+					{
+						id: '21389',
+						name: 'Cäsar Charlie',
+						year: 2013,
+						quote: '... for a lifetime of work for the human and environmental rights of indigenous people and for his tireless efforts to save the Amazon forest from desctruction ...'
+					},
+					{
+						id: '67234',
+						name: 'Dora Delta',
+						year: 2014,
+						quote: '... for a lifetime of work for the human and environmental rights of indigenous people and for his tireless efforts to save the Amazon forest from desctruction ...'
+					},
 					{
 						id: '91238',
-						name: 'Erwin Kräutler',
-						year: 2011,
+						name: 'Emil Echo',
+						year: 2015,
 						quote: '... for a lifetime of work for the human and environmental rights of indigenous people and for his tireless efforts to save the Amazon forest from desctruction ...'
 					}
 				];
