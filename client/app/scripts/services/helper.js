@@ -18,7 +18,7 @@
 					}
 				};
 
-				this.determineTransformKey = function () {
+				this.determineTransformKey = function determineTransformKey() {
 					var index,
 						keys = [
 							'transform',
@@ -35,6 +35,54 @@
 					}
 
 					throw new Error('Not supported Browser.');
-				}
+				};
+
+				this.splitTextIntoLines = function splitTextIntoLine(text, lineLength) {
+					var parts = [],
+						length;
+
+					if (_.isArray(lineLength)) {
+						length = lineLength.shift();
+						while (splitting(length)) {
+							if (lineLength.length > 0) {
+								length = lineLength.shift();
+							}
+						}
+
+					} else {
+						while (splitting(lineLength)) {
+							// nothing
+						}
+					}
+
+					function splitting(max) {
+						var i;
+
+						if (text.length <= max) {
+							return add();
+						}
+
+						for (i = max; i >= 0; i--) {
+							if (text.charAt(i) === ' ') {
+								return addPart(i);
+							}
+						}
+
+						return add();
+					}
+
+					function add() {
+						parts.push(text);
+						return false;
+					}
+
+					function addPart(index) {
+						parts.push(text.substring(0, index));
+						text = text.substr(index + 1);
+						return true;
+					}
+
+					return parts;
+				};
 			}]);
 }());
