@@ -5,6 +5,8 @@
 
 		.controller('MapCtrl', ['$scope', 'ResourceService',
 			function ($scope) {
+				$scope.laureates = null;
+
 				$scope.title = 'Map';
 			}]);
 

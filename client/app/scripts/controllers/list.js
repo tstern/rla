@@ -5,6 +5,8 @@
 
 		.controller('ListCtrl', ['$scope', '$timeout', 'ResourceService', 'HelperService',
 			function ($scope, $timeout, ResourceService, HelperService) {
+				$scope.laureates = null;
+
 				ResourceService.getLaureates().then(function (laureates) {
 					$scope.laureates = prepareLaureates(laureates);
 					$timeout(function () {

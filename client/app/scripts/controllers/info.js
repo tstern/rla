@@ -7,6 +7,8 @@
 			function ($scope, ResourceService) {
 				var laureateId = $scope.$stateParams.id;
 
+				$scope.laureate = null;
+
 				ResourceService.getLaureates().then(function (laureates) {
 					var i;
 
@@ -20,7 +22,7 @@
 				});
 
 				function checkIfLaureateExist() {
-					if (!$scope.laureate) {
+					if ($scope.laureate === null) {
 						$scope.$state.go('notFound');
 					}
 				}
