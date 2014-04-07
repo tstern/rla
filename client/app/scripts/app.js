@@ -29,10 +29,15 @@
 						controller: 'MapCtrl'
 					},
 					info = {
-						url: '/info',
+						url: '/info/:id',
 						name: 'info',
 						templateUrl: 'views/info.tpl.html',
 						controller: 'InfoCtrl'
+					},
+					notFound = {
+						url: '/404',
+						name: 'notFound',
+						templateUrl: '404.html'
 					};
 
 				// default route
@@ -43,6 +48,7 @@
 				$stateProvider.state(wall);
 				$stateProvider.state(map);
 				$stateProvider.state(info);
+				$stateProvider.state(notFound);
 			}])
 
 		.run(['$rootScope', '$state', '$stateParams',

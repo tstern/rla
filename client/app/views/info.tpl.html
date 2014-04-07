@@ -1,3 +1,6 @@
-<div>
-	<h1>{{ title }}</h1>
+<div ng-if="error">
+	<p class="error main">Error: {{ error.message }}</p>
+</div>
+<div ng-if="!error">
+	<pre>{{ laureate | json }}</pre>
 </div>

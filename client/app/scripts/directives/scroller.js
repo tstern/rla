@@ -120,8 +120,8 @@
 						$elem.on('touchstart', function (event) {
 							var touch = event.originalEvent.touches[0];
 
-							event.preventDefault();
-							event.stopPropagation();
+//							event.preventDefault();
+//							event.stopPropagation();
 
 							startX = touch.pageX;
 							startY = touch.pageY;
@@ -143,8 +143,8 @@
 						});
 
 						$elem.on('touchend', function (event) {
-							event.preventDefault();
-							event.stopPropagation();
+//							event.preventDefault();
+//							event.stopPropagation();
 
 							calmDown();
 						});

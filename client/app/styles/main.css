@@ -76,7 +76,12 @@ nav {
 	height: 100%;
 }
 
+.error {
+	color: #ff0000;
+}
+
 .content,
+.info,
 .list {
 	height: 100%;
 	width: 100%;
@@ -122,13 +127,15 @@ nav {
 }
 
 .list .item .button {
+	float: right;
 	margin-top: 4px;
-	text-align: right;
+	/*text-align: right;*/
 }
 
 .list .item .button .text {
 	background: #82bb24;
 	color: #ffffff;
+	cursor: pointer;
 }
 
 .list .item .button .arrow {

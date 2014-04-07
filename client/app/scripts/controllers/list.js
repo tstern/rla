@@ -14,7 +14,7 @@
 
 				function prepareLaureates(laureates) {
 					laureates.forEach(function (laureate) {
-						laureate.quote = splitQuote(laureate.quote);
+						laureate.splittedQuote = laureate.splittedQuote || splitQuote(laureate.quote);
 					});
 					return laureates;
 				}
