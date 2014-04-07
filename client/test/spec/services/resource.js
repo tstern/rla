@@ -77,10 +77,8 @@
 			function mockFor_localStorageService_get(key) {
 				if (key === 'version') {
 					return version;
-				}
-
-				if (key === 'laureates') {
-					return [1, 2, 3, 4, 5];
+				} else {
+					return [];
 				}
 			}
 		}));
