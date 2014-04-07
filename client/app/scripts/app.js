@@ -3,8 +3,7 @@
 
 	var dependencies = [
 		'ui.router',
-		'LocalStorageModule',
-		'ngMockE2E'
+		'LocalStorageModule'
 	];
 
 	angular.module('rla', dependencies)
@@ -61,48 +60,6 @@
 					$window.mozRequestAnimationFrame ||
 					$window.webkitRequestAnimationFrame ||
 					$window.msRequestAnimationFrame;
-			}])
-
-		.run(['$httpBackend',
-			function ($httpBackend) {
-				var laureates = [
-					{
-						id: '53453',
-						name: 'Anton Alpha',
-						year: 2011,
-						quote: '... for a lifetime of work for the human and environmental rights of indigenous people and for his tireless efforts to save the Amazon forest from desctruction ...'
-					},
-					{
-						id: '92384',
-						name: 'Berta Bravo',
-						year: 2012,
-						quote: '... for a lifetime of work for the human and environmental rights of indigenous people and for his tireless efforts to save the Amazon forest from desctruction ...'
-					},
-					{
-						id: '21389',
-						name: 'Cäsar Charlie',
-						year: 2013,
-						quote: '... for a lifetime of work for the human and environmental rights of indigenous people and for his tireless efforts to save the Amazon forest from desctruction ...'
-					},
-					{
-						id: '67234',
-						name: 'Dora Delta',
-						year: 2014,
-						quote: '... for a lifetime of work for the human and environmental rights of indigenous people and for his tireless efforts to save the Amazon forest from desctruction ...'
-					},
-					{
-						id: '91238',
-						name: 'Emil Echo',
-						year: 2015,
-						quote: '... for a lifetime of work for the human and environmental rights of indigenous people and for his tireless efforts to save the Amazon forest from desctruction ...'
-					}
-				];
-
-				$httpBackend.whenGET(/\.tpl\.html$/).passThrough();
-
-				$httpBackend.whenGET('/rest/version').respond('1.0');
-
-				$httpBackend.whenGET('/rest/laureates').respond(laureates);
 			}]);
 
 }());
