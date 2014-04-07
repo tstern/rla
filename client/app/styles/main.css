@@ -25,6 +25,7 @@ html {
 
 body {
 	background: linear-gradient(#550000, #000000);
+	font-family: rla_bodoni_seventy;
 	height: 100%;
 	width: 100%;
 }
@@ -80,7 +81,47 @@ nav {
 	color: #ff0000;
 }
 
+.not-found {
+	padding: 100px 50px;
+	text-align: center;
+}
+
+.not-found h1 {
+	color: #007dbf;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.not-found img {
+	padding: 20px 0;
+	-webkit-animation: logoRotate 5s linear 1s infinite;
+	animation: logoRotate 5s linear 1s infinite;
+}
+
+.not-found p {
+	color: #007dbf;
+	font-size: 16px;
+}
+
+.not-found a {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/* animation: logo rotate */
+@-webkit-keyframes logoRotate {
+	0%	{ -webkit-transform: rotateY(0deg); }
+	50%	{ -webkit-transform: rotateY(180deg); }
+	100%{ -webkit-transform: rotateY(360deg); }
+}
+@keyframes logoPulse {
+	0%	{ transform: rotateY(0deg); }
+	50%	{ transform: rotateY(180deg); }
+	100%{ transform: rotateY(360deg); }
+}
+
 .content,
+.not-found,
 .info,
 .list {
 	height: 100%;
@@ -106,7 +147,6 @@ nav {
 
 .list .item span {
 	display: inline-block;
-	font-family: rla_bodoni_seventy;
 	font-size: 20px;
 	line-height: 20px;
 	padding: 2px 5px;

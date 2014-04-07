@@ -37,11 +37,13 @@
 					notFound = {
 						url: '/404',
 						name: 'notFound',
-						templateUrl: '404.html'
+						templateUrl: 'views/404.tpl.html'
 					};
 
-				// default route
-				$urlRouterProvider.otherwise('/list');
+				// redirecting
+				$urlRouterProvider.when('', list.url);
+				$urlRouterProvider.when('/', list.url);
+				$urlRouterProvider.otherwise(notFound.url);
 
 				// register all state objects
 				$stateProvider.state(list);
