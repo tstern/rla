@@ -39,13 +39,10 @@
 					var version = localStorageService.get('version'),
 						deferred = $q.defer();
 
-					console.log('search');
 
 					RESTService.readVersion().then(function (currentVersion) {
-						console.log('successA');
 						deferred.resolve(version !== currentVersion);
 					}, function (errorMsg) {
-						console.log('errorA');
 						console.warn(errorMsg);
 						deferred.resolve(false);
 					});

@@ -22,7 +22,7 @@
 			HelperService = $injector.get('HelperService');
 			localStorageService = $injector.get('localStorageService');
 
-			$injector.get('$httpBackend').whenGET(/\.tpl\.html/).respond('');
+			$injector.get('$httpBackend').whenGET(/\.tpl\.html/).respond({});
 		}));
 
 		it('should not be undefined', inject(function ($injector) {
@@ -45,32 +45,14 @@
 				version = '1.0';
 
 			spyOn(HelperService, 'isOfflineMode').andReturn(false);
-			spyOn(RESTService, 'readVersion').andCallFake(function () {
-				console.log('mock');
-				var deferred = $q.defer();
-				setTimeout(function () {
-					deferred.resolve(version);
-					$rootScope.$apply();
-				});
-				return deferred.promise;
-			});
-			spyOn(localStorageService, 'get').andCallFake(function (key) {
-				if (key === 'version') {
-					return version;
-				}
-
-				if (key === 'laureates') {
-					return [1, 2, 3, 4, 5];
-				}
-			});
+			spyOn(RESTService, 'readVersion').andCallFake(mockFor_RESTService_readVersion);
+			spyOn(localStorageService, 'get').andCallFake(mockFor_localStorageService_get);
 
 			runs(function () {
-				console.log('-----');
 				ResourceService = $injector.get('ResourceService');
 				ResourceService.getLaureates().then(function (_laureates) {
 					laureates = _laureates;
 				});
-				console.log('-----');
 			});
 
 			waitsFor(function () {
@@ -82,6 +64,25 @@
 				expect(localStorageService.get.argsForCall[0]).toEqual(['version']);
 				expect(localStorageService.get.argsForCall[1]).toEqual(['laureates']);
 			});
+
+			function mockFor_RESTService_readVersion() {
+				var deferred = $q.defer();
+				setTimeout(function () {
+					deferred.resolve(version);
+					$rootScope.$apply();
+				});
+				return deferred.promise;
+			}
+
+			function mockFor_localStorageService_get(key) {
+				if (key === 'version') {
+					return version;
+				}
+
+				if (key === 'laureates') {
+					return [1, 2, 3, 4, 5];
+				}
+			}
 		}));
 	});
 
