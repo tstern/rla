@@ -18,6 +18,10 @@
 					}
 				};
 
+				this.isOfflineMode = function () {
+					return !navigator.onLine;
+				};
+
 				this.determineTransformKey = function determineTransformKey() {
 					var index,
 						keys = [

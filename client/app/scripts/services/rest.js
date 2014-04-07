@@ -11,6 +11,7 @@
 				var REST_BASE_URL = '/rest';
 
 				this.readVersion = function readVersion() {
+					console.log('original');
 					var deferred = $q.defer(),
 						request = $http({ method: 'GET', url: REST_BASE_URL + '/version' });
 
