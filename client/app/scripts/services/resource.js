@@ -6,9 +6,9 @@
 
 	angular.module('rla')
 
-		.service('ResourceService', ['$q', 'RESTService', 'localStorageService',
-			function ($q, RESTService, localStorageService) {
-				var offline = !navigator.onLine,
+		.service('ResourceService', ['$q', 'RESTService', 'HelperService', 'localStorageService',
+			function ($q, RESTService, HelperService, localStorageService) {
+				var offline = HelperService.isOfflineMode(),
 					deferredLaureates = $q.defer(),
 					laureates = null;
 
@@ -39,9 +39,13 @@
 					var version = localStorageService.get('version'),
 						deferred = $q.defer();
 
+					console.log('search');
+
 					RESTService.readVersion().then(function (currentVersion) {
+						console.log('successA');
 						deferred.resolve(version !== currentVersion);
 					}, function (errorMsg) {
+						console.log('errorA');
 						console.warn(errorMsg);
 						deferred.resolve(false);
 					});
