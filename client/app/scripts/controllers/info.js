@@ -7,6 +7,11 @@
 			function ($scope, ResourceService) {
 				var laureateId = $scope.$stateParams.id;
 
+				$scope.neighbours = {
+					left: 'map',
+					right: 'list'
+				};
+
 //				$scope.laureate = null;
 				$scope.laureate = {
 					name: 'Amy Goodman',

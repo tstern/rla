@@ -9,7 +9,7 @@
 
 				$scope.neighbours = {
 					left: 'wall',
-					right: 'list'
+					right: 'info'
 				};
 
 				$scope.title = 'Map';

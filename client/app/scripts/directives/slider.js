@@ -58,7 +58,7 @@
 						});
 
 						$elem.on('touchend', function (event) {
-							if (animation || neighbours.left === null || neighbours.right === null) {
+							if (animation || !neighbours) {
 								return;
 							}
 

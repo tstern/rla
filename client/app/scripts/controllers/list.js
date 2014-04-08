@@ -8,7 +8,7 @@
 				$scope.laureates = null;
 
 				$scope.neighbours = {
-					left: 'map',
+					left: 'info',
 					right: 'wall'
 				};
 
