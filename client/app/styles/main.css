@@ -123,9 +123,26 @@ nav {
 .content,
 .not-found,
 .info,
+.map,
+.wall,
 .list {
 	height: 100%;
 	width: 100%;
+}
+
+.fadeIn1s {
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+	from{ opacity: 0; }
+	to	{ opacity: 1; }
+}
+
+@keyframes fadeIn {
+	from{ opacity: 0; }
+	to	{ opacity: 1; }
 }
 
 .list .logo {

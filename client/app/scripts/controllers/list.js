@@ -7,6 +7,11 @@
 			function ($scope, $timeout, ResourceService, HelperService) {
 				$scope.laureates = null;
 
+				$scope.neighbours = {
+					left: 'map',
+					right: 'wall'
+				};
+
 				ResourceService.getLaureates().then(function (laureates) {
 					$scope.laureates = prepareLaureates(laureates);
 					$timeout(function () {

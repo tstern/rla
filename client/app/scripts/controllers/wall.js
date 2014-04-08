@@ -7,6 +7,11 @@
 			function ($scope, ResourceService) {
 				$scope.laureates = null;
 
+				$scope.neighbours = {
+					left: 'list',
+					right: 'map'
+				};
+
 				$scope.title = 'Wall';
 			}]);
 
