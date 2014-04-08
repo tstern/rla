@@ -120,9 +120,6 @@
 						$elem.on('touchstart', function (event) {
 							var touch = event.originalEvent.touches[0];
 
-//							event.preventDefault();
-//							event.stopPropagation();
-
 							startX = touch.pageX;
 							startY = touch.pageY;
 						});
@@ -136,16 +133,15 @@
 							touchX = touch.pageX;
 							touchY = touch.pageY;
 
-							calculations(touchY - startY);
+							if (!HelperService.isHorizontal(touchX - startX, touchY - startY)) {
+								calculations(touchY - startY);
 
-							startX = touchX;
-							startY = touchY;
+								startX = touchX;
+								startY = touchY;
+							}
 						});
 
 						$elem.on('touchend', function (event) {
-//							event.preventDefault();
-//							event.stopPropagation();
-
 							calmDown();
 						});
 
