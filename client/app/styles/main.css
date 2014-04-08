@@ -97,12 +97,6 @@ nav {
 	font-weight: bold;
 }
 
-.not-found img {
-	padding: 20px 0;
-	-webkit-animation: logoRotate 5s linear 1s infinite;
-	animation: logoRotate 5s linear 1s infinite;
-}
-
 .not-found p {
 	color: #007dbf;
 	font-size: 16px;
@@ -111,6 +105,12 @@ nav {
 .not-found a {
 	font-size: 18px;
 	font-weight: bold;
+}
+
+img.rotate-y {
+	padding: 20px 0;
+	-webkit-animation: logoRotate 5s linear 1s infinite;
+	animation: logoRotate 5s linear 1s infinite;
 }
 
 /* animation: logo rotate */
@@ -204,6 +204,17 @@ nav {
 	font-weight: bold;
 	padding-right: 20px;
 	width: 450px;
+}
+
+.info .links div {
+	float: left;
+	font-weight: bold;
+	width: 400px;
+}
+
+.info .links img {
+	float: right;
+	margin: 30px 70px;
 }
 
 

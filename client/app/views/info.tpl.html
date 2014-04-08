@@ -11,5 +11,19 @@
 			<h3 class="paragraph-title">{{ paragraph.title }}</h3>
 			<p>{{ paragraph.text }}</p>
 		</div>
+		<hr />
+		<div class="links">
+			<div class="list-group">
+				<a ng-href="link[0]" class="list-group-item">Acceptance Speech by {{ laureate.name }}</a>
+				<a ng-href="link[1]" class="list-group-item">Publications by {{ laureate.name }}</a>
+				<a ng-href="link[2]" class="list-group-item">Interview with {{ laureate.name }}</a>
+				<a ng-href="link[3]" class="list-group-item">Pictures of {{ laureate.name }}</a>
+				<a ng-href="link[4]" class="list-group-item">News about {{ laureate.name }}</a>
+				<a href="http://www.rightlivelihood.org/?id=BetterWorldLinks" class="list-group-item">Better World Links</a>
+				<a href="http://www.rightlivelihood.org/?id=ContactDetails" class="list-group-item">Contact Details</a>
+			</div>
+			<img src="images/logo200x200.png" class="rotate-y" />
+		</div>
+		<br class="clear" />
 	</div>
 </div>
