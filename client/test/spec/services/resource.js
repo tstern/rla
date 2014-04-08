@@ -41,11 +41,10 @@
 		}));
 
 		it('should load laureates from local storage in online mode with an up to date version', inject(function ($injector) {
-			var laureates = null,
-				version = '1.0';
+			var laureates = null;
 
 			spyOn(HelperService, 'isOfflineMode').andReturn(false);
-			spyOn(RESTService, 'readVersion').andCallFake(mockFor_RESTService_readVersion);
+			spyOn(RESTService, 'readVersion').andCallFake(createDeferredMock('1.0'));
 			spyOn(localStorageService, 'get').andCallFake(mockFor_localStorageService_get);
 
 			runs(function () {
@@ -57,31 +56,62 @@
 
 			waitsFor(function () {
 				return laureates !== null;
-			}, 'The laureates should be loaded', 500);
+			}, 'Loading laureates', 500);
 
 			runs(function () {
 				expect(RESTService.readVersion).toHaveBeenCalled();
 				expect(localStorageService.get.argsForCall[0]).toEqual(['version']);
 				expect(localStorageService.get.argsForCall[1]).toEqual(['laureates']);
 			});
+		}));
 
-			function mockFor_RESTService_readVersion() {
+		it('should load laureates from server in online mode with an outdated version', inject(function ($injector) {
+			var laureates = null;
+
+			spyOn(HelperService, 'isOfflineMode').andReturn(false);
+			spyOn(RESTService, 'readVersion').andCallFake(createDeferredMock('2.0'));
+			spyOn(RESTService, 'readLaureates').andCallFake(createDeferredMock([]));
+			spyOn(localStorageService, 'get').andCallFake(mockFor_localStorageService_get);
+			spyOn(localStorageService, 'set');
+
+			runs(function () {
+				ResourceService = $injector.get('ResourceService');
+				ResourceService.getLaureates().then(function (_laureates) {
+					laureates = _laureates;
+				});
+			});
+
+			waitsFor(function () {
+				return laureates !== null;
+			}, 'Loading laureates', 500);
+
+			runs(function () {
+				expect(RESTService.readVersion).toHaveBeenCalled();
+				expect(localStorageService.get).toHaveBeenCalledWith('version');
+				expect(RESTService.readLaureates).toHaveBeenCalled();
+				expect(localStorageService.set).toHaveBeenCalledWith('laureates', []);
+			});
+		}));
+
+		function createDeferredMock(resolve) {
+			return function () {
 				var deferred = $q.defer();
 				setTimeout(function () {
-					deferred.resolve(version);
+					deferred.resolve(resolve);
 					$rootScope.$apply();
 				});
 				return deferred.promise;
-			}
+			};
+		}
 
-			function mockFor_localStorageService_get(key) {
-				if (key === 'version') {
-					return version;
-				} else {
-					return [];
-				}
+		function mockFor_localStorageService_get(key) {
+			if (key === 'version') {
+				return '1.0';
 			}
-		}));
+			if (key === 'laureates') {
+				return [];
+			}
+		}
 	});
 
 }());
