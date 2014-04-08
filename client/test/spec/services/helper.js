@@ -40,6 +40,26 @@
 			});
 		});
 
+		describe('isHorizontal(deltaX, deltaY)', function () {
+			it('should be horizontal when absolute value of deltaX is greater than absolute value of deltaY', function () {
+				expect(HelperService.isHorizontal(2, -1)).toBe(true);
+				expect(HelperService.isHorizontal(-2, 1)).toBe(true);
+				expect(HelperService.isHorizontal(2, 1)).toBe(true);
+			});
+
+			it('should be vertical when absolute value of deltaX is lower than absolute value of deltaY', function () {
+				expect(HelperService.isHorizontal(1, -2)).toBe(false);
+				expect(HelperService.isHorizontal(-1, 2)).toBe(false);
+				expect(HelperService.isHorizontal(1, 2)).toBe(false);
+			});
+
+			it('should be vertical when absolute value of delta is equal to absolute value of deltaY', function () {
+				expect(HelperService.isHorizontal(-1, 1)).toBe(false);
+				expect(HelperService.isHorizontal(1, -1)).toBe(false);
+				expect(HelperService.isHorizontal(1, 1)).toBe(false);
+			});
+		});
+
 		describe('splitTextIntoLines(text, lineLength)', function () {
 			// 96 characters long text
 			var text = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.';

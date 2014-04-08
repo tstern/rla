@@ -22,6 +22,10 @@
 					return !navigator.onLine;
 				};
 
+				this.isHorizontal = function (x, y) {
+					return Math.abs(y) < Math.abs(x);
+				};
+
 				this.determineTransformKey = function determineTransformKey() {
 					var index,
 						keys = [
