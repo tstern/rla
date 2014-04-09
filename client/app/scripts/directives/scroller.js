@@ -48,7 +48,7 @@
 							speedY = speed;
 							deltaMax = deltaSteps;
 							deltaMin = ($items.size() - 2) * -deltaSteps;
-							deltaSum = ($items.size() - 1) * deltaSteps;
+							deltaSum = $items.size() * deltaSteps;
 
 							for (index = 0; index < $items.size(); index++) {
 								calculateDelta(index);
@@ -66,8 +66,9 @@
 								$item.delta = $item.delta + deltaSum;
 							}
 
-							if ($item.delta > -4 * deltaSteps) {
+							if (Math.abs($item.delta) < 3 * deltaSteps) {
 								calculateStatus($item);
+								$item.style.visibility = 'visible';
 							} else {
 								$item.style.visibility = 'hidden';
 							}
@@ -80,7 +81,6 @@
 
 							$item.style[transformKey] = 'translateY(' + y + 'px) scale(' + scale + ')';
 							$item.style.opacity = opacity;
-							$item.style.visibility = 'visible';
 							$item.style.zIndex = 10;
 						}
 
