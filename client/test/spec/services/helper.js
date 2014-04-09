@@ -85,6 +85,36 @@
 				expect(HelperService.splitTextIntoLines(text, [50, 25])).toEqual(expectedArray);
 			});
 		});
+
+		describe('groupImagesByHeight(images)', function () {
+			var images = getImagesArray();
+
+			it('should group an array of images by their height correctly', function () {
+				var groupedImages = HelperService.groupImagesByHeight(images);
+
+				expect(groupedImages.small.length).toBe(2);
+				expect(groupedImages.medium.length).toBe(3);
+				expect(groupedImages.large.length).toBe(4);
+				expect(groupedImages.ignore.length).toBe(3);
+			});
+		});
 	});
+
+	function getImagesArray() {
+		return [
+			{ height: 0 },
+			{ height: 300 },
+			{ height: 350 },
+			{ height: 400 },
+			{ height: 500 },
+			{ height: 550 },
+			{ height: 600 },
+			{ height: 700 },
+			{ height: 750 },
+			{ height: 650 },
+			{ height: 450 },
+			{ height: 250 }
+		];
+	}
 
 }());

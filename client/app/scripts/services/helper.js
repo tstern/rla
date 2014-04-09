@@ -92,5 +92,32 @@
 
 					return parts;
 				};
+
+				this.groupImagesByHeight = function groupImagesByHeight(images) {
+					var s = 300,
+						m = 400,
+						l = 550,
+						xl = 700,
+						groups = {
+							small: [],
+							medium: [],
+							large: [],
+							ignore: []
+						};
+
+					images.forEach(function (image) {
+						if (image.height < s || image.height > xl) {
+							groups.ignore.push(image);
+						} else if (image.height < m) {
+							groups.small.push(image);
+						} else if (image.height < l) {
+							groups.medium.push(image);
+						} else {
+							groups.large.push(image);
+						}
+					});
+
+					return groups;
+				}
 			}]);
 }());
