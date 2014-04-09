@@ -147,11 +147,14 @@
 
 					function extractImages() {
 						var image,
+							firstImage,
 							width = 0;
 
 						while (extractable()) {
 							extractImage();
 						}
+						setupFirstImage();
+						setupLastImage();
 
 						function extractable() {
 							return imageGroup[key].length > 0 && imageGroup[key][0].width + width < maxWidth;
@@ -159,9 +162,23 @@
 
 						function extractImage() {
 							image = imageGroup[key].shift();
+							firstImage = firstImage ? firstImage : image;
 							image[key] = true;
 							width = width + image.width;
 							images.push(image);
+						}
+
+						function setupFirstImage() {
+							if (firstImage) {
+								firstImage.first = true;
+								firstImage.space = (maxWidth - width) / 4;
+							}
+						}
+
+						function setupLastImage() {
+							if (image) {
+								image.last = true;
+							}
 						}
 					}
 

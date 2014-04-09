@@ -136,7 +136,7 @@
 		return {
 			small: [
 				{ height: 300, width: 200 },
-				{ height: 300, width: 250 },
+				{ height: 300, width: 200 },
 				{ height: 300, width: 300 },
 				{ height: 300, width: 200 },
 				{ height: 300, width: 250 },
@@ -163,24 +163,24 @@
 
 	function getExpectedReorderedImages() {
 		return [
+			{ height: 300, width: 200, small: true, first: true, space: 25 },
 			{ height: 300, width: 200, small: true },
-			{ height: 300, width: 250, small: true },
 			{ height: 300, width: 300, small: true },
-			{ height: 300, width: 200, small: true },
-			{ height: 500, width: 400, medium: true },
-			{ height: 500, width: 500, medium: true },
-			{ height: 600, width: 500, large: true },
+			{ height: 300, width: 200, small: true, last: true },
+			{ height: 500, width: 400, medium: true, first: true, space: 25 },
+			{ height: 500, width: 500, medium: true, last: true },
+			{ height: 600, width: 500, large: true, first: true, space: 25 },
 			{ height: 600, width: 200, large: true },
-			{ height: 600, width: 200, large: true },
-			{ height: 300, width: 250, small: true },
+			{ height: 600, width: 200, large: true, last: true },
+			{ height: 300, width: 250, small: true, first: true, space: 37.5 },
 			{ height: 300, width: 400, small: true },
-			{ height: 300, width: 200, small: true },
+			{ height: 300, width: 200, small: true, last: true },
+			{ height: 500, width: 200, medium: true, first: true, space: 50 },
 			{ height: 500, width: 200, medium: true },
 			{ height: 500, width: 200, medium: true },
-			{ height: 500, width: 200, medium: true },
-			{ height: 500, width: 200, medium: true },
-			{ height: 600, width: 600, large: true },
-			{ height: 500, width: 200, medium: true }
+			{ height: 500, width: 200, medium: true, last: true },
+			{ height: 600, width: 600, large: true, first: true, last: true, space: 100 },
+			{ height: 500, width: 200, medium: true, first: true, last: true, space: 200 }
 		];
 	}
 
