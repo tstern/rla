@@ -45,7 +45,7 @@
 							deltaX = touchX - startX;
 							deltaY = touchY - startY;
 
-							if (HelperService.isHorizontal(deltaX, deltaY)) {
+							if (HelperService.isHorizontal(deltaX, deltaY) && timing + slideTime > Date.now()) {
 								event.stopPropagation();
 								event.preventDefault();
 							}
@@ -55,7 +55,7 @@
 						});
 
 						$elem.on('touchend', function (event) {
-							if (animation || !neighbours) {
+							if (animation || !neighbours || Math.abs(deltaX) < 100) {
 								return;
 							}
 
