@@ -68,10 +68,31 @@
 
 						function activateImage() {
 							active = true;
-							element.style[transformKey] = 'scale(2)';
+							element.style[transformKey] = 'scale(2) ' + correctPosition();
 							element.style.boxShadow = '0px 0px 20px 5px #007dbf';
 							element.style.zIndex = $scope[listName].length + 10;
 							$quote.show();
+						}
+
+						function correctPosition() {
+							var x = 0,
+								y = 0,
+								top = element.offsetTop,
+								left = element.offsetLeft,
+								width = element.offsetWidth / 2,
+								height = element.offsetHeight / 2;
+
+							if (top < height) {
+								y = height;
+							}
+
+							if (left < width) {
+								x = width;
+							} else if (left + width > 800) {
+								x = -width;
+							}
+
+							return 'translate(' + x + 'px, ' + y + 'px)';
 						}
 
 						function deactivateImage() {

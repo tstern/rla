@@ -289,7 +289,7 @@ img.rotate-y {
 }
 
 .wall .frame {
-	padding: 50px;
+	padding: 100px 50px 300px 50px;
 }
 
 .wall .image {
