@@ -285,5 +285,39 @@ img.rotate-y {
 .wall {
 	background: #000000;
 	color: #ffffff;
-	padding: 100px;
+	overflow-y: scroll;
+}
+
+.wall .frame {
+	padding: 50px;
+}
+
+.wall .image {
+	float: left;
+	position: relative;
+	-webkit-transition: -webkit-transform 0.5s;
+}
+
+.wall .image.active {
+	box-shadow: 0 0 20px 5px #007dbf;
+}
+
+.wall .image .quote {
+	background: rgba(0, 0, 0, 0.5);
+	bottom: 0;
+	padding: 2px;
+	position: absolute;
+}
+
+.wall .image a {
+	color: #ffffff;
+	font-size: 6px;
+}
+
+.wall .image a h4 {
+	font-size: 10px;
+}
+
+.wall .image a h4 span {
+	font-size: 5px;
 }
