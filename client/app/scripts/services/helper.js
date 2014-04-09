@@ -118,6 +118,64 @@
 					});
 
 					return groups;
-				}
+				};
+
+				this.reorderImages = function reorderImages(imageGroup, maxWidth) {
+					var images = [],
+						random = Math.random(),
+						key = random < 0.33 ? 'small' : random < 0.66 ? 'medium' : 'large';
+
+					while (hasImages()) {
+						randomReverse();
+						extractImages();
+						changeKey();
+					}
+
+					function hasImages() {
+						var hasSmallImages = imageGroup.small.length > 0,
+							hasMediumImages = imageGroup.medium.length > 0,
+							hasLargeImages = imageGroup.large.length > 0;
+
+						return hasSmallImages || hasMediumImages || hasLargeImages;
+					}
+
+					function randomReverse() {
+						if (Math.random() > 0.5) {
+							imageGroup[key] = imageGroup[key].reverse();
+						}
+					}
+
+					function extractImages() {
+						var image,
+							width = 0;
+
+						while (extractable()) {
+							extractImage();
+						}
+
+						function extractable() {
+							return imageGroup[key].length > 0 && imageGroup[key][0].width + width < maxWidth;
+						}
+
+						function extractImage() {
+							image = imageGroup[key].shift();
+							image[key] = true;
+							width = width + image.width;
+							images.push(image);
+						}
+					}
+
+					function changeKey() {
+						if (key === 'small') {
+							key = 'medium';
+						} else if (key === 'medium') {
+							key = 'large';
+						} else {
+							key = 'small';
+						}
+					}
+
+					return images;
+				};
 			}]);
 }());

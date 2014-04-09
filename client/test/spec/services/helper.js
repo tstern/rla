@@ -98,6 +98,21 @@
 				expect(groupedImages.ignore.length).toBe(3);
 			});
 		});
+
+		describe('reorderImages(imageGroup, maxWidth)', function () {
+			var imageGroup = getImageGroup();
+
+			it('should reorder a group of images correctly', function () {
+				var images;
+
+				spyOn(Math, 'random').andReturn(0);
+
+				images = HelperService.reorderImages(imageGroup, 1000);
+
+				expect(images.length).toBe(18);
+				expect(images).toEqual(getExpectedReorderedImages());
+			});
+		});
 	});
 
 	function getImagesArray() {
@@ -114,6 +129,58 @@
 			{ height: 650 },
 			{ height: 450 },
 			{ height: 250 }
+		];
+	}
+
+	function getImageGroup() {
+		return {
+			small: [
+				{ height: 300, width: 200 },
+				{ height: 300, width: 250 },
+				{ height: 300, width: 300 },
+				{ height: 300, width: 200 },
+				{ height: 300, width: 250 },
+				{ height: 300, width: 400 },
+				{ height: 300, width: 200 }
+			],
+			medium: [
+				{ height: 500, width: 400 },
+				{ height: 500, width: 500 },
+				{ height: 500, width: 200 },
+				{ height: 500, width: 200 },
+				{ height: 500, width: 200 },
+				{ height: 500, width: 200 },
+				{ height: 500, width: 200 }
+			],
+			large: [
+				{ height: 600, width: 500 },
+				{ height: 600, width: 200 },
+				{ height: 600, width: 200 },
+				{ height: 600, width: 600 }
+			]
+		}
+	}
+
+	function getExpectedReorderedImages() {
+		return [
+			{ height: 300, width: 200, small: true },
+			{ height: 300, width: 250, small: true },
+			{ height: 300, width: 300, small: true },
+			{ height: 300, width: 200, small: true },
+			{ height: 500, width: 400, medium: true },
+			{ height: 500, width: 500, medium: true },
+			{ height: 600, width: 500, large: true },
+			{ height: 600, width: 200, large: true },
+			{ height: 600, width: 200, large: true },
+			{ height: 300, width: 250, small: true },
+			{ height: 300, width: 400, small: true },
+			{ height: 300, width: 200, small: true },
+			{ height: 500, width: 200, medium: true },
+			{ height: 500, width: 200, medium: true },
+			{ height: 500, width: 200, medium: true },
+			{ height: 500, width: 200, medium: true },
+			{ height: 600, width: 600, large: true },
+			{ height: 500, width: 200, medium: true }
 		];
 	}
 
