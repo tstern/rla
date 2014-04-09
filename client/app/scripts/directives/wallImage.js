@@ -83,13 +83,13 @@
 								height = element.offsetHeight / 2;
 
 							if (top < height) {
-								y = height;
+								y = height / 2;
 							}
 
 							if (left < width) {
-								x = width;
-							} else if (left + width > 800) {
-								x = -width;
+								x = width / 2;
+							} else if (left + width * 2 > 1024 - width) {
+								x = -width / 2;
 							}
 
 							return 'translate(' + x + 'px, ' + y + 'px)';
