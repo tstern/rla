@@ -13,7 +13,7 @@
 				};
 
 				var images = HelperService.groupImagesByHeight(getImages());
-				images = HelperService.reorderImages(images, 2 * 924);
+				images = HelperService.reorderImages(images, 2 * 900);
 
 				$scope.images = images;
 			}]);
