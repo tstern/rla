@@ -125,8 +125,6 @@ img.rotate-y {
 	100%{ transform: rotateY(360deg); }
 }
 
-/* general */
-
 .content,
 .not-found,
 .info,
@@ -134,6 +132,8 @@ img.rotate-y {
 .wall,
 .list {
 	height: 100%;
+	position: absolute;
+	top: 0;
 	width: 100%;
 }
 
@@ -217,9 +217,7 @@ img.rotate-y {
 	margin: 30px 70px;
 }
 
-
-
-/* logo */
+/* list */
 
 .list .logo {
 	left: 150px;
@@ -280,4 +278,12 @@ img.rotate-y {
 	margin-left: -2px;
 	padding: 0;
 	width: 0;
+}
+
+/* wall */
+
+.wall {
+	background: #000000;
+	color: #ffffff;
+	padding: 100px;
 }
