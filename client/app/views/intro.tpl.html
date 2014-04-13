@@ -1,0 +1,8 @@
+<div class="intro" ng-class="{ fadeOut: loaded }">
+	<h1>{{ intro.title }}</h1>
+	<img src="images/logo333x333.png" class="rotate-y">
+	<p ng-repeat="message in intro.messages" ng-class="{ process: !$first }">
+		<span ng-class="{ error: message.type === 'error' }">{{ message.text }}</span>
+		<img ng-if="$last && message.type !== 'error' && !loaded" src="images/ajax-loader.gif" />
+	</p>
+</div>

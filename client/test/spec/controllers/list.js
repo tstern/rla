@@ -12,13 +12,15 @@
 		// Initialize the controller and a mock scope
 		beforeEach(inject(function ($controller, $rootScope) {
 			scope = $rootScope.$new();
+			scope.laureates = [{ id: 1, quote: 'laureate1' }, { id: 2, quote: 'laureate2' }, { id: 3, quote: 'laureate3' }];
 			ListCtrl = $controller('ListCtrl', {
 				$scope: scope
 			});
 		}));
 
-		it('should attach laureates variable', function () {
-			expect(scope.laureates).not.toBeUndefined();
+		it('should have "map" and "list" as neighbours', function () {
+			expect(scope.neighbours.left).toBe('map');
+			expect(scope.neighbours.right).toBe('wall');
 		});
 	});
 

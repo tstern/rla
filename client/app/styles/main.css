@@ -86,23 +86,28 @@ nav {
 	color: #ff0000;
 }
 
-.not-found {
+.not-found,
+.intro {
 	padding: 100px 50px;
 	text-align: center;
 }
 
-.not-found h1 {
+.not-found h1,
+.intro h1 {
 	color: #007dbf;
 	font-style: italic;
 	font-weight: bold;
 }
 
-.not-found p {
+.not-found p,
+.intro p {
 	color: #007dbf;
 	font-size: 16px;
+	margin-bottom: 0;
 }
 
-.not-found a {
+.not-found a,
+.intro a {
 	font-size: 18px;
 	font-weight: bold;
 }
@@ -127,6 +132,7 @@ img.rotate-y {
 
 .content,
 .not-found,
+.intro,
 .info,
 .map,
 .wall,
@@ -137,7 +143,7 @@ img.rotate-y {
 	width: 100%;
 }
 
-.fadeIn1s {
+.fadeIn {
 	-webkit-animation: fadeIn 1s;
 	animation: fadeIn 1s;
 }
@@ -150,6 +156,21 @@ img.rotate-y {
 @keyframes fadeIn {
 	from{ opacity: 0; }
 	to	{ opacity: 1; }
+}
+
+.fadeOut {
+	-webkit-animation: fadeOut 500ms ease-in 500ms;
+	animation: fadeOut 500ms ease-in 500ms;
+}
+
+@-webkit-keyframes fadeOut {
+	from{ opacity: 1; }
+	to	{ opacity: 0; }
+}
+
+@keyframes fadeOut {
+	from{ opacity: 1; }
+	to	{ opacity: 0; }
 }
 
 /* info */

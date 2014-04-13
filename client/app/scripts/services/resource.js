@@ -6,67 +6,70 @@
 
 	angular.module('rla')
 
-		.service('ResourceService', ['$q', 'RESTService', 'HelperService', 'localStorageService',
-			function ($q, RESTService, HelperService, localStorageService) {
-				var offline = HelperService.isOfflineMode(),
-					deferredLaureates = $q.defer(),
-					laureates = null;
-
-				this.getLaureates = function getLaureates() {
-					return deferredLaureates.promise;
-				};
-
-				initialize();
-
-				function initialize() {
-					if (offline) {
-						resolveLaureates();
-					} else {
+		.service('ResourceService', ['$q', '$rootScope', 'RESTService', 'HelperService', 'localStorageService',
+			function ($q, $rootScope, RESTService, HelperService, localStorageService) {
+				this.loadLaureates = function loadLaureates() {
+					if (HelperService.isOnlineMode()) {
 						searchForUpdate()
 							.then(tryToUpdate)
-							.then(resolveLaureates);
+							.catch(failure)
+							.finally(loadLaureatesFromLocalStorage);
+					} else {
+						loadLaureatesFromLocalStorage();
 					}
-				}
-
-				function resolveLaureates() {
-					if (_.isNull(laureates)) {
-						laureates = localStorageService.get('laureates');
-					}
-					deferredLaureates.resolve(laureates);
-				}
+				};
 
 				function searchForUpdate() {
-					var version = localStorageService.get('version'),
+					var localVersion = localStorageService.get('version'),
 						deferred = $q.defer();
 
+					$rootScope.$emit('laureates:notify', 'Searching for an update.');
 
-					RESTService.readVersion().then(function (currentVersion) {
-						deferred.resolve(version !== currentVersion);
+					RESTService.readVersion().then(function (version) {
+						deferred.resolve(localVersion === version);
 					}, function (errorMsg) {
-						console.warn(errorMsg);
-						deferred.resolve(false);
+						deferred.reject(errorMsg);
 					});
 
 					return deferred.promise;
 				}
 
-				function tryToUpdate(update) {
+				function tryToUpdate(upToDate) {
 					var deferred = $q.defer();
 
-					if (update) {
-						RESTService.readLaureates().then(function (newLaureates) {
-							localStorageService.set('laureates', newLaureates);
-							laureates = newLaureates;
+					if (upToDate) {
+						$rootScope.$emit('laureates:notify', 'Local version of laureates is up to date.');
+						deferred.resolve();
+
+					} else {
+						$rootScope.$emit('laureates:notify', 'Downloading new version of laureates.');
+						RESTService.readLaureates().then(function (laureates) {
+							saveLaureatesToLocalStorage(laureates);
 							deferred.resolve();
 						}, function (errorMsg) {
-							console.warn(errorMsg);
-							deferred.resolve();
+							deferred.reject(errorMsg);
 						});
-					} else {
-						deferred.resolve();
 					}
 
 					return deferred.promise;
+				}
+
+				function saveLaureatesToLocalStorage(laureates) {
+					localStorageService.set('laureates', laureates);
+				}
+
+				function loadLaureatesFromLocalStorage() {
+					var laureates = localStorageService.get('laureates');
+
+					if (_.isArray(laureates)) {
+						$rootScope.$emit('laureates:loaded', laureates);
+					} else {
+						failure('Couldn\'t load laureates from local storage.');
+					}
+				}
+
+				function failure(error) {
+					$rootScope.$emit('laureates:error', error);
 				}
 			}]);
 }());

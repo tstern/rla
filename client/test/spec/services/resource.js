@@ -20,6 +20,7 @@
 			$rootScope = $injector.get('$rootScope');
 			RESTService = $injector.get('RESTService');
 			HelperService = $injector.get('HelperService');
+			ResourceService = $injector.get('ResourceService');
 			localStorageService = $injector.get('localStorageService');
 
 			$injector.get('$httpBackend').whenGET(/\.tpl\.html/).respond({});
@@ -32,10 +33,10 @@
 		}));
 
 		it('should load laureates from local storage in offline mode', inject(function ($injector) {
-			spyOn(HelperService, 'isOfflineMode').andReturn(true);
+			spyOn(HelperService, 'isOnlineMode').andReturn(false);
 			spyOn(localStorageService, 'get');
 
-			ResourceService = $injector.get('ResourceService');
+			ResourceService.loadLaureates();
 
 			expect(localStorageService.get).toHaveBeenCalledWith('laureates');
 		}));
@@ -43,19 +44,19 @@
 		it('should load laureates from local storage in online mode with an up to date version', inject(function ($injector) {
 			var laureates = null;
 
-			spyOn(HelperService, 'isOfflineMode').andReturn(false);
+			spyOn(HelperService, 'isOnlineMode').andReturn(true);
 			spyOn(RESTService, 'readVersion').andCallFake(createDeferredMock('1.0'));
 			spyOn(localStorageService, 'get').andCallFake(mockFor_localStorageService_get);
 
 			runs(function () {
-				ResourceService = $injector.get('ResourceService');
-				ResourceService.getLaureates().then(function (_laureates) {
+				$rootScope.$on('laureates:loaded', function (event, _laureates) {
 					laureates = _laureates;
 				});
+				ResourceService.loadLaureates();
 			});
 
 			waitsFor(function () {
-				return laureates !== null;
+				return _.isArray(laureates)	;
 			}, 'Loading laureates', 500);
 
 			runs(function () {
@@ -68,17 +69,17 @@
 		it('should load laureates from server in online mode with an outdated version', inject(function ($injector) {
 			var laureates = null;
 
-			spyOn(HelperService, 'isOfflineMode').andReturn(false);
+			spyOn(HelperService, 'isOnlineMode').andReturn(true);
 			spyOn(RESTService, 'readVersion').andCallFake(createDeferredMock('2.0'));
 			spyOn(RESTService, 'readLaureates').andCallFake(createDeferredMock([]));
 			spyOn(localStorageService, 'get').andCallFake(mockFor_localStorageService_get);
 			spyOn(localStorageService, 'set');
 
 			runs(function () {
-				ResourceService = $injector.get('ResourceService');
-				ResourceService.getLaureates().then(function (_laureates) {
+				$rootScope.$on('laureates:loaded', function (event, _laureates) {
 					laureates = _laureates;
 				});
+				ResourceService.loadLaureates();
 			});
 
 			waitsFor(function () {

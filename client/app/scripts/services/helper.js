@@ -18,8 +18,8 @@
 					}
 				};
 
-				this.isOfflineMode = function () {
-					return !navigator.onLine;
+				this.isOnlineMode = function () {
+					return navigator.onLine;
 				};
 
 				this.isHorizontal = function (x, y) {

@@ -6,8 +6,8 @@
 
 	angular.module('rla')
 
-		.directive('tsScroller', ['HelperService',
-			function (HelperService) {
+		.directive('tsScroller', ['$timeout', 'HelperService',
+			function ($timeout, HelperService) {
 				return {
 					link: function ($scope, $elem, $attrs) {
 						var $items = null,
@@ -27,10 +27,12 @@
 							animationId = null,
 							transformKey = HelperService.determineTransformKey();
 
-						$scope.$on('laureates:loaded', function () {
+						$timeout(initialize);
+
+						function initialize() {
 							$items = $elem.find('.item');
 							setupPositions();
-						});
+						}
 
 						function setupPositions() {
 							var index;

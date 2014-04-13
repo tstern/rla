@@ -5,11 +5,9 @@
 
 		.controller('MapCtrl', ['$scope', 'ResourceService',
 			function ($scope) {
-				$scope.laureates = null;
-
 				$scope.neighbours = {
 					left: 'wall',
-					right: 'info'
+					right: 'list'
 				};
 
 				$scope.title = 'Map';

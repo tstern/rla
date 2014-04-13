@@ -52,7 +52,8 @@
 	<div class="shadow east"></div>
 	<div class="shadow south"></div>
 	<div class="shadow west"></div>
-	<div class="content" ui-view=""></div>
+	<div class="content" ng-if="!laureates" ng-include="'views/intro.tpl.html'" ng-controller="IntroCtrl">abc</div>
+	<div class="content" ng-if="laureates" ui-view=""></div>
 </div>
 
 <!--[if lt IE 9]>
@@ -80,6 +81,7 @@
 <script src="scripts/directives/slider.js"></script>
 <script src="scripts/directives/scroller.js"></script>
 <script src="scripts/directives/wallImage.js"></script>
+<script src="scripts/controllers/intro.js"></script>
 <script src="scripts/controllers/list.js"></script>
 <script src="scripts/controllers/wall.js"></script>
 <script src="scripts/controllers/map.js"></script>
