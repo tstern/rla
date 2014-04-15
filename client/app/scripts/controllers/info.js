@@ -3,8 +3,8 @@
 
 	angular.module('rla')
 
-		.controller('InfoCtrl', ['$scope', 'ResourceService',
-			function ($scope, ResourceService) {
+		.controller('InfoCtrl', ['$scope', '$sce',
+			function ($scope, $sce) {
 				var laureateId = $scope.$stateParams.id;
 
 				initialize();
@@ -14,6 +14,7 @@
 
 					if (index !== null) {
 						$scope.laureate = $scope.laureates[index];
+						$scope.biography = $sce.trustAsHtml($scope.laureate.biography);
 						setupNeighbours(index + 1);
 					} else {
 						$scope.$state.go('notFound');
@@ -24,7 +25,7 @@
 					var i;
 
 					for (i = 0; i < $scope.laureates.length; i++) {
-						if ($scope.laureates[i].id === id) {
+						if ($scope.laureates[i].id === parseInt(id, 10)) {
 							return i;
 						}
 					}

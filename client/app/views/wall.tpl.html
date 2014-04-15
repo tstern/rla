@@ -1,7 +1,7 @@
 <div class="wall fadeIn" ts-slider="neighbours">
 	<div class="frame">
 		<div ng-repeat-start="image in images" class="image" ts-wall-image="images">
-			<img ng-src="images/laureates/{{ image.filename }}" height="{{ image.height / 2 }}" width="{{ image.width / 2 }}" />
+			<img ng-src="/laureates/{{ image.filename }}" height="{{ image.height / 2 }}" width="{{ image.width / 2 }}" />
 			<div class="quote" ng-init="lastInRow = image.last">
 				<a ui-sref="info({ id: image.id })">
 					<h4>{{ image.title }} <span>({{ image.subtitle }})</span></h4>

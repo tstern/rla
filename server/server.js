@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	var VERSION = '0.2',	// should be increased when new laureates added to database
+	var VERSION = '0.3',	// should be increased when database changed
 		express = require('express'),
 		sqlite3 = require('sqlite3').verbose(),
 		app = express(),
@@ -12,6 +12,9 @@
 	function init() {
 		// Provide static directory.
 		app.use(express.static(__dirname + '/public'));
+
+		// Provide static laureates image directory.
+		app.use('/laureates', express.static(__dirname + '/laureates_images'));
 
 		// Dispatch REST requests.
 		app.all('/rest/*', dispatchREST);

@@ -1,16 +1,17 @@
 <div class="info fadeIn" ts-slider="neighbours">
 	<div class="page">
-		<h1 class="title">{{ laureate.name }} ({{ laureate.year }} / {{ laureate.country }})</h1>
+		<h1 class="title">{{ laureate.firstname + ' ' + laureate.lastname }} ({{ laureate.year }} / {{ laureate.country }})</h1>
 		<div class="quote">
-			<img alt="{{ laureate.name }}" height="350" width="300" src="data:image/jpeg;base64,{{ laureate.portrait }}" />
-			<p>"{{ laureate.quote }}"</p>
+			<img alt="{{ laureate.firstname + ' ' + laureate.lastname }}" width="300" src="/laureates/{{ laureate.portrait }}" />
+			<p>{{ laureate.citation }}</p>
 		</div>
 		<br class="clear" />
-		<p>{{ laureate.description }}</p>
-		<div ng-repeat="paragraph in laureate.paragraphs">
-			<h3 class="paragraph-title">{{ paragraph.title }}</h3>
-			<p>{{ paragraph.text }}</p>
-		</div>
+		<div ng-bind-html="biography"></div>
+		<!--<p>{{ laureate.description }}</p>-->
+		<!--<div ng-repeat="paragraph in laureate.paragraphs">-->
+			<!--<h3 class="paragraph-title">{{ paragraph.title }}</h3>-->
+			<!--<p>{{ paragraph.text }}</p>-->
+		<!--</div>-->
 		<hr />
 		<div class="links">
 			<div class="list-group">
