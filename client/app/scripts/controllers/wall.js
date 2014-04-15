@@ -27,15 +27,14 @@
 
 				function extractImage(laureate) {
 					return {
-						laureateId: laureate.id,
-						name: laureate.name,
-						year: laureate.year,
-						country: laureate.country,
-						quote: laureate.quote,
-						image: laureate.image.code,
-						width: laureate.image.width,
-						height: laureate.image.height
-					};
+						id: laureate.id,
+						title: laureate.firstname + ' ' + laureate.lastname,
+						subtitle: laureate.country + ', ' + laureate.year,
+						citation: laureate.citation,
+						filename: laureate.picture,
+						width: laureate.pictureWidth,
+						height: laureate.pictureHeight
+					}
 				}
 			}]);
 

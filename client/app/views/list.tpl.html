@@ -1,11 +1,11 @@
 <div class="list fadeIn" ts-slider="neighbours" ts-scroller="">
 	<img src="images/logo100x100.png" height="120" width="120" class="logo">
 	<div id="item{{ $index }}" class="item" ng-repeat="laureate in laureates">
-		<p class="quote-part" ng-repeat="part in laureate.splittedQuote" ng-class="{ first: $first }">
+		<p class="quote-part" ng-repeat="part in laureate.splittedCitation" ng-class="{ first: $first }">
 			<span class="line">{{ part }}</span>
 		</p>
 		<a class="button" ui-sref="info({id: laureate.id })">
-			<span class="text">{{ laureate.name }}, {{ laureate.year }}</span>
+			<span class="text">{{ laureate.firstname + ' ' + laureate.lastname }}, {{ laureate.year }}</span>
 			<span class="arrow"></span>
 		</a>
 	</div>

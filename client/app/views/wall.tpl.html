@@ -1,11 +1,11 @@
 <div class="wall fadeIn" ts-slider="neighbours">
 	<div class="frame">
 		<div ng-repeat-start="image in images" class="image" ts-wall-image="images">
-			<img ng-src="images/laureates/{{ image.name }}.jpg" height="{{ image.height / 2 }}" width="{{ image.width / 2 }}" />
+			<img ng-src="images/laureates/{{ image.filename }}" height="{{ image.height / 2 }}" width="{{ image.width / 2 }}" />
 			<div class="quote" ng-init="lastInRow = image.last">
-				<a ui-sref="info({ id: image.laureateId })">
-					<h4>Lorem Ipsum <span>(USA, 2008)</span></h4>
-					<p>"... for developing an innovative model of truly independent political journalism that brings to million of people the alternative voices that are often excluded by mainstream media."</p>
+				<a ui-sref="info({ id: image.id })">
+					<h4>{{ image.title }} <span>({{ image.subtitle }})</span></h4>
+					<p>"{{ image.citation }}"</p>
 				</a>
 			</div>
 		</div>

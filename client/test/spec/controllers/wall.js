@@ -24,32 +24,7 @@
 	});
 
 	function getLaureates() {
-		return [
-			{
-				id: 1,
-				image: {
-					name: 'alpha',
-					width: 200,
-					height: 300
-				}
-			},
-			{
-				id: 2,
-				image: {
-					name: 'bravo',
-					width: 200,
-					height: 300
-				}
-			},
-			{
-				id: 3,
-				image: {
-					name: 'charlie',
-					width: 200,
-					height: 300
-				}
-			}
-		]
+		return []
 	}
 
 }());

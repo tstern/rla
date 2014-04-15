@@ -12,7 +12,7 @@
 		// Initialize the controller and a mock scope
 		beforeEach(inject(function ($controller, $rootScope) {
 			scope = $rootScope.$new();
-			scope.laureates = [{ id: 1, quote: 'laureate1' }, { id: 2, quote: 'laureate2' }, { id: 3, quote: 'laureate3' }];
+			scope.laureates = [{ id: 1, citation: 'laureate1' }, { id: 2, citation: 'laureate2' }, { id: 3, citation: 'laureate3' }];
 			ListCtrl = $controller('ListCtrl', {
 				$scope: scope
 			});

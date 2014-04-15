@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	var VERSION = '0.1',	// should be increased when new laureates added to database
+	var VERSION = '0.2',	// should be increased when new laureates added to database
 		express = require('express'),
 		sqlite3 = require('sqlite3').verbose(),
 		app = express(),

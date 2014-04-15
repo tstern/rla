@@ -14,8 +14,8 @@
 
 				function splitQuotes() {
 					$scope.laureates.forEach(function (laureate) {
-						if (!laureate.splittedQuote) {
-							laureate.splittedQuote = HelperService.splitTextIntoLines(laureate.quote, [50, 65]);
+						if (!laureate.splittedCitation) {
+							laureate.splittedCitation = HelperService.splitTextIntoLines(laureate.citation, [50, 65]);
 						}
 					});
 				}
