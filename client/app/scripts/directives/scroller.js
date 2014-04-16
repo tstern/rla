@@ -129,9 +129,6 @@
 						$elem.on('touchmove', function (event) {
 							var touch = event.originalEvent.touches[0];
 
-							event.preventDefault();
-							event.stopPropagation();
-
 							touchX = touch.pageX;
 							touchY = touch.pageY;
 

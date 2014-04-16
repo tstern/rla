@@ -7,21 +7,16 @@
 		</div>
 		<br class="clear" />
 		<div ng-bind-html="biography"></div>
-		<!--<p>{{ laureate.description }}</p>-->
-		<!--<div ng-repeat="paragraph in laureate.paragraphs">-->
-			<!--<h3 class="paragraph-title">{{ paragraph.title }}</h3>-->
-			<!--<p>{{ paragraph.text }}</p>-->
-		<!--</div>-->
 		<hr />
 		<div class="links">
 			<div class="list-group">
-				<a ng-href="{{ laureate.links[0] }}" class="list-group-item">Acceptance Speech by {{ laureate.name }}</a>
-				<a ng-href="{{ laureate.links[1] }}" class="list-group-item">Publications by {{ laureate.name }}</a>
-				<a ng-href="{{ laureate.links[2] }}" class="list-group-item">Interview with {{ laureate.name }}</a>
-				<a ng-href="{{ laureate.links[3] }}" class="list-group-item">Pictures of {{ laureate.name }}</a>
-				<a ng-href="{{ laureate.links[4] }}" class="list-group-item">News about {{ laureate.name }}</a>
-				<a href="http://www.rightlivelihood.org/" class="list-group-item">Better World Links</a>
-				<a href="http://www.rightlivelihood.org/" class="list-group-item">Contact Details</a>
+				<a ng-href="{{ laureate.link1] }}" class="list-group-item">Acceptance Speech by {{ laureate.firstname + ' ' + laureate.lastname }}</a>
+				<a ng-href="{{ laureate.link2 }}" class="list-group-item">Publications by {{ laureate.firstname + ' ' + laureate.lastname }}</a>
+				<a ng-href="{{ laureate.link3 }}" class="list-group-item">Interview with {{ laureate.firstname + ' ' + laureate.lastname }}</a>
+				<a ng-href="{{ laureate.link4 }}" class="list-group-item">Pictures of {{ laureate.firstname + ' ' + laureate.lastname }}</a>
+				<a ng-href="{{ laureate.link5 }}" class="list-group-item">News about {{ laureate.firstname + ' ' + laureate.lastname }}</a>
+				<a ng-href="{{ laureate.link6 }}" class="list-group-item">Better World Links</a>
+				<a ng-href="{{ laureate.link7 }}" class="list-group-item">Contact Details</a>
 			</div>
 			<img src="images/logo200x200.png" class="rotate-y" />
 		</div>
