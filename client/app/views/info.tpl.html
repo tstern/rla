@@ -1,4 +1,4 @@
-<div class="info fadeIn" ts-slider="neighbours">
+<div class="info fadeIn" ts-slider="slider">
 	<div class="page">
 		<h1 class="title">{{ laureate.firstname + ' ' + laureate.lastname }} ({{ laureate.year }} / {{ laureate.country }})</h1>
 		<div class="quote">
@@ -10,7 +10,7 @@
 		<hr />
 		<div class="links">
 			<div class="list-group">
-				<a ng-href="{{ laureate.link1] }}" class="list-group-item">Acceptance Speech by {{ laureate.firstname + ' ' + laureate.lastname }}</a>
+				<a ng-href="{{ laureate.link1 }}" class="list-group-item">Acceptance Speech by {{ laureate.firstname + ' ' + laureate.lastname }}</a>
 				<a ng-href="{{ laureate.link2 }}" class="list-group-item">Publications by {{ laureate.firstname + ' ' + laureate.lastname }}</a>
 				<a ng-href="{{ laureate.link3 }}" class="list-group-item">Interview with {{ laureate.firstname + ' ' + laureate.lastname }}</a>
 				<a ng-href="{{ laureate.link4 }}" class="list-group-item">Pictures of {{ laureate.firstname + ' ' + laureate.lastname }}</a>

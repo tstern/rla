@@ -5,9 +5,14 @@
 
 		.controller('ListCtrl', ['$scope', '$timeout', 'ResourceService', 'HelperService',
 			function ($scope, $timeout, ResourceService, HelperService) {
-				$scope.neighbours = {
-					left: 'map',
-					right: 'wall'
+				$scope.slider = {
+					slide: function (left) {
+						if (left) {
+							$scope.$state.go('wall');
+						} else {
+							$scope.$state.go('map');
+						}
+					}
 				};
 
 				splitQuotes();

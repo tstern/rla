@@ -21,12 +21,12 @@
 			});
 		}));
 
-		it('should select laureate with id 2', function () {
-			expect(scope.laureate.id).toBe(2);
+		it('should have a slider object', function () {
+			expect(scope.slider).not.toBeUndefined();
 		});
 
-		it('should have next laureate as right neighbour', function () {
-			expect(scope.neighbours.right === 'info3');
+		it('should select laureate with id 2', function () {
+			expect(scope.laureate.id).toBe(2);
 		});
 	});
 

@@ -12,14 +12,14 @@
 		// Initialize the controller and a mock scope
 		beforeEach(inject(function ($controller, $rootScope) {
 			scope = $rootScope.$new();
-			scope.laureates = [{ id: 1 }, { id: 2 }, { id: 3 }];
+			scope.laureates = [];
 			MapCtrl = $controller('MapCtrl', {
 				$scope: scope
 			});
 		}));
 
-		it('should attach laureates variable', function () {
-			expect(scope.laureates).not.toBeUndefined();
+		it('should have a slider object', function () {
+			expect(scope.slider).not.toBeUndefined();
 		});
 	});
 

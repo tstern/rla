@@ -62,6 +62,7 @@
 				// store previous $state name on $stateChange
 				$rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
 					$rootScope.previousStateName = from.name;
+					$rootScope.previousStateParams = fromParams;
 				});
 			}])
 

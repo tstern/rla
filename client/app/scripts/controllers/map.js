@@ -5,9 +5,14 @@
 
 		.controller('MapCtrl', ['$scope', 'ResourceService',
 			function ($scope) {
-				$scope.neighbours = {
-					left: 'wall',
-					right: 'list'
+				$scope.slider = {
+					slide: function (left) {
+						if (left) {
+							$scope.$state.go('list');
+						} else {
+							$scope.$state.go('wall');
+						}
+					}
 				};
 
 				$scope.title = 'Map';

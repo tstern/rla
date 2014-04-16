@@ -12,19 +12,15 @@
 		// Initialize the controller and a mock scope
 		beforeEach(inject(function ($controller, $rootScope) {
 			scope = $rootScope.$new();
-			scope.laureates = getLaureates();
+			scope.laureates = [];
 			WallCtrl = $controller('WallCtrl', {
 				$scope: scope
 			});
 		}));
 
-		it('should attach laureates variable', function () {
-			expect(scope.laureates).not.toBeUndefined();
+		it('should have a slider object', function () {
+			expect(scope.slider).not.toBeUndefined();
 		});
 	});
-
-	function getLaureates() {
-		return []
-	}
 
 }());
