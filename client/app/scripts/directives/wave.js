@@ -60,14 +60,6 @@
 								$wave.addClass('animate');
 							}, delay);
 						}
-
-						$scope.$on('$destroy', function (event) {
-							var i;
-
-							for (i = 0; i < $waves.length; i++) {
-								$waves[i].get(0).removeEventListener('webkitAnimationEnd');
-							}
-						});
 					}
 				}
 			}]);
