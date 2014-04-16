@@ -317,6 +317,7 @@ img.rotate-y {
 	float: left;
 	position: relative;
 	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
 }
 
 .wall .image.active {
@@ -341,4 +342,70 @@ img.rotate-y {
 
 .wall .image a h4 span {
 	font-size: 5px;
+}
+
+/* map */
+.map .worldmap {
+	position: absolute;
+	z-index: 10;
+}
+
+.map.ocean {
+	/*background: linear-gradient(#007dbf, #005c7f);*/
+	background: linear-gradient(#555, #000);
+	min-height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+
+.map.ocean .wave {
+	background: #ffffff;
+	display: inline-block;
+	height: 100%;
+	position: absolute;
+	width: 8px;
+	z-index: 5;
+}
+
+.map.ocean .wave.animate {
+	-webkit-animation: waving 8s ease-in-out;
+	animation: waving 8s ease-in-out;
+}
+
+
+@-webkit-keyframes waving{
+	0%{
+		height:100%;
+	}
+	10%{
+		height: 90%;
+	}
+	20%{
+		height: 85%
+	}
+	30%{
+		height: 65%;
+	}
+	40%{
+		height:50%
+	}
+	50%{
+		height: 60%;
+	}
+	60%{
+		height: 25%
+	}
+	70%{
+		height:40%;
+	}
+	80%{
+		height:20%
+	}
+	90%{
+		height:10%;
+	}
+	100%{
+		height:0%;
+	}
 }
