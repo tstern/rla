@@ -5,15 +5,6 @@
 
 		.controller('WallCtrl', ['$scope', 'ResourceService', 'HelperService',
 			function ($scope, ResourceService, HelperService) {
-				$scope.slider = {
-					slide: function (left) {
-						if (left) {
-							$scope.$state.go('map');
-						} else {
-							$scope.$state.go('list');
-						}
-					}
-				};
 
 				$scope.images = extractImages();
 

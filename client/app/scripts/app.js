@@ -58,12 +58,6 @@
 				// provide app-wide access to $state and $stateParams
 				$rootScope.$state = $state;
 				$rootScope.$stateParams = $stateParams;
-
-				// store previous $state name on $stateChange
-				$rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
-					$rootScope.previousStateName = from.name;
-					$rootScope.previousStateParams = fromParams;
-				});
 			}])
 
 		.run(['$window',

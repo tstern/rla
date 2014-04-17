@@ -28,24 +28,6 @@
 	your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	<ul class="nav navbar-nav">
-		<li ng-class="{ active: $state.current.name === 'list' }">
-			<a ui-sref="list">List</a>
-		</li>
-		<li ng-class="{ active: $state.current.name === 'wall' }">
-			<a ui-sref="wall">Wall</a>
-		</li>
-		<li ng-class="{ active: $state.current.name === 'map' }">
-			<a ui-sref="map">Map</a>
-		</li>
-		<li ng-class="{ active: $state.current.name === 'info' }">
-			<a ui-sref="info">Info</a>
-		</li>
-	</ul>
-</nav>
-
 <!-- Add your site or application content here -->
 <div class="container">
 	<div class="shadow north"></div>
@@ -54,6 +36,7 @@
 	<div class="shadow west"></div>
 	<div class="content" ng-if="!laureates" ng-include="'views/intro.tpl.html'" ng-controller="IntroCtrl">abc</div>
 	<div class="content" ng-if="laureates" ui-view=""></div>
+	<div class="navigation" ng-if="laureates" ng-include="'views/nav.tpl.html'" ng-controller="NavCtrl"></div>
 </div>
 
 <!--[if lt IE 9]>
@@ -84,6 +67,7 @@
 <script src="scripts/directives/wallImage.js"></script>
 <script src="scripts/directives/wave.js"></script>
 <script src="scripts/controllers/intro.js"></script>
+<script src="scripts/controllers/nav.js"></script>
 <script src="scripts/controllers/list.js"></script>
 <script src="scripts/controllers/wall.js"></script>
 <script src="scripts/controllers/map.js"></script>

@@ -1,0 +1,14 @@
+<div>
+	<div class="left">
+		<a ng-href="{{ $state.href(navigator.west.name, navigator.west.params) }}"><span class="leftArrow"></span> Back</a>
+	</div>
+	<div class="center">
+		<a ui-sref="list" ng-class="{ active: $state.current.name === 'list'}">&bullet;</a>
+		<a ui-sref="wall" ng-class="{ active: $state.current.name === 'wall'}">&bullet;</a>
+		<a ui-sref="map" ng-class="{ active: $state.current.name === 'map'}">&bullet;</a>
+	</div>
+	<div class="right">
+		<!--<a ui-sref="{{ navigator.east.name }}({{ navigator.east.params }})">Next Laureate <span class="rightArrow"></span></a>-->
+		<a ng-href="{{ $state.href(navigator.east.name, navigator.east.params) }}">Next Laureate <span class="rightArrow"></span></a>
+	</div>
+</div>

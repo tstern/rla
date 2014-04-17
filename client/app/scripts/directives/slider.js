@@ -11,7 +11,6 @@
 				return {
 					link: function ($scope, $elem, $attrs) {
 						var transformKey = HelperService.determineTransformKey(),
-							slider = $scope[$attrs.tsSlider],
 							animation = false,
 							timing = 0,
 							startX = 0,
@@ -55,7 +54,7 @@
 						});
 
 						$elem.on('touchend', function (event) {
-							if (animation || !slider || Math.abs(deltaX) < 100) {
+							if (animation || !$scope.navigator || Math.abs(deltaX) < 100) {
 								return;
 							}
 
@@ -82,7 +81,11 @@
 							if (time < slideTime) {
 								requestAnimationFrame(slide, null);
 							} else {
-								slider.slide(left);
+								if (left) {
+									$scope.$state.go($scope.navigator.east.name, $scope.navigator.east.params);
+								} else {
+									$scope.$state.go($scope.navigator.west.name, $scope.navigator.west.params);
+								}
 							}
 						}
 
