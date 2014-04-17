@@ -11,18 +11,15 @@
 				return {
 					link: function ($scope, $elem, $attrs) {
 						var stripeWidth = 8,
-							frameWidth = 1024,
-							$waves = [];
+							frameWidth = 1024;
 
 						createWaves();
-						initWaves();
 
 						function createWaves() {
 							var i, $wave;
 
 							for (i = 0; i < frameWidth; i = i + stripeWidth) {
 								$wave = createWave(i);
-								$waves.push($wave);
 								$elem.append($wave);
 							}
 
@@ -30,11 +27,14 @@
 						}
 
 						function createWave(delta) {
-							var $wave = $('<div></div>');
+							var $wave = $('<div></div>'),
+								delay = delta * 1.25 + 'ms';
 
-							$wave.addClass('wave');
+							$wave.addClass('wave animate');
 							$wave.css({
-								'left': delta + 'px'
+								'left': delta + 'px',
+								'animation-delay': delay,
+								'-webkit-animation-delay': delay
 							});
 
 							$wave.get(0).addEventListener('webkitAnimationEnd', function (event) {
@@ -42,23 +42,6 @@
 							}, false);
 
 							return $wave;
-						}
-
-						function initWaves() {
-							var i;
-
-							for (i = 0; i < $waves.length; i++) {
-								initWave(i);
-							}
-						}
-
-						function initWave(i) {
-							var $wave = $waves[i],
-								delay = i * 10;
-
-							$timeout(function () {
-								$wave.addClass('animate');
-							}, delay);
 						}
 					}
 				}
