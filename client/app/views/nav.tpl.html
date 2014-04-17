@@ -1,6 +1,6 @@
 <div>
 	<div class="left">
-		<a ng-href="{{ $state.href(navigator.west.name, navigator.west.params) }}"><span class="leftArrow"></span> Back</a>
+		<a ng-href="{{ $state.href(navigator.west.name, navigator.west.params) }}">&laquo; {{ navigator.west.text }}</a>
 	</div>
 	<div class="center">
 		<a ui-sref="list" ng-class="{ active: $state.current.name === 'list'}">&bullet;</a>
@@ -9,6 +9,6 @@
 	</div>
 	<div class="right">
 		<!--<a ui-sref="{{ navigator.east.name }}({{ navigator.east.params }})">Next Laureate <span class="rightArrow"></span></a>-->
-		<a ng-href="{{ $state.href(navigator.east.name, navigator.east.params) }}">Next Laureate <span class="rightArrow"></span></a>
+		<a ng-href="{{ $state.href(navigator.east.name, navigator.east.params) }}">{{ navigator.east.text }} &raquo;</a>
 	</div>
 </div>

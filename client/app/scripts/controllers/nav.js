@@ -8,72 +8,89 @@
 
 		.controller('NavCtrl', ['$rootScope', '$scope',
 			function ($rootScope, $scope) {
-				var navigator = {
-					list: function (to, toParams, from, fromParams) {
-						return {
-							east: {
-								name: 'wall',
-								params: {}
-							},
-							west: {
-								name: 'map',
-								params: {}
-							}
-						}
-					},
-
-					wall: function (to, toParams, from, fromParams) {
-						return {
-							east: {
-								name: 'map',
-								params: {}
-							},
-							west: {
-								name: 'list',
-								params: {}
-							}
-						};
-					},
-
-					map: function (to, toParams, from, fromParams) {
-						return {
-							east: {
-								name: 'list',
-								params: {}
-							},
-							west: {
-								name: 'wall',
-								params: {}
-							}
-						};
-					},
-
-					info: function (to, toParams, from, fromParams) {
-						var id = getIdOfNextLaureate(toParams.id);
-
-						return {
-							east: {
-								name: 'info',
-								params: {
-									id: id
+				var previousStateName = 'list',
+					navigator = {
+						list: function (to, toParams, from, fromParams) {
+							return {
+								east: {
+									name: 'wall',
+									params: {},
+									text: 'next'
+								},
+								west: {
+									name: 'map',
+									params: {},
+									text: 'prev'
 								}
-							},
-							west: {
-								name: from ? from.name : 'list',
-								params: fromParams || {}
+							}
+						},
+
+						wall: function (to, toParams, from, fromParams) {
+							return {
+								east: {
+									name: 'map',
+									params: {},
+									text: 'next'
+								},
+								west: {
+									name: 'list',
+									params: {},
+									text: 'prev'
+								}
+							};
+						},
+
+						map: function (to, toParams, from, fromParams) {
+							return {
+								east: {
+									name: 'list',
+									params: {},
+									text: 'next'
+								},
+								west: {
+									name: 'wall',
+									params: {},
+									text: 'prev'
+								}
+							};
+						},
+
+						info: function (to, toParams, from, fromParams) {
+							var name = getPreviousStateName(from),
+								id = getIdOfNextLaureate(toParams.id);
+
+							return {
+								east: {
+									name: 'info',
+									params: {
+										id: id
+									},
+									text: 'next laureate'
+								},
+								west: {
+									name: name,
+									params: fromParams || {},
+									text: 'back to ' + name
+								}
 							}
 						}
-					}
-				};
+					};
 
 				if (!$rootScope.navigator) {
 					$rootScope.navigator = navigator[$scope.$state.current.name]($scope.$state.current.name, $scope.$state.params);
 				}
 
-				// store previous $state name on $stateChange
 				$rootScope.$on('$stateChangeSuccess', function (event, to, toParams, from, fromParams) {
 					$rootScope.navigator = navigator[to.name](to, toParams, from, fromParams);
 				});
+
+				function getPreviousStateName(previousState) {
+					if (previousState && previousState.name !== 'info') {
+						previousStateName = previousState.name;
+					}
+
+					return previousStateName;
+				}
 
 				function getIdOfNextLaureate(id) {
 					var index;
