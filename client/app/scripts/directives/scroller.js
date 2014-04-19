@@ -133,6 +133,9 @@
 							touchY = touch.pageY;
 
 							if (!HelperService.isHorizontal(touchX - startX, touchY - startY)) {
+								event.stopPropagation();
+								event.preventDefault();
+
 								calculations(touchY - startY);
 
 								startX = touchX;
