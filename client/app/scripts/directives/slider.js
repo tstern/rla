@@ -44,7 +44,7 @@
 							deltaX = touchX - startX;
 							deltaY = touchY - startY;
 
-							if (HelperService.isHorizontal(deltaX, deltaY) && timing + slideTime > Date.now()) {
+							if (HelperService.isHorizontal(deltaX, deltaY)) {
 								event.stopPropagation();
 								event.preventDefault();
 							}

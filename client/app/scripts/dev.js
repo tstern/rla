@@ -35,7 +35,8 @@
 				"portrait": "dekha_ibrahim_abdi_portrait.jpg",
 				"picture": "dekha_ibrahim_abdi_picture.jpg",
 				"pictureWidth": 750,
-				"pictureHeight": 500
+				"pictureHeight": 500,
+				"coordinate": "(542,432)"
 			},
 			{
 				"id": 2,
@@ -58,7 +59,8 @@
 				"portrait": "jose_antonio_abreu_portrait.jpg",
 				"picture": "jose_antonio_abreu_picture.jpg",
 				"pictureWidth": 460,
-				"pictureHeight": 594
+				"pictureHeight": 594,
+				"coordinate": "(213,386)"
 			},
 			{
 				"id": 3,
@@ -81,7 +83,8 @@
 				"portrait": "swami_agnivesh_portrait.jpg",
 				"picture": "swami_agnivesh_picture.jpg",
 				"pictureWidth": 752,
-				"pictureHeight": 500
+				"pictureHeight": 500,
+				"coordinate": "(659,322)"
 			},
 			{
 				"id": 4,
@@ -104,7 +107,8 @@
 				"portrait": "martin_almada_portrait.jpg",
 				"picture": "martin_almada_picture.jpg",
 				"pictureWidth": 750,
-				"pictureHeight": 500
+				"pictureHeight": 500,
+				"coordinate": "(242,502)"
 			},
 			{
 				"id": 5,
@@ -127,7 +131,8 @@
 				"portrait": "atcc_portrait.jpg",
 				"picture": "atcc_picture.jpg",
 				"pictureWidth": 750,
-				"pictureHeight": 500
+				"pictureHeight": 500,
+				"coordinate": "(193,390)"
 			},
 			{
 				"id": 6,
@@ -150,7 +155,8 @@
 				"portrait": "maude_barlow_portrait.jpg",
 				"picture": "maude_barlow_picture.jpg",
 				"pictureWidth": 750,
-				"pictureHeight": 500
+				"pictureHeight": 500,
+				"coordinate": "(214,259)"
 			},
 			{
 				"id": 7,
@@ -173,7 +179,8 @@
 				"portrait": "nnimmo_bassey_portrait.jpg",
 				"picture": "nnimmo_bassey_picture.jpg",
 				"pictureWidth": 328,
-				"pictureHeight": 500
+				"pictureHeight": 500,
+				"coordinate": "(438,396)"
 			},
 			{
 				"id": 8,
@@ -196,7 +203,8 @@
 				"portrait": "walden_bello_portrait.jpg",
 				"picture": "walden_bello_picture.jpg",
 				"pictureWidth": 460,
-				"pictureHeight": 471
+				"pictureHeight": 471,
+				"coordinate": "(796,364)"
 			}
 		];
 	}

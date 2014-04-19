@@ -413,8 +413,37 @@ img.rotate-y {
 	z-index: 10;
 }
 
+.map .board {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+}
+
+.map .marker {
+	border-left: 2px solid #000000;
+	font-size: 3px;
+	height: 4px;
+	margin-top: -4px;
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+	z-index: 20;
+}
+
+.map.zoom .marker {
+	background: rgba(0, 0, 0, 0.5);
+	padding: 0 1px;
+	width: auto;
+	z-index: 200;
+}
+
+.map.zoom .marker a {
+	color: #ffffff;
+}
+
 .map.ocean {
-	background: linear-gradient(#007dbf, #005c7f);
+	background: linear-gradient(#0083ff, #0049c8);
 	/*background: linear-gradient(#555, #000);*/
 	min-height: 100%;
 	position: absolute;

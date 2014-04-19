@@ -1,3 +1,7 @@
-<div class="map fadeIn" ts-slider="" ts-wave="" ts-map-zoom="10">
+<div class="map fadeIn" ts-slider="" ts-wave="">
+	<div class="board" ts-map-zoom="10"></div>
 	<img src="images/worldmap.svg" width="1024" height="768" class="worldmap" />
+	<div class="marker" ng-repeat="laureate in laureates" style="left: {{ laureate.coord[0] }}px; top: {{ laureate.coord[1] }}px;">
+		<a ui-sref="info({ id: {{ laureate.id }}})">{{ laureate.firstname + ' ' + laureate.lastname }}</a>
+	</div>
 </div>

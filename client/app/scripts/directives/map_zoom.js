@@ -20,7 +20,7 @@
 						prepare();
 
 						function prepare() {
-							$elem.css({
+							$elem.parent().css({
 								'-webkit-transition': '-webkit-transform 0.5s',
 								'transition': 'transform 0.5s'
 							});
@@ -29,20 +29,26 @@
 						$elem.on('click', function (event) {
 							var x, y;
 
+							if (event.shiftKey && console) {
+								console.log(event.offsetX, event.offsetY);
+								return;
+							}
+
+
 							if (zoomed) {
 								zoomOut();
 							} else {
-								x = correctX(-event.clientX + widthSpace);
-								y = correctY(-event.clientY + heightSpace);
+								x = correctX(-event.offsetX + widthSpace);
+								y = correctY(-event.offsetY + heightSpace);
 								zoomIn(x, y);
 							}
 						});
 
 						function zoomOut() {
-							$elem.css({
+							$elem.parent().css({
 								'-webkit-transform': '',
 								'transform': ''
-							});
+							}).removeClass('zoom');
 
 							zoomed = false;
 						}
@@ -50,10 +56,10 @@
 						function zoomIn(x, y) {
 							var transform = 'scale(' + zoomFactor + ') translate(' + x + 'px, ' + y + 'px)';
 
-							$elem.css({
+							$elem.parent().css({
 								'-webkit-transform': transform,
 								'transform': transform
-							});
+							}).addClass('zoom');
 
 							zoomed = true;
 						}
