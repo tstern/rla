@@ -10,24 +10,36 @@
 		beforeEach(module('rla'));
 
 		// Initialize the controller and a mock scope
-		beforeEach(inject(function ($controller, $rootScope) {
+		beforeEach(inject(function ($rootScope) {
 			scope = $rootScope.$new();
+			scope.laureates = [{ id: 1 }, { id: 2 }, { id: 3 }];
+		}));
+
+		it('should select laureate with id 2', inject(function ($controller) {
 			scope.$stateParams = {
 				id: 2
 			};
-			scope.laureates = [{ id: 1 }, { id: 2 }, { id: 3 }];
+
 			InfoCtrl = $controller('InfoCtrl', {
 				$scope: scope
 			});
+
+			expect(scope.laureate.id).toBe(2);
 		}));
 
-		it('should have a slider object', function () {
-			expect(scope.slider).not.toBeUndefined();
-		});
+		it('should navigate to not found page', inject(function ($controller) {
+			spyOn(scope.$state, 'go');
 
-		it('should select laureate with id 2', function () {
-			expect(scope.laureate.id).toBe(2);
-		});
+			scope.$stateParams = {
+				id: 4
+			};
+
+			InfoCtrl = $controller('InfoCtrl', {
+				$scope: scope
+			});
+
+			expect(scope.$state.go).toHaveBeenCalledWith('notFound');
+		}));
 	});
 
 }());

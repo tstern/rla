@@ -17,10 +17,6 @@
 				$scope: scope
 			});
 		}));
-
-		it('should have a slider object', function () {
-			expect(scope.slider).not.toBeUndefined();
-		});
 	});
 
 }());

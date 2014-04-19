@@ -12,14 +12,14 @@
 		// Initialize the controller and a mock scope
 		beforeEach(inject(function ($controller, $rootScope) {
 			scope = $rootScope.$new();
-			scope.laureates = [];
+			scope.laureates = [{ coordinate: '(100,250)' }];
 			MapCtrl = $controller('MapCtrl', {
 				$scope: scope
 			});
 		}));
 
-		it('should have a slider object', function () {
-			expect(scope.slider).not.toBeUndefined();
+		it('should extract coordinates correct', function () {
+			expect(scope.laureates[0].coord).toEqual(['100', '250']);
 		});
 	});
 
