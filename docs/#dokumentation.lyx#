@@ -1578,8 +1578,8 @@ http://www.jetbrains.com/webstorm/
 
  verwendet.
  Damit die Werkzeuge, die zur Entwicklung benötigt werden, funktionieren
- muss Node JS auf dem Rechner installiert sein.
- Node JS wird zum einen für die client-seitigen Entwicklungswerkzeuge benötigt
+ muss NodeJS auf dem Rechner installiert sein.
+ NodeJS wird zum einen für die client-seitigen Entwicklungswerkzeuge benötigt
  und zum anderen für die Implementierung des Servers verwendet.
  Um die entsprechenden Konsolenbefehle auszuführen wurde die Git Bash verwendet.
 \end_layout
@@ -1947,11 +1947,11 @@ node_modules
 \end_layout
 
 \begin_layout Subsection
-Angular JS
+AngularJS
 \end_layout
 
 \begin_layout Standard
-Angular JS bietet verschiedene Funktionalitäten.
+AngularJS bietet verschiedene Funktionalitäten.
  In diesem Projekt werden die Funktionalitäten 
 \emph on
 Controller
@@ -2013,13 +2013,13 @@ Document Object Model
 Service
 \emph default
  sind Singletons, die es ermöglichen Logik auszulagern.
- In Angular JS gibt es außerdem 
+ In AngularJS gibt es außerdem 
 \emph on
 Injection
 \emph default
 .
- Damit lassen sich verschiedene Angular JS Funktionalitäten als Parameter
- in andere Angular JS Funktionalitäten injizieren.
+ Damit lassen sich verschiedene AngularJS Funktionalitäten als Parameter
+ in andere AngularJS Funktionalitäten injizieren.
 \end_layout
 
 \begin_layout Subsection
@@ -2112,7 +2112,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename bilder/initiale_laden_der_applikation.png
-	width 100text%
+	width 90text%
 
 \end_inset
 
@@ -2678,11 +2678,6 @@ Ausgabe eines fehlgeschlagenen Testdurchlauf.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Für die Server wurden keine Unit Tests geschrieben, weil die Logik dort
- zu gering ist als das sich Unit Tests lohnen.
 \end_layout
 
 \begin_layout Subsection

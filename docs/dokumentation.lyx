@@ -448,8 +448,27 @@ Projektbeschreibung
 \end_layout
 
 \begin_layout Standard
-Als Unterstützung für die gemeinnützige Stiftung Right Livelihood hat mein
- Betrieb eine Webseite erstellt.
+Als Unterstützung für die gemeinnützige Stiftung Right Livelihood
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.rightlivelihood.org/
+\end_layout
+
+\end_inset
+
+ hat mein Ausbildungsbetrieb ion2s GmbH
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.ion2s.com/
+\end_layout
+
+\end_inset
+
+ eine Webseite erstellt.
  Die Mobilanwendung soll diese Webseite ergänzen.
  Die Idee für dieses Projekt kommt von meinem Betrieb.
  Neben der Unterstützung für Right Livelihood ist das Ziel das Wissen im
@@ -465,10 +484,19 @@ In der Mobilanwendung sollen die Preisträger des Right Livelihood Awards,
  Der Fokus dieser Mobilanwendung liegt dementsprechend auf dem Client.
  Serverseitig sollen die statischen Resourcen bereitgestellt und eine Datenbank
  angelegt werden, die die Daten der Preisträger beinhaltet.
- Der Server soll mit NodeJS realisiert werden.
+ Der Server soll mit NodeJS
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://nodejs.org/
+\end_layout
+
+\end_inset
+
+ realisiert werden.
  Der Vorteil ist, dass sowohl Client als auch Server in der Programmiersprache
  JavaScript entwickelt werden.
- Als Datenbank wird MongoDB verwendet werden.
 \end_layout
 
 \begin_layout Standard
@@ -480,25 +508,25 @@ Ein Konzept für die Gestaltung existiert bereits.
 \begin_layout Enumerate
 Intro - Das Intro wird ein Ladebildschirm, welches der Mobilanwendung die
  Zeit gibt die benötigten Daten der Laureaten herunterzuladen.
+ Nachdem Ladevorgang wird zur entsprechenden Darstellungs Ansicht gewechselt.
 \end_layout
 
 \begin_layout Enumerate
-Liste-Ansicht - Sobald alle Daten heruntergeladen sind wird automatisch
- fließend vom Intro in die Liste-Ansicht gewechselt.
- Die Liste wird scrollbar sein.
+Liste-Ansicht - Die Liste wird scrollbar sein.
  Jedes Listenelement beinhaltet den Namen des Laureaten und ein Zitat.
 \end_layout
 
 \begin_layout Enumerate
 Bilderwand-Ansicht - In der Bilderwand-Ansicht werden Bilder aller Preisträger
  zufällig positioniert.
- Der Benutzer kann die Bilderwand bewegen und auch rein- bzw.
- rauszoomen.
+ Der Benutzer kann die Bilderwand vertikal bewegen und die einzelnen Bilder
+ vergrößern.
 \end_layout
 
 \begin_layout Enumerate
 Weltkarte-Ansicht - Auf einer Weltkarte werden die Laureaten ihrem Herkunftsland
  entsprechend markiert.
+ Mit einem Klick auf die Weltkarte kann der Benutzer näher ranzoomen.
 \end_layout
 
 \begin_layout Enumerate
@@ -617,11 +645,6 @@ Das Schreiben und Ausführen von Tests ist Bestandteil der Umsetzung.
  werden.
  Unter anderem sollen Personen, die nicht direkt am Projekt beteiligt sind,
  die Anwendung testen um so ein besseres und größeres Feedback zu erhalten.
-\end_layout
-
-\begin_layout Standard
-Die Dokumentation wird mit Fortschritt des Projektes wachsen und mit Fertigstell
-ung der Dokumentation gilt das Projekt als abgeschlossen.
 \end_layout
 
 \begin_layout Standard
@@ -1014,11 +1037,11 @@ Listendarstellung aller Laureaten
 \end_layout
 
 \begin_layout Itemize
-Bilderwand mit Portraits aller Laureaten
+Bilderwand mit Bildern aller Laureaten
 \end_layout
 
 \begin_layout Itemize
-Weltkarte mit Markierungen zu den Herkunftsländern aller Laureaten
+Weltkarte mit Markierungen zu den Herkunftsorten aller Laureaten
 \end_layout
 
 \begin_layout Itemize
@@ -1062,11 +1085,13 @@ Auf Grund der genannten Technologien, die zum Einsatz kommen, sollen nur
 \end_layout
 
 \begin_layout Standard
-Zur Untersützung bei der Entwicklung soll das JavaScript Framework 
-\begin_inset CommandInset href
-LatexCommand href
-name "AngularJS"
-target "http://angularjs.org/"
+Zur Untersützung bei der Entwicklung soll das JavaScript Framework AngularJS
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://angularjs.org/
+\end_layout
 
 \end_inset
 
@@ -1075,11 +1100,13 @@ target "http://angularjs.org/"
 \emph on
 Scaffolding Tool
 \emph default
- 
-\begin_inset CommandInset href
-LatexCommand href
-name "Yeoman"
-target "http://yeoman.io/"
+ Yeoman
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://yeoman.io/
+\end_layout
 
 \end_inset
 
@@ -1090,11 +1117,13 @@ target "http://yeoman.io/"
 \emph on
 JavaScript Task Runner Tool 
 \emph default
+Grunt
+\begin_inset Foot
+status open
 
-\begin_inset CommandInset href
-LatexCommand href
-name "Grunt"
-target "http://gruntjs.com/"
+\begin_layout Plain Layout
+http://gruntjs.com/
+\end_layout
 
 \end_inset
 
@@ -1102,11 +1131,13 @@ target "http://gruntjs.com/"
 \emph on
 Package Manager Tool
 \emph default
- 
-\begin_inset CommandInset href
-LatexCommand href
-name "Bower"
-target "http://bower.io/"
+ Bower
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://bower.io/
+\end_layout
 
 \end_inset
 
@@ -1121,19 +1152,19 @@ n, weil es automatisch vorhandene Abhängigkeiten externer Bibliotheken auflöst
 
 \begin_layout Standard
 Damit die Mobilanwendung auch im offline Modus funktioniert sollen die Daten
- der Laureaten mit Hilfe der HTML5 Besonderheit 
+ der Laureaten mit Hilfe der HTML5 Besonderheit Local Storage
 \emph on
-Local Storage
+ 
 \emph default
- lokal auf dem entsprechenden Gerät gespeichert werden.
- Außerdem müssen Bilder Base64-codiert in den 
+lokal auf dem entsprechenden Gerät gespeichert werden.
+ Außerdem müssen Bilder Base64-codiert in den Local Storage
 \emph on
-Local Storage
+ 
 \emph default
- abgespeichert werden damit diese auch im offline Modus verfügbar sind.
+abgespeichert werden damit diese auch im offline Modus verfügbar sind.
  Dies bedeutet einen höheren Aufwand der Implementierung, aber bewirkt neben
  der Verfügbarkeit im offline Modus einen deutlichen Performancevorteil
- beim Laden.
+ beim wiederholten Laden.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1147,53 +1178,41 @@ Der Server soll neben der Bereitstellung der statischen Dateien auch eine
 \end_layout
 
 \begin_layout Itemize
-NodeJS (JavaScript)
+NodeJS
 \end_layout
 
 \begin_layout Itemize
-MongoDB
-\end_layout
+SQLite
+\begin_inset Foot
+status open
 
-\begin_layout Standard
-\begin_inset CommandInset href
-LatexCommand href
-name "NodeJS"
-target "http://nodejs.org/"
+\begin_layout Plain Layout
+https://sqlite.org/
+\end_layout
 
 \end_inset
 
- ist eine serverseitige JavaScript Plattform.
+
+\end_layout
+
+\begin_layout Standard
+NodeJS ist eine serverseitige JavaScript Plattform.
  Der Vorteil dieser Entscheidung ist, dass sowohl Client als auch Server
  in der Skriptsprache JavaScript geschrieben werden.
  Zur Unterstützung bei der Implementierung des Servers soll das NodeJS Framework
- 
-\begin_inset CommandInset href
-LatexCommand href
-name "ExpressJS"
-target "http://expressjs.com/"
+ ExpressJS
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://expressjs.com/
+\end_layout
 
 \end_inset
 
  eingesetzt werden.
- Als Datenbank für die Laureaten wird die Datenbank 
-\begin_inset CommandInset href
-LatexCommand href
-name "MongoDB"
-target "https://www.mongodb.org/"
-
-\end_inset
-
- verwendet.
- Es soll nur eine Datenbanktabelle mit allen Informationen zu den Laureaten
- existieren, welche mit Hilfe einer MongoDB Schnittstelle im 
-\begin_inset CommandInset href
-LatexCommand href
-name "JSON"
-target "http://www.json.org/"
-
-\end_inset
-
- Format an den Client geliefert wird.
+ Als Datenbank wird SQLite verwendet, weil an die Datenbank keine größeren
+ Anforderungen gestellt werden als die Daten der Laureaten zu liefern.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1203,20 +1222,19 @@ Test
 \begin_layout Standard
 Es werden Unittests geschrieben, die während der Entwicklung automatisch
  bei Änderungen im Quellcode ausgeführt werden sollen.
- Zum Testen des Clients als auch des Servers soll das Framework 
-\begin_inset CommandInset href
-LatexCommand href
-name "Jasmine 2.0"
-target "http://jasmine.github.io/2.0/introduction.html"
+ Zum Testen des Clients als auch des Servers soll das Framework Jasmine
+ 2.0
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://jasmine.github.io/2.0/introduction.html
+\end_layout
 
 \end_inset
 
  verwendet werden.
- Die beschriebenen Tests behandeln nur die 
-\emph on
-Business Logic
-\emph default
- der Mobilanwendung.
+ Die beschriebenen Tests behandeln nur die Geschäftslogik der Mobilanwendung.
  Manipulationen am 
 \emph on
 Document Object Model
@@ -1225,111 +1243,83 @@ Document Object Model
  werden.
 \end_layout
 
-\begin_layout Standard
-Kontrollen der Funktionsfähigkeit der Mobilanwendung sollen in folgenden
- Browsern durchgeführt werden:
-\end_layout
-
-\begin_layout Itemize
-Google Chrome (aktuellste Version)
-\end_layout
-
-\begin_layout Itemize
-Mozilla Firefox (aktuellste Version)
-\end_layout
-
-\begin_layout Itemize
-Apple Safari (aktuellste Version)
-\end_layout
-
-\begin_layout Itemize
-Microsoft Internet Explorer 11
-\end_layout
-
-\begin_layout Standard
-Zusätzlich wird die Mobilanwendung auf folgenden Systemen kontrolliert:
-\end_layout
-
-\begin_layout Itemize
-iOS (Smartphone + Tablet PC)
-\end_layout
-
-\begin_layout Itemize
-Android (Smartphone + Tablet PC)
-\end_layout
-
-\begin_layout Subsubsection
-Native Applikation
-\end_layout
-
-\begin_layout Standard
-Die Mobilanwendung soll als native Applikation verfügbar sein.
- Für diesen Fall gibt es entsprechende Container Klassen für iOS- und Android-Sy
-steme.
- Für das iOS-System ist dies die Klasse 
-\emph on
-
-\begin_inset CommandInset href
-LatexCommand href
-name "UIWebView"
-target "https://developer.apple.com/library/ios/documentation/uikit/reference/UIWebView_Class/Reference/Reference.html"
-
-\end_inset
-
-
-\emph default
- und für das Android-System ist dies die Klasse 
-\begin_inset CommandInset href
-LatexCommand href
-name "WebView"
-target "http://developer.android.com/reference/android/webkit/WebView.html"
-
-\end_inset
-
-.
- Die Funktionsweise dieser Klassen basiert auf ein 
-\emph on
-Container Element
-\emph default
-.
- Es wird dann ein 
-\emph on
-request
-\emph default
- gesendet um die Mobilanwendung in dieses 
-\emph on
-Container Element
-\emph default
-.
-\end_layout
-
 \begin_layout Subsubsection
 Kommunikation
 \end_layout
 
 \begin_layout Standard
-Die Übertragung der Daten soll ausschließlich im JSON Format stattfinden.
+Die Übertragung der Daten soll ausschließlich im JSON
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.json.org/
+\end_layout
+
+\end_inset
+
+ Format stattfinden.
  Als Schnittstelle zwischen Client und Server soll das Programmierparadigma
- REST (Representational State Transfer) verwendet werden.
+ REST (Representational State Transfer)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://en.wikipedia.org/wiki/Representational_state_transfer
+\end_layout
+
+\end_inset
+
+ verwendet werden.
  Diese Entscheidung ermöglicht eine gute Erweiterung der Mobilanwendung
  zu einem späteren Zeitpunkt.
- Es sollen nur folgende drei REST URI implementiert werden:
+ Es sollen nur folgende zwei REST URI implementiert werden:
 \end_layout
 
 \begin_layout Itemize
-/laureates [GET] - Liefert eine Liste von allen Laureaten mit den wichtigsten
- Informationen.
-\end_layout
-
-\begin_layout Itemize
-/laureates/:id [GET] - Liefert alle Informationen eines einzelnen Laureaten
- mit der übergebenen id.
+/laureates [GET] - Liefert eine Liste von Daten aller Laureaten.
 \end_layout
 
 \begin_layout Itemize
 /version [GET] - Liefert die aktuellste Versionsnummer.
 \end_layout
 
+\begin_layout Subsubsection
+Versionierung
+\end_layout
+
+\begin_layout Standard
+Zur Versionierung der Mobilanwendung soll das Versionsverwaltungssystem
+ Git
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://git-scm.com/
+\end_layout
+
+\end_inset
+
+ zum Einsatz kommen.
+ Das Versionsverwaltungssystem ist weit verbreitet und es gibt viele Plug
+ Ins, die die Arbeit mit Git vereinfachen.
+ Das Projekt soll außerdem auf GitHub
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://github.com/
+\end_layout
+
+\end_inset
+
+ hochgeladen werden.
+ So ist es möglich das andere Projektmitglieder relativ leicht sich an dem
+ Projekt beteiligen können.
+ Außerdem bietet GitHub mehrere visuelle Darstellung des Projektverlaufes
+ an, so dass es möglich ist den Projektfortschritt einfach zu erkennen.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
@@ -1337,13 +1327,211 @@ Die Übertragung der Daten soll ausschließlich im JSON Format stattfinden.
 
 \end_layout
 
-\begin_layout Part
+\begin_layout Section
 Gestalterisches Konzept
 \end_layout
 
 \begin_layout Standard
 Das gestalterische Konzept wurde nicht von mir erstellt.
- Es liegt als Anhang bei.
+ Es besteht hauptsächlich aus Abläufen und Bildern, die illustrieren sollen
+ wie die Mobilanwendung aussehen und zu bedienen ist.
+ Ich hab mich bei der Umsetzung der Mobilanwendung mehr oder weniger an
+ diesen Vorgaben orientiert.
+ Eine exakte Umsetzung der Gestaltung war zum Teil aus technischen und zeitliche
+n Gründen nicht möglich.
+ Außerdem wurden aus zeitlichen Gründen nicht alle Ansichten und Funktionen
+ übernommen.
+\end_layout
+
+\begin_layout Subsection
+Bilderwand-Ansicht
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename bilder/vergleich_bilderwand_ansicht.png
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Vergleich von Gestaltung (links) und Umsetzung (rechts) der Bilderwand-Ansicht.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bei der Aneinanderreihung der Bilder sollte kein statischer Eindruck entstehen.
+ Außerdem sollte sich der Benutzer frei durch die Bilderwand bewegen können.
+ Da ich Probleme mit der Umsetzung der Gesten-Steuerung hatte habe ich mich
+ entschieden die Bilder vertikal aneinander zu reihen und somit nur ein
+ vertikales Scrollen dem Benutzer zu ermöglichen.
+ Auch ein freies Zoomen ist nicht umgesetzt.
+ Dagegen kann der Benutzer auf ein Bild klicken das vergrößert und entsprechend
+ positioniert wird das der Benutzer das ganze Bild sehen kann.
+ Bei einem vergrößerten Bild werden zusätzlich ein paar Informationen zu
+ dem Laureaten angezeigt.
+ Ein Klick auf diese Zusatzinformationen führt den Benutzer zur Info-Ansicht
+ des Laureaten.
+\end_layout
+
+\begin_layout Subsection
+Liste-Ansicht
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename bilder/vergleich_liste_ansicht.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Vergleich von Gestaltung (links) und Umsetzung (rechts) der Liste-Ansicht.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In der Gestaltung sollen weiter entfernte Objekte verschwommen dargestellt
+ werden.
+ Dieser Effekt ist technisch schwer umzusetzen und ist in meiner Umsetzung
+ nicht vorhanden.
+\end_layout
+
+\begin_layout Subsection
+Weltkarte-Ansicht
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename bilder/vergleich_weltkarte_ansicht.png
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Vergleich von Gestaltung (links) und Umsetzung (rechts) der Weltkarte-Ansicht.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Auch bei der Weltkarte sollte ein freies Bewegen und Zoomen möglich sein.
+ Auf Grund ähnlicher Probleme wie bei der Bilderwand habe ich mich entschlossen
+ das der Benutzer nur in bestimmte Bereiche der Weltkarte zoomen kann.
+ Durch einen Klick auf die Weltkarte wird auf diesen Punkt herangezoomt
+ und Laureaten, die sich in diesem Bereich befinden werden dargestellt.
+ Ein Freies Bewegen der Weltkarte ist nicht möglich.
+ Der Benutzer muss erneut auf die Weltkarte klicken um wieder die komplette
+ Weltkarte zu sehen.
+ Klickt der Benutzer im gezoomten Zustand auf einen Laureaten wird er zur
+ Info-Ansicht geführt.
+\end_layout
+
+\begin_layout Subsection
+Info-Ansicht
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename bilder/vergleich_info_ansicht.png
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Vergleich von Gestaltung (links) und Umsetzung (rechts) der Info-Ansicht.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bei der Info-Ansicht hab ich mir die Freiheit genommen die weiterführenden
+ Links des Laureaten nach unten zu platzieren.
 \end_layout
 
 \begin_layout Standard
@@ -1353,38 +1541,1927 @@ Das gestalterische Konzept wurde nicht von mir erstellt.
 
 \end_layout
 
-\begin_layout Part
+\begin_layout Section
 Durchführung
 \end_layout
 
 \begin_layout Standard
-<die durchführung>
+Das komplette Projekt wurde auf GitHub
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://github.com/tstern/rla
+\end_layout
+
+\end_inset
+
+ hochgeladen und kann dort eingesehen werden.
+\end_layout
+
+\begin_layout Subsection
+Die Entwicklungsumgebung
 \end_layout
 
 \begin_layout Standard
+Die Mobilanwendung wurde auf einem Rechner mit dem Betriebssystem Windows
+ 7 entwickelt.
+ Als Entwicklungsumgebung wurde das Programm WebStorm
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.jetbrains.com/webstorm/
+\end_layout
+
+\end_inset
+
+ verwendet.
+ Damit die Werkzeuge, die zur Entwicklung benötigt werden, funktionieren
+ muss NodeJS auf dem Rechner installiert sein.
+ NodeJS wird zum einen für die client-seitigen Entwicklungswerkzeuge benötigt
+ und zum anderen für die Implementierung des Servers verwendet.
+ Um die entsprechenden Konsolenbefehle auszuführen wurde die Git Bash verwendet.
+\end_layout
+
+\begin_layout Subsection
+Projektstruktur
+\end_layout
+
+\begin_layout Standard
+Es existiert ein Projekt, das drei Unterprojekte beinhaltet.
+ Im Unterprojekt 
+\emph on
+client
+\emph default
+ befinden sich alle Dateien, die für die Client-Entwicklung eine Rolle spielen.
+ Dokumentation und Material, wie z.
+ B.
+ Diagramme und Bilder, das für die Dokumentation verwendet werden befinden
+ sich im Unterprojekt 
+\emph on
+docs
+\emph default
+.
+ Das letzte Unterprojekt ist der 
+\emph on
+server
+\emph default
+.
+ Hier liegen die statischen Ordner, die Server JavaScript Datei und die
+ Datenbank ab.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename bilder/project_structure.png
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Projektstuktur der Mobilanwendung.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+client
+\end_layout
+
+\begin_layout Standard
+Für Grunt werden die beiden Dateien 
+\emph on
+Gruntfile.js
+\emph default
+ und 
+\emph on
+package.json
+\emph default
+ benötigt.
+ In der 
+\emph on
+Gruntfile.js
+\emph default
+ werden Prozesse definiert, die bei der Entwicklung des Projektes als Befehle
+ ausgeführt werden können.
+ Die wichtigsten Befehle für die Ausführung der Prozesse sind 
+\emph on
+serve
+\emph default
+, 
+\emph on
+test
+\emph default
+ und 
+\emph on
+build
+\emph default
+.
+\end_layout
+
+\begin_layout Description
+serve Dieser Befehl startet einen simplen Webserver und öffnet die Webanwendung
+ automatisch im Standardbrowser.
+ Außerdem beobachtet dieser Prozess bestimmte Dateien.
+ Gespeicherte Änderungen an diesen Dateien werden dann erkannt und es werden
+ weitere Befehle ausgeführt.
+ Unter anderem wird der Befehl 
+\emph on
+test
+\emph default
+ ausgeführt, das dem Entwickler direkt mitteilt, wenn ein Test fehlschlägt.
+ Wurden alle weiteren Prozesse durchgeführt wird automatisch die Webanwendung
+ im Browser aktualisiert.
+\end_layout
+
+\begin_layout Description
+test Dieser Befehl führt die selbstgeschriebenen Unit Tests aus.
+ In diesem Projekt wird die Testumgebung 
+\emph on
+karma
+\emph default
+ verwendet, die einen vorgegebenen Browser öffnet in dem die Tests schließlich
+ laufen.
+ 
+\end_layout
+
+\begin_layout Description
+build Dieser Befehl soll am Ende eine Version der Anwendung liefern, die
+ im Produktionsmodus zum Einsatz kommt.
+ Dazu werden Veresserungen am Quellcode vorgenommen, wie z.
+ B.
+ Code-Komprimierung und es werden mehrere Dateien in einer einzelnen Datei
+ zusammen gefasst.
+ Das Resultat dieses Prozesses wird in den statischen 
+\emph on
+public 
+\emph default
+Ordner des Servers kopiert.
+\end_layout
+
+\begin_layout Standard
+In der 
+\emph on
+package.json
+\emph default
+ werden Abhängigkeiten eingetragen, die für die Client-Entwicklung existieren.
+ Da es nur Abhängigkeiten für die Grunt Prozesse gibt stehen alle Abhängigkeiten
+ im Feld 
+\emph on
+devDependencies
+\emph default
+.
+ Zusätzlich gibt es die Fehler 
+\emph on
+name
+\emph default
+ und 
+\emph on
+version
+\emph default
+.
+ Diese Felder sind nur sinnvoll, wenn das Projekt in anderen Projekt verwendet
+ werden soll.
+ Dies ist hier nicht der Fall.
+ Die 
+\emph on
+package.json
+\emph default
+ ist sinnvoll für neue Projektmitglieder.
+ Nachdem diese das Projekt mit Git auf ihren Rechner kopiert haben müssen
+ diese nur noch den Befehl 
+\emph on
+npm install
+\emph default
+ in ihre Konsole eingeben und es werden automatisch alle Abhängigkeiten
+ installiert.
+\end_layout
+
+\begin_layout Standard
+Für Bower existiert die Datei 
+\emph on
+bower.json
+\emph default
+, welche ähnlich aufgebaut ist wie die 
+\emph on
+package.json
+\emph default
+.
+ Der Unterschied ist das in der 
+\emph on
+bower.json
+\emph default
+ Abhängigkeiten stehen, die die fertig Anwendung besitzt, z.
+ B.
+ das JavaScript Framework Angular JS.
+\end_layout
+
+\begin_layout Standard
+Für Karma existieren zwei Konfigurationsdateien.
+ Die erste ist 
+\emph on
+karma.conf.js
+\emph default
+ und die zweite ist 
+\emph on
+karma-e2e.conf.js
+\emph default
+.
+ In der ersten Dateien stehen Einstellungen für die Umgebung in denen die
+ Unit Tests laufen sollen.
+ So lässt sich z.
+ B.
+ der Browser bestimmen.
+ In diesem Projekt wird 
+\emph on
+PhantomJS
+\emph default
+ verwendet.
+ Die zweite Datei wird für Einstellungen benötigt wenn Integrationstests
+ durchgeführt werden sollen.
+ Integrationstests gibt es in diesem Projekt nicht.
+\end_layout
+
+\begin_layout Standard
+Git benutzt zwei Dateien, zum einen 
+\emph on
+.gitignore
+\emph default
+ und zum anderen 
+\emph on
+.gitattributes
+\emph default
+.
+ In der ersten können Dateien und Verzeichnisse von der Versionierung ausgeschlo
+ssen werden.
+ Die zweite Datei gibt dem Pfad in dem sich die Datei befindet spezielle
+ Attribute.
+ In diesem Unterprojekt gibt es nur das Attribute 
+\family typewriter
+* text=auto
+\family default
+, welches bewirkt das Zeilenumbrüche normalisiert werden.
+\end_layout
+
+\begin_layout Standard
+Desweiteren existieren noch verschiedene Ordner die kurz erklärt werden:
+\end_layout
+
+\begin_layout Description
+.tmp Dieser Ordner dient nur als Zwischenspeicher für verschiedene Gruntprozesse.
+\end_layout
+
+\begin_layout Description
+app In diesem Ordner befindet sich der Quellcode und die Abhängigkeiten,
+ die in der 
+\emph on
+bower.json
+\emph default
+ deklariert sind.
+\end_layout
+
+\begin_layout Description
+dist Dies ist das Zielverzeichnis des Grunt Prozesses 
+\emph on
+build
+\emph default
+.
+\end_layout
+
+\begin_layout Description
+node_modules Abhängigkeiten die in der 
+\emph on
+package.json
+\emph default
+ angegeben sind werden hier installiert.
+\end_layout
+
+\begin_layout Description
+scripts Beinhaltet Skriptdateien, die bestimmte Grunt Prozesse in einem
+ eigenem Konsolenfenster starten.
+\end_layout
+
+\begin_layout Description
+test Testdateien liegen in diesem Ordner.
+ Besitzt die gleiche Verzeichnisstruktur wie 
+\emph on
+app
+\emph default
+.
+\end_layout
+
+\begin_layout Subsubsection
+docs
+\end_layout
+
+\begin_layout Standard
+In diesem Unterprojekt liegt die Dokumentation ab.
+ Außerdem werden hier Bilder und Diagramme abgelegt, die für die Dokumentation
+ verwendet werden.
+ Die Dokumentation ist mit LyX
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.lyx.org/
+\end_layout
+
+\end_inset
+
+ geschrieben.
+ Das Diagramm für den Ladeprozess ist mit Microsoft Visio
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://office.microsoft.com/de-de/visio/
+\end_layout
+
+\end_inset
+
+ gemacht.
+\end_layout
+
+\begin_layout Subsubsection
+server
+\end_layout
+
+\begin_layout Standard
+Es existieren zwei wichtige Dateien in diesem Unterprojekt.
+ Erste der beiden Dateien ist die Datenbank 
+\emph on
+rla.s3db
+\emph default
+.
+ Hier werden alle Informationen über die Laureaten abgespeichert.
+ Die zweite Datei ist 
+\emph on
+server.js
+\emph default
+, welche den Server initialisiert.
+ Desweiteren existieren die zwei statischen Ordner 
+\emph on
+laureates_images
+\emph default
+ und 
+\emph on
+public
+\emph default
+.
+ Im Ordner 
+\emph on
+laureates_images
+\emph default
+ liegen alle Bilder der Laureaten ab.
+ Im zweiten statischen Ordner 
+\emph on
+public
+\emph default
+ liegen die Dateien ab, die dem Clien geschickt werden.
+ Im letzten Ordner 
+\emph on
+node_modules
+\emph default
+ liegen die Projekte ab, die als Abhängigkeit für den Server deklariert
+ sind.
+\end_layout
+
+\begin_layout Subsection
+AngularJS
+\end_layout
+
+\begin_layout Standard
+AngularJS bietet verschiedene Funktionalitäten.
+ In diesem Projekt werden die Funktionalitäten 
+\emph on
+Controller
+\emph default
+, 
+\emph on
+Directive
+\emph default
+ und 
+\emph on
+Service
+\emph default
+ verwendet.
+ Ein 
+\emph on
+Controller
+\emph default
+ definiert den Bereich für den 
+\emph on
+$scope
+\emph default
+.
+ Ein 
+\emph on
+$scope
+\emph default
+ erbt durch das 
+\emph on
+prototyping
+\emph default
+ in JavaScript vom 
+\emph on
+$rootScope
+\emph default
+ bzw.
+ vom übergeordneten 
+\emph on
+$scope
+\emph default
+.
+ Das 
+\emph on
+$scope
+\emph default
+ Objekt dient als Schnittstelle zwischen Geschäftslogik und der Ansicht.
+ Eine 
+\emph on
+Directive
+\emph default
+ existiert nur in der Ansicht und erweitert die Funktion und Aufgaben von
+ HTML.
+ So lässt sich das Verhalten von Elementen im 
+\emph on
+Document Object Model
+\emph default
+ bestimmen.
+ 
+\emph on
+Service
+\emph default
+ sind Singletons, die es ermöglichen Logik auszulagern.
+ In AngularJS gibt es außerdem 
+\emph on
+Injection
+\emph default
+.
+ Damit lassen sich verschiedene AngularJS Funktionalitäten als Parameter
+ in andere AngularJS Funktionalitäten injizieren.
+\end_layout
+
+\begin_layout Subsection
+Umsetzung
+\end_layout
+
+\begin_layout Subsubsection
+Controller
+\end_layout
+
+\begin_layout Standard
+Für jede Ansicht existiert ein 
+\emph on
+Controller
+\emph default
+.
+ Die Aufgabe des 
+\emph on
+Controller
+\emph default
+ ist es das Array von Laureaten so anzupassen, das diese in der Ansicht
+ korrekt dargestellt werden.
+\end_layout
+
+\begin_layout Itemize
+ListCtrl: (Liste-Ansicht) Teilt die Zitate der Laureaten in einzelne Zeilen.
+\end_layout
+
+\begin_layout Itemize
+WallCtrl: (Bilderwand-Ansicht) Extrahiert Bilddaten und benötigte Informationen
+ aus dem Laureaten Objekt.
+\end_layout
+
+\begin_layout Itemize
+MapCtrl: (Weltkarte-Ansicht) Liest die Koordinaten der Laureaten aus.
+\end_layout
+
+\begin_layout Itemize
+InfoCtrl: (Info-Ansicht) Sucht anhand einer id den darzustellenden Laureaten.
+\end_layout
+
+\begin_layout Standard
+Außerdem existiert ein 
+\emph on
+Controller
+\emph default
+ mit dem Namen IntroCtrl
+\family typewriter
+ 
+\family default
+für die Intro-Ansicht und ein 
+\emph on
+Controller
+\emph default
+ mit dem Namen NavCtrl
+\family typewriter
+ 
+\family default
+für die Navigation und Navigationsleiste.
+\end_layout
+
+\begin_layout Subsubsection
+Service
+\end_layout
+
+\begin_layout Standard
+In diesem Projekt gibt es drei 
+\emph on
+Services
+\emph default
+ HelperService, RESTService und ResourceService.
+ Der HelperService ist eine Sammlung von Hilfsfunktionen.
+ Im RESTService werden die beiden Requests an die REST-Schnittstelle des
+ Servers definiert.
+ Diese werden im ResourceService verwendet.
+ Deswegen wird der RESTService in den ResourceService injiziert.
+ Der ResourceService steuert den Ablauf wie die Laureaten geladen werden
+ und mit Hilfe von Events wird der Zustand des Ladeprozesses geteilt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename bilder/initiale_laden_der_applikation.png
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ablaufdiagramm des initialen Ladeprozesses.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Directive
+\end_layout
+
+\begin_layout Standard
+Jede 
+\emph on
+Directive
+\emph default
+ hat ts als Prefix.
+ Diese Namenskonvention soll einen Konflikt mit einer anderen 
+\emph on
+Directive
+\emph default
+ aus einer externen Quelle verhindern.
+ Folgend wird jede 
+\emph on
+Directive
+\emph default
+, die in diesem Projekt entwickelt wurde, erläutert.
+\end_layout
+
+\begin_layout Description
+ts-slider Diese 
+\emph on
+Directive
+\emph default
+ ist in jeder der vier Ansichten im Einsatz.
+ Mit ihr wird das Navigieren per Wischfunktion realisiert.
+ Mit der Hilfsfunktion 
+\family typewriter
+isHorizonzal(deltaX, deltaY)
+\family default
+ wird ein horizontales Wischen registriert.
+ Erfolgt das Wischen innerhalb eines vorgegeben Zeitfenster wird in die
+ entsprechende Richtung navigiert.
+ Welche Ansicht rechts bzw.
+ links von der momentanen Ansicht befindet wird im NavCtrl festgelegt.
+ Die Animation, das die momentane Ansicht zur Seite bewegt wird, ist mit
+ JavaScript umgesetzt.
+ Eine Callback-Funktion, die die Berechnungen für die Animation durchführt,
+ wird der Funktion 
+\family typewriter
+requestAnimationFrame
+\family default
+ als Parameter übergeben.
+ Bevor der Browser einen neuen Frame render (zeichnet) werden die Callbacks,
+ die mit der Funktion 
+\family typewriter
+requestAnimationFrame
+\family default
+ regristiert wurden, aufgerufen.
+ Die Berechnungen erfolgen somit synchron mit dem Renderer des Browsers.
+ Die Vorteile sind eine bessere Performance der Animation und wenn der Browser
+ im Hintergrund läuft pausiert der Renderer und somit auch die Animation.
+\end_layout
+
+\begin_layout Description
+ts-scroller Diese 
+\emph on
+Directive
+\emph default
+ wird nur in der Liste-Ansicht verwendet.
+ Die Liste wird scrollbar und reagiert auf jede vertikale Touch-Bewegung.
+ Jedes Listenelement besitzt dazu folgende vier Attribute.
+ Eine echte und falsche Position, ein Skalierungs- und ein Verblassungswert.
+ Die falsche Position, der Skalierungs- und Verblassungswert werden durch
+ Algorithmen durch die echte Position, die als Parameter übergeben wird,
+ ermittelt.
+ Diese Berechnungen werden bei jeder Bewegung ausgeführt.
+ Wird die Touch-Bewegung beendet werden die sichtbaren Listenelemente auf
+ bestimmte Position weiter bewegt.
+ Dazu wird das Listenelement identifiziert, das sich am nähesten der echten
+ Position 0 befindet.
+ Die vorhandene Differenz wird mit Hilfe der 
+\family typewriter
+requestAnimationFrame
+\family default
+ Funktion weiter animiert.
+ Sollte die Geschwindigkeit der Touch-Bewegung einen bestimmten Wert überschreit
+en wird ein Abklingen simuliert.
+ dazu wird zusätzlich mit jedem Frame die Geschwindigkeit etwas reduziert.
+ Folgend stehen die Algorithmen für die Berechnungen:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Algorithmus für die falsche Position:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function calculateY(delta) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  return (Math.sqrt(-delta + deltaSteps)
+\end_layout
+
+\begin_layout Plain Layout
+
+    - Math.sqrt(deltaSteps)) * -20;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Algorithmus für die Skalierung:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function calculateScale(delta) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  var scale = delta / -deltaMinVisible + 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (scale < 0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    scale = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+  } else if (scale > 1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    scale = scale * scale;
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  return scale;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Algorithmus für den Verblassungswert:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function calculateOpacity(delta) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  var opacity = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (delta === 0) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+    return opacity;
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (delta < 0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    opacity = 1 + ((delta + deltaSteps / 2)
+\end_layout
+
+\begin_layout Plain Layout
+
+      / (deltaSteps * 1.5));
+\end_layout
+
+\begin_layout Plain Layout
+
+  } else { 
+\end_layout
+
+\begin_layout Plain Layout
+
+    opacity = 1 - (delta / deltaSteps); 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  return opacity > 1 ? 1 : opacity < 0 ? 0 : opacity;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+ts-wall-image Diese 
+\emph on
+Directive
+\emph default
+ kommt nur in der Bilderwand-Ansicht zum Einsatz und wird jedem Bild-Element
+ hinzugefügt.
+ Als erstes wird anhand der Kategorie, in welches das Bild vorher zugeordnet
+ wurde, eine feste Höhe gegeben.
+ Die Differenz zwischen fester Höhe und tatsächlicher Höhe wird als CSS-Attribut
+e 
+\emph on
+margin
+\emph default
+ dem Bild-Element hinzugefügt.
+ Dadurch sind die Bilder perfekt in einer Reihe, aber durch das CSS-Attribut
+ 
+\emph on
+margin
+\emph default
+ sind die einzelnen Bilder leicht versetzt.
+ Außerdem wird ein 
+\emph on
+Click-Event
+\emph default
+ registriert.
+ Bei einem Klick auf das Bild wird dies hervorgehoben und Informationen
+ zum Laureaten werden eingeblendet.
+ Sollte ein anderes Bild bereits aktiv sind wird dies automatisch zurückgesetzt.
+\end_layout
+
+\begin_layout Description
+ts-map-zoom Diese 
+\emph on
+Directive 
+\emph default
+kommt nur in der Weltkarte-Ansicht zum Einsatz.
+ Hier wird ein 
+\emph on
+Click-Event
+\emph default
+ registriert.
+ Sobald ein Benutzer auf die Weltkarte klickt wird in dieser Bereich vergrößert
+ und Laureaten, die sich in diesem Bereich befinden, werden dargestellt.
+ Ein erneuter Klick verkleinert die Ansicht wieder auf die komplette Weltkarte.
+\end_layout
+
+\begin_layout Description
+ts-wave Auch diese 
+\emph on
+Directive
+\emph default
+ kommt nur in der Weltkarte-Ansicht zum Einsatz.
+ Die Aufgabe dieser 
+\emph on
+Directive
+\emph default
+ ist es, dass sobald die Weltkarte geöffnet wird, eine Wellenanimation das
+ komplette Wasser im Hintergrund befüllt.
+ Eine mögliche Umsetzung einer solchen Animation habe ich auf http://codepen.io/m
+iyovanstenis/pen/BfGeK gefunden.
+ Die Idee dahinter ist es den Hintergrund in mehrere gleichgroße Streifen
+ zu unterteilen.
+ Jeder Streifen bekommt die gleiche Animation, aber mit immer größerer Verzögeru
+ng (Animation-Delay).
+ Dadurch entsteht der Welleneffekt.
+\end_layout
+
+\begin_layout Subsection
+Test
+\end_layout
+
+\begin_layout Standard
+Es wurden nur Unit Tests für die Controller und Services geschrieben.
+ Für den Aufbau der Tests wird das Framework Jasmine verwendet.
+\end_layout
+
+\begin_layout Description
+Controller
+\begin_inset space ~
+\end_inset
+
+Unit
+\begin_inset space ~
+\end_inset
+
+Test Es wird hier geprüft ob die 
+\emph on
+Controller
+\emph default
+ die ihr übergebenes Array von Laureaten korrekt verarbeiten.
+ Dazu wird der 
+\emph on
+Controller
+\emph default
+ mit einem vorgegebenem Array initialisiert.
+ Nach der Initialisierung des 
+\emph on
+Controller
+\emph default
+ wird das übergebene Array geprüft.
+\end_layout
+
+\begin_layout Description
+HelperService
+\begin_inset space ~
+\end_inset
+
+Unit
+\begin_inset space ~
+\end_inset
+
+Test Die verschiedenen Hilfsfunktionen werden hier geprüft.
+ Dazu werden verschiedene Parameter übergeben und der Rückgabewert der Hilfsfunk
+tionen wird auf Korrektheit geprüft.
+\end_layout
+
+\begin_layout Description
+RESTService
+\begin_inset space ~
+\end_inset
+
+Unit
+\begin_inset space ~
+\end_inset
+
+Test Hier wird nur getestet ob die http-Anfrage korrekt aufgebaut wird.
+ Dazu wird das verwendete 
+\emph on
+$http
+\emph default
+ Objekt mit dem TestObjekt 
+\emph on
+$httpBackend
+\emph default
+ gemockt.
+ Dadurch können http-Anfragen abgefangen werden und definierte Antworten
+ können gesendet werden.
+\end_layout
+
+\begin_layout Description
+ResourceService
+\begin_inset space ~
+\end_inset
+
+Unit
+\begin_inset space ~
+\end_inset
+
+Test Durch die asynchrone Funktionsweise dieses 
+\emph on
+Service
+\emph default
+ ist der Aufbau der Unit Tests komplizierter als bei den anderen Unit Tests.
+ Es müssen verschiedene Zustände simuliert werden, dass mit Hilfe von Mocks
+ realisiert wird.
+ Außerdem müssen asynchrone Funktionen in speziellen von Jasmine bereitgestellte
+n 
+\family typewriter
+run
+\family default
+ Funktionen umschlossen werden.
+ Die ebenfalls von Jasmine bereitgestellte 
+\family typewriter
+waitsFor
+\family default
+ Funktion blockiert den weiteren Testablauf so lange bis ein bestimmtes
+ Ereignis eintrifft oder ein Zeitlimit erreicht wurde.
+ Getestet wird also hier ob sich der 
+\emph on
+Service
+\emph default
+ in einer bestimmten Situation entsprechend reagiert.
+ Am Ende sollte aber immer eine Liste von Laureaten existieren oder eine
+ Fehlermeldung abgefangen sein.
+\end_layout
+
+\begin_layout Subsubsection
+Testdurchläufe
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename bilder/test_success.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ausgabe eines erfolgreichen Testdurchlauf.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename bilder/test_failed.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ausgabe eines fehlgeschlagenen Testdurchlauf.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Server
+\end_layout
+
+\begin_layout Standard
+Der Server ist mit dem Framework ExpressJS realisiert.
+ Es existieren zwei statische Pfade und ein Pfad als REST Schnittstelle.
+ Bei den statischen Pfaden können die entsprechenden Dateien direkt angefragt
+ werden.
+ Bei der REST Schnittstelle wird die URI und die Request Methode geprüft.
+ Sind URI bekannt und die Request Methode erlaubt wird eine entsprechende
+ Antwort gegeben.
+ Sollte die URI unbekannt sein wird als Antwort die Fehlermeldung 
+\emph on
+
+\begin_inset Quotes erd
+\end_inset
+
+REST URI is unknown.
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ mit dem Statuscode 404 gesendet.
+ Ist die Request Methode nicht erlaubt wird als Antwort eine Fehlermeldung
+ mit den erlaubten Request Methoden und mit dem Statuscode 405 gesendet.
+\end_layout
+
+\begin_layout Standard
+Die Datenbankanbindung erfolgt mit dem NodeJS Modul sqlite3
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://www.npmjs.org/package/sqlite3
+\end_layout
+
+\end_inset
+
+.
+ Sollte ein REST Request für alle Laureaten beim Server eintreffen werden
+ mit einem Query alle Daten aus der Datenbank geholt.
+ Diese Daten werden im JSON Format als Antwort gesendet.
+\end_layout
+
+\begin_layout Standard
+Die Datenbank ist eine sqlite Datenbank.
+ Die Daten werden mit dem Programm sqliteman
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://sqliteman.com/
+\end_layout
+
+\end_inset
+
+ eingepflegt.
+ 
 \begin_inset Newpage newpage
 \end_inset
 
 
 \end_layout
 
-\begin_layout Part
+\begin_layout Section
 Projektabschluss
 \end_layout
 
-\begin_layout Standard
-<mein fazit>
+\begin_layout Subsection
+Vorgehensweise
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
+Der Projektanfang verlief sehr gut.
+ Das technische Konzept konnte ich schneller abschließen als geplant.
+ Während der Umsetzung gab es nur geringe Anpassungen am technischen Konzept.
+ Der Ladeprozess wurde abgeändert.
+ Die REST URI /rest/laureates/:id wurde entfernt und es wurde anstatt MongoDB
+ die Datenbank sqlite verwendet.
+\end_layout
+
+\begin_layout Standard
+Der nächste Schritt war die Ordnerstruktur festzulegen und die Projektstruktur
+ durch Yeoman generieren zu lassen.
+ Zur generierten Projektstruktur fügte ich noch ein paar nützliche JavaScript
+ Bibliotheken hinzu.
+ Schließlich definierte ich die vier Bereiche, die es in der Mobilanwendung
+ geben wird.
+\end_layout
+
+\begin_layout Standard
+Nachdem die Projektstruktur des Clients fertig war hab ich die Projektstruktur
+ für den Server per Hand angelegt.
+ Zuerst gab es nur einen statischen Ordner für die Client-Daten und eine
+ JavaScript Datei, die den Server initialisiert.
+ Später folgten die Datenbank und ein weiterer statischer Ordner für die
+ Bilder der Laureaten.
+ Ich habe mich dazu entschieden die Bilder dem Server zuzuordnen, weil ich
+ wollte das die Bilder dort sind wo die Datenbank sich befindet.
+ Die Bilder direkt in der Datenbank zu speichern wurde mir von Arbeitskollegen
+ abgeraten.
+\end_layout
+
+\begin_layout Standard
+Die erste Ansicht, die ich umgesetzt habe, war die Liste-Ansicht.
+ Problematisch bei der Umsetzung war es einen guten Algorithmus zu finden,
+ der die entsprechenden Werte lieferte.
+ Mit etwas rumprobieren und der Verwendung von Funktionsgraphen konnte ich
+ die entsprechenden Algorithmen entwickeln.
+\end_layout
+
+\begin_layout Standard
+Bevor ich die nächste Ansicht anging habe ich den Slide-Effekt für die Navigatio
+n implementiert.
+ Die Umsetzung klappte gut und lieferte direkt ein gutes Ergebnis.
+ Dennoch stellte sich heraus, das diese Umsetzung ein horizontales Bewegen
+ in der Mobilanwendung nicht zu lies.
+ Aus diesem Grund habe ich mich dazu entschieden die Bilderwand-Ansicht
+ vertikal aufzubauen und die Weltkarte nur per Klick zoombar zu machen.
+\end_layout
+
+\begin_layout Standard
+Die Umsetzung der Bilderwand verlief gut.
+ Meine Idee war es die Bilder ihren Höhen zu kategorisieren und feste Höhen
+ zuzuweisen.
+ Die Differenz der Höhen wird dann als CSS-Attribute margin gesetzt.
+ Mit einem Klick auf ein Bild wird dieses hervorgehoben und Information
+ werden eingeblendet.
+ Bis zu diesem Zeitpunkt lag ich gut in der Zeit.
+\end_layout
+
+\begin_layout Standard
+Ich wollte jetzt die Datenbank erzeugen.
+ Zuerst war als Datenbank MongoDB geplant.
+ Nach einem Gespräch mit einem Arbeitskollegen habe ich mich dann entschieden
+ sqlite als Datenbank zu nehmen.
+ Gründe dafür waren MongoDB mehr bietet als ich für diese Mobilanwendung
+ benötige und sqlite dagegen vollkommen ausreichend war.
+ Außerdem kannte ich die SQL-Syntax wohingegen ich mir dir Syntax für MongoDB
+ hätte aneignen müssen.
+ Mein Betrieb besitzt für die Right Livelihood Webseite bereits eine Datenbank
+ mit allen Laureaten.
+ Diese habe ich als SQL Dump exportiert.
+ Bis dahin gab es soweit keine Probleme.
+ Problematisch war dann die Konvertierung des SQL Dump in eine Syntax, die
+ sqlite versteht.
+ Tools und Skripte, die ich im Internet gefunden habe, haben bei mir nicht
+ richtig funktioniert.
+ Ich habe dann per Hand die Syntax angepasst um die Rohdaten in meine sqlite
+ Datenbank zu importieren.
+ Dieses Vorgehen hat ziemlich viel Zeit gekostet.
+\end_layout
+
+\begin_layout Standard
+Das nächste Problem waren die Bilder.
+ Ich konnte diese nicht direkt aus dem SQL Dump übernehmen, weil zum Teil
+ das Bild nicht für meine Bilderwand geeignet war.
+ Deswegen habe ich alle Bilder vom Server, auf dem die Right Livelihood
+ Webseite liegt, heruntergeladen und per Hand zwei passende Bilder ausgesucht.
+ Dabei habe ich die Bildergrößen angepasst und die Bilder entsprechend unbenannt.
+ Bei über 140 Laureaten hat diese Prozedur enorm viel Zeit gekostet und
+ war auch in der Zeitplanung nicht vorgesehen.
+ Entsprechend lag ich zu diesem Zeitpunkt nicht mehr in der Zeit.
+ Glücklicherweise war dann das Ergebnis sehr zufriedenstellend, so dass
+ ich mit der nächsten Ansicht fortfahren konnte.
+\end_layout
+
+\begin_layout Standard
+Die Umsetzung der Weltkarte war zu Beginn kein Problem.
+ Als erstes suchte ich eine passende Weltkarte im SVG Format aus, damit
+ beim Zoomen keine Qualität verloren geht.
+ Danach implementierte ich die Wellenanimation, die ein befüllen der Weltmeere
+ darstellen sollte.
+ Schließlich baute ich eine Zoomfunktion ein, die in den geklickten Bereich
+ hereinzoomt.
+\end_layout
+
+\begin_layout Standard
+Das Problem bei der Weltkarte waren die Koordinaten der Laureaten herauszufinden.
+ Ich hatte die GPS-Koordinaten der Laureaten.
+ Diese musste ich in Pixel-Koordinaten konvertieren, die auf meine Weltkarte
+ passen.
+ Mit ein paar Arbeitskollegen versuchte ich einen Algorithmus für diese
+ Aufgabe zu finden.
+ Wir fanden ein paar Algorithmen, aber bei der Implementierung lieferten
+ diese kein befriedigendes Ergebnis.
+ Schließlich habe ich mich dazu entschieden wieder per Hand die Koordinaten
+ in die Datenbank einzupflegen.
+ Dazu schaute ich auf Google Maps die Positionen der Laureaten an und klickte
+ entsprechend auf meine Weltkarte und lies mir die Pixel-Koordinaten ausgeben.
+ Dieses Vorgehen hat wieder viel Zeit gekostet und war so nicht im Zeitplan
+ vorgesehen.
+\end_layout
+
+\begin_layout Standard
+Zum Schluss wurde ein Refactoring der Controller und Tests durchgeführt.
+ Nachdem alle Tests erfolgreich durchliefen und die Mobilanwendung einen
+ guten Eindruck machte habe ich mich dazu entschieden die Umsetzung abzuschließe
+n.
+\end_layout
+
+\begin_layout Subsection
+Abschließender Zeitplan
+\end_layout
+
+\begin_layout Standard
+Die Datenbank Umsetzung war eigentlich bei der Umsetzung der Module für
+ den Server eingeplant.
+ Da ich mit der Datenbank und den Daten größere Probleme hatte habe ich
+ eine neue Zeile für die Datenbank hinzugefügt.
+ Beim Client hab ich die Umsetzung der Services unterschätzt.
+ Das liegt daran das ich Logik, die eigentlich für den Controller geplant
+ war, sehr oft in die Services verlegt hab um diese Funktionen besser testen
+ zu können.
+ Das Problem mit der Datenbank war ein Planungsfehler von mir.
+ Ich hätte mich besser mit den Daten, die mir zur Verfügung standen, auseinander
+ setzen müssen.
+ Durch diesen Zeitverlust fielen ausführlichere Tests auf anderen mobilen
+ Geräten weg.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Phase
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Beschreibung
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Soll-Std
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ist-Std
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+I.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Technisches Konzept
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+II.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Umsetzung
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Art der Umsetzung
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Soll-Std
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Ist-Std
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Struktur
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Services
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Controllers
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+28
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Client
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+28
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+39
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Struktur
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Module
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Datenbank
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+24
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Server
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+27
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Part
-Anhang
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+66
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+III.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Testdurchführung
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IV.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dokumentation / Abschluss
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gesamt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+88
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_body
