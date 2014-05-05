@@ -1712,7 +1712,7 @@ karma
 \begin_layout Description
 build Dieser Befehl soll am Ende eine Version der Anwendung liefern, die
  im Produktionsmodus zum Einsatz kommt.
- Dazu werden Veresserungen am Quellcode vorgenommen, wie z.
+ Dazu werden Verbesserungen am Quellcode vorgenommen, wie z.
  B.
  Code-Komprimierung und es werden mehrere Dateien in einer einzelnen Datei
  zusammen gefasst.
@@ -2747,7 +2747,7 @@ http://sqliteman.com/
 \end_inset
 
  eingepflegt.
- Mit diesem Programm lassen sich sqlite3 Datenbanken über eine grafische
+ Mit diesem Programm lassen sich sqlite Datenbanken über eine grafische
  Benutzeroberfläche bearbeiten.
  
 \begin_inset Newpage newpage

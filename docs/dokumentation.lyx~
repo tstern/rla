@@ -472,18 +472,18 @@ http://www.ion2s.com/
  Die Mobilanwendung soll diese Webseite ergänzen.
  Die Idee für dieses Projekt kommt von meinem Betrieb.
  Neben der Unterstützung für Right Livelihood ist das Ziel das Wissen im
- Bereich der mobilen Geräte intern im Betrieb zu vertiefen bzw.
+ Bereich der mobilen Geräte im Betrieb zu vertiefen bzw.
  zu erweitern.
 \end_layout
 
 \begin_layout Standard
 In der Mobilanwendung sollen die Preisträger des Right Livelihood Awards,
- die sogenannten Laureaten, multimedial präsentiert.
+ die sogenannten Laureaten, multimedial präsentiert werden.
  Um dieses Ziel zu erreichen sollen moderne Webtechnologien wie JavaScript,
- HTML5 und CSS3 clientseitig verwendet werden.
+ HTML5 und CSS3 verwendet werden.
  Der Fokus dieser Mobilanwendung liegt dementsprechend auf dem Client.
  Serverseitig sollen die statischen Resourcen bereitgestellt und eine Datenbank
- angelegt werden, die die Daten der Preisträger beinhaltet.
+ angelegt werden, welche die Daten der Preisträger beinhaltet.
  Der Server soll mit NodeJS
 \begin_inset Foot
 status open
@@ -506,32 +506,34 @@ Ein Konzept für die Gestaltung existiert bereits.
 \end_layout
 
 \begin_layout Enumerate
-Intro - Das Intro wird ein Ladebildschirm, welches der Mobilanwendung die
- Zeit gibt die benötigten Daten der Laureaten herunterzuladen.
- Nachdem Ladevorgang wird zur entsprechenden Darstellungs Ansicht gewechselt.
+Intro - Beim ersten Aufruf der Mobilanwendung wird eine Intro-Ansicht gezeigt.
+ Während dieser Ansicht werden die Daten der Laureaten heruntergeladen.
 \end_layout
 
 \begin_layout Enumerate
 Liste-Ansicht - Die Liste wird scrollbar sein.
+ Das Scrollen soll durch CSS einen 3D-Effekt bekommen.
  Jedes Listenelement beinhaltet den Namen des Laureaten und ein Zitat.
 \end_layout
 
 \begin_layout Enumerate
 Bilderwand-Ansicht - In der Bilderwand-Ansicht werden Bilder aller Preisträger
  zufällig positioniert.
- Der Benutzer kann die Bilderwand vertikal bewegen und die einzelnen Bilder
- vergrößern.
+ Der Benutzer kann die Bilderwand vertikal bewegen und ein einzelnes Bild
+ per Klick vergrößern.
 \end_layout
 
 \begin_layout Enumerate
 Weltkarte-Ansicht - Auf einer Weltkarte werden die Laureaten ihrem Herkunftsland
- entsprechend markiert.
- Mit einem Klick auf die Weltkarte kann der Benutzer näher ranzoomen.
+ entsprechend positioniert.
+ Mit einem Klick auf die Weltkarte kann der Benutzer in dieses Gebiet hereinzoom
+en.
 \end_layout
 
 \begin_layout Enumerate
 Detail-Ansicht - Hier werden detaillierte Informationen zu den einzelnen
  Laureaten dargestellt.
+ Diese Ansicht ist von den anderen Ansichten erreichbar.
 \end_layout
 
 \begin_layout Subsection
@@ -542,7 +544,7 @@ Zeitplan
 Die gesamte Dauer dieses Projektes sollte 70 Stunden betragen.
  Sobald das technische Konzept steht wird mit der Umsetzung der Mobilanwendung
  begonnen.
- Die Umsetzung für den Client ist in folgende Unteraufgaben gegliedert:
+ Die Umsetzung für den Client ist in folgende Arbeitspakete gegliedert:
 \end_layout
 
 \begin_layout Enumerate
@@ -551,15 +553,15 @@ Struktur
 
 \begin_deeper
 \begin_layout Itemize
-Verzeichnisse anlegen
+Verzeichnis anlegen.
 \end_layout
 
 \begin_layout Itemize
-Applikation Initiliasierung
+Eine Applikationsstruktur festlegen.
 \end_layout
 
 \begin_layout Itemize
-Routing implementieren
+Routing implementieren.
 \end_layout
 
 \end_deeper
@@ -569,11 +571,11 @@ Services
 
 \begin_deeper
 \begin_layout Itemize
-REST Schnittstelle
+Umsetzung der REST Schnittstellen.
 \end_layout
 
 \begin_layout Itemize
-Lokale Speicherung
+Implementierung der lokalen Speicherung.
 \end_layout
 
 \end_deeper
@@ -583,23 +585,23 @@ Controllers
 
 \begin_deeper
 \begin_layout Itemize
-Intro
+Umsetzung des Intro.
 \end_layout
 
 \begin_layout Itemize
-Liste
+Umsetzung der Listen-Ansicht.
 \end_layout
 
 \begin_layout Itemize
-Bilderwand
+Umsetzung der Bilderwand-Ansicht.
 \end_layout
 
 \begin_layout Itemize
-Weltkarte
+Umsetzung der Weltkarte-Ansicht.
 \end_layout
 
 \begin_layout Itemize
-Detail
+Umsetzung der Detail-Ansicht.
 \end_layout
 
 \end_deeper
@@ -613,15 +615,15 @@ Struktur
 
 \begin_deeper
 \begin_layout Itemize
-Verzeichnisse anlegen
+Verzeichnisse anlegen.
 \end_layout
 
 \begin_layout Itemize
-Server Initialisierung
+Serverstruktur festlegen.
 \end_layout
 
 \begin_layout Itemize
-Verteilung der Anfragen
+Umgang mit Anfragen an den Server.
 \end_layout
 
 \end_deeper
@@ -631,24 +633,25 @@ Module
 
 \begin_deeper
 \begin_layout Itemize
-REST Schnittstelle
+Umsetzung der REST Schnittstelle.
 \end_layout
 
 \begin_layout Itemize
-Datenbankanbindung
+Implementierung der Datenbank.
 \end_layout
 
 \end_deeper
 \begin_layout Standard
 Das Schreiben und Ausführen von Tests ist Bestandteil der Umsetzung.
- Dennoch sollen nach abgeschlossener Umsetzung ausführliche Tests durchgeführt
- werden.
+ Darüber hinaus sollen nach abgeschlossener Umsetzung ausführliche Tests
+ durchgeführt werden.
  Unter anderem sollen Personen, die nicht direkt am Projekt beteiligt sind,
- die Anwendung testen um so ein besseres und größeres Feedback zu erhalten.
+ die Anwendung testen, um so ein besseres und umfangreicheres Feedback zu
+ erhalten.
 \end_layout
 
 \begin_layout Standard
-Aus diesen Angaben ergibt sich dieser Zeitplan:
+Aus diesen Angaben ergibt sich folgender Zeitplan:
 \end_layout
 
 \begin_layout Standard
@@ -1050,8 +1053,7 @@ Detailansicht eines einzelnen Laureaten
 
 \begin_layout Standard
 Weitere Anforderungen sind Funktionsfähigkeit auf mobilen Geräten (iOS-
- bzw.
- Android-System) sowie Desktop-Rechnern und der Betrieb im offline Modus.
+ und Android-System) sowie Desktop-Rechnern und der Betrieb im offline Modus.
 \end_layout
 
 \begin_layout Subsection
@@ -1064,7 +1066,7 @@ Client
 
 \begin_layout Standard
 Um eine ansprechende Darstellung und ein angenehmes Benutzergefühl realisieren
- zu können sollen folgende Webtechnologien eingesetzt werden:
+ zu können, sollen folgende Webtechnologien eingesetzt werden:
 \end_layout
 
 \begin_layout Itemize
@@ -1080,8 +1082,10 @@ CSS3
 \end_layout
 
 \begin_layout Standard
-Auf Grund der genannten Technologien, die zum Einsatz kommen, sollen nur
+Aufgrund der genannten Technologien, die zum Einsatz kommen, sollen nur
  moderne Browser unterstützt werden, die diese Technologien beherrschen.
+ Browser, die nicht unterstützt werden, bekommen nur eine entsprechende
+ Nachricht angezeigt.
 \end_layout
 
 \begin_layout Standard
@@ -1151,8 +1155,8 @@ n, weil es automatisch vorhandene Abhängigkeiten externer Bibliotheken auflöst
 \end_layout
 
 \begin_layout Standard
-Damit die Mobilanwendung auch im offline Modus funktioniert sollen die Daten
- der Laureaten mit Hilfe der HTML5 Besonderheit Local Storage
+Damit die Mobilanwendung auch im offline Modus funktioniert, sollen die
+ Daten der Laureaten mit Hilfe des HTML5 Features Local Storage,
 \emph on
  
 \emph default
@@ -1161,7 +1165,7 @@ lokal auf dem entsprechenden Gerät gespeichert werden.
 \emph on
  
 \emph default
-abgespeichert werden damit diese auch im offline Modus verfügbar sind.
+abgespeichert werden, damit diese auch im offline Modus verfügbar sind.
  Dies bedeutet einen höheren Aufwand der Implementierung, aber bewirkt neben
  der Verfügbarkeit im offline Modus einen deutlichen Performancevorteil
  beim wiederholten Laden.
@@ -1172,7 +1176,7 @@ Server
 \end_layout
 
 \begin_layout Standard
-Der Server soll neben der Bereitstellung der statischen Dateien auch eine
+Der Server soll neben der Bereitstellung der statischen Dateien, auch eine
  aktuelle Versionsnummer und Informationen zu allen Laureaten liefern.
  Für diese Aufgaben sollen folgende Technologien eingesetzt werden:
 \end_layout
@@ -1197,10 +1201,10 @@ https://sqlite.org/
 
 \begin_layout Standard
 NodeJS ist eine serverseitige JavaScript Plattform.
- Der Vorteil dieser Entscheidung ist, dass sowohl Client als auch Server
- in der Skriptsprache JavaScript geschrieben werden.
- Zur Unterstützung bei der Implementierung des Servers soll das NodeJS Framework
- ExpressJS
+ Der Vorteil dieser Technologieauswahl ist, dass sowohl Client als auch
+ Server in der Skriptsprache JavaScript geschrieben werden.
+ Zur Unterstützung bei der Implementierung des Servers, soll das NodeJS
+ Framework ExpressJS
 \begin_inset Foot
 status open
 
@@ -1212,7 +1216,7 @@ http://expressjs.com/
 
  eingesetzt werden.
  Als Datenbank wird SQLite verwendet, weil an die Datenbank keine größeren
- Anforderungen gestellt werden als die Daten der Laureaten zu liefern.
+ Anforderungen gestellt werden, als die Daten der Laureaten zu liefern.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1248,7 +1252,7 @@ Kommunikation
 \end_layout
 
 \begin_layout Standard
-Die Übertragung der Daten soll ausschließlich im JSON
+Die Übertragung der Daten soll ausschließlich im JSON-Format
 \begin_inset Foot
 status open
 
@@ -1258,8 +1262,8 @@ http://www.json.org/
 
 \end_inset
 
- Format stattfinden.
- Als Schnittstelle zwischen Client und Server soll das Programmierparadigma
+ stattfinden.
+ Als Schnittstelle zwischen Client und Server, soll das Programmierparadigma
  REST (Representational State Transfer)
 \begin_inset Foot
 status open
@@ -1273,7 +1277,7 @@ http://en.wikipedia.org/wiki/Representational_state_transfer
  verwendet werden.
  Diese Entscheidung ermöglicht eine gute Erweiterung der Mobilanwendung
  zu einem späteren Zeitpunkt.
- Es sollen nur folgende zwei REST URI implementiert werden:
+ Es sollen folgende zwei REST URI implementiert werden:
 \end_layout
 
 \begin_layout Itemize
@@ -1301,8 +1305,7 @@ http://git-scm.com/
 \end_inset
 
  zum Einsatz kommen.
- Das Versionsverwaltungssystem ist weit verbreitet und es gibt viele Plug
- Ins, die die Arbeit mit Git vereinfachen.
+ Git ist weit verbreitet und verfügt über viele Plug Ins.
  Das Projekt soll außerdem auf GitHub
 \begin_inset Foot
 status open
@@ -1314,8 +1317,8 @@ https://github.com/
 \end_inset
 
  hochgeladen werden.
- So ist es möglich das andere Projektmitglieder relativ leicht sich an dem
- Projekt beteiligen können.
+ So ist es möglich, das andere Projektmitglieder sich einfach an dem Projekt
+ beteiligen können.
  Außerdem bietet GitHub mehrere visuelle Darstellung des Projektverlaufes
  an, so dass es möglich ist den Projektfortschritt einfach zu erkennen.
 \end_layout
@@ -1334,9 +1337,9 @@ Gestalterisches Konzept
 \begin_layout Standard
 Das gestalterische Konzept wurde nicht von mir erstellt.
  Es besteht hauptsächlich aus Abläufen und Bildern, die illustrieren sollen
- wie die Mobilanwendung aussehen und zu bedienen ist.
- Ich hab mich bei der Umsetzung der Mobilanwendung mehr oder weniger an
- diesen Vorgaben orientiert.
+ wie die Mobilanwendung auszusehen hat und zu bedienen ist.
+ Ich hab mich bei der Umsetzung der Mobilanwendung weitesgehend an diesen
+ Vorgaben orientiert.
  Eine exakte Umsetzung der Gestaltung war zum Teil aus technischen und zeitliche
 n Gründen nicht möglich.
  Außerdem wurden aus zeitlichen Gründen nicht alle Ansichten und Funktionen
@@ -1383,15 +1386,14 @@ Vergleich von Gestaltung (links) und Umsetzung (rechts) der Bilderwand-Ansicht.
 \begin_layout Standard
 Bei der Aneinanderreihung der Bilder sollte kein statischer Eindruck entstehen.
  Außerdem sollte sich der Benutzer frei durch die Bilderwand bewegen können.
- Da ich Probleme mit der Umsetzung der Gesten-Steuerung hatte habe ich mich
- entschieden die Bilder vertikal aneinander zu reihen und somit nur ein
- vertikales Scrollen dem Benutzer zu ermöglichen.
- Auch ein freies Zoomen ist nicht umgesetzt.
- Dagegen kann der Benutzer auf ein Bild klicken das vergrößert und entsprechend
- positioniert wird das der Benutzer das ganze Bild sehen kann.
- Bei einem vergrößerten Bild werden zusätzlich ein paar Informationen zu
- dem Laureaten angezeigt.
- Ein Klick auf diese Zusatzinformationen führt den Benutzer zur Info-Ansicht
+ Da bei der Umsetzung der Gesten-Steuerung Probleme aufgetreten sind, habe
+ ich mich dazu entschieden, die Bilder vertikal aneinander zu reihen und
+ somit nur ein vertikales Scrollen dem Benutzer zu ermöglichen.
+ Auch ein freies Zoomen konnte nicht umgesetzt werden.
+ Stattdessen kann der Benutzer auf ein Bild klicken das sich vergrößert
+ und so positioniert wird, das der Benutzer das gesamte Bild sehen kann.
+ In dieser Ansicht werden zusätzliche Informationen des Laureaten angezeigt.
+ Ein Klick auf diese Zusatzinformationen führt den Benutzer zur Detail-Ansicht
  des Laureaten.
 \end_layout
 
@@ -1438,8 +1440,8 @@ Vergleich von Gestaltung (links) und Umsetzung (rechts) der Liste-Ansicht.
 \begin_layout Standard
 In der Gestaltung sollen weiter entfernte Objekte verschwommen dargestellt
  werden.
- Dieser Effekt ist technisch schwer umzusetzen und ist in meiner Umsetzung
- nicht vorhanden.
+ Dieser Effekt ist technisch schwer umzusetzen und wurde deshalb nicht implement
+iert.
 \end_layout
 
 \begin_layout Subsection
@@ -1481,19 +1483,20 @@ Vergleich von Gestaltung (links) und Umsetzung (rechts) der Weltkarte-Ansicht.
 
 \begin_layout Standard
 Auch bei der Weltkarte sollte ein freies Bewegen und Zoomen möglich sein.
- Auf Grund ähnlicher Probleme wie bei der Bilderwand habe ich mich entschlossen
- das der Benutzer nur in bestimmte Bereiche der Weltkarte zoomen kann.
+ Aufgrund ähnlicher Probleme, wie bei der Bilderwand, habe ich mich dazu
+ entschlossen, dass der Benutzer nur in bestimmte Bereiche der Weltkarte
+ zoomen kann.
  Durch einen Klick auf die Weltkarte wird auf diesen Punkt herangezoomt
- und Laureaten, die sich in diesem Bereich befinden werden dargestellt.
+ und die Laureaten, die sich in diesem Bereich befinden werden dargestellt.
  Ein Freies Bewegen der Weltkarte ist nicht möglich.
  Der Benutzer muss erneut auf die Weltkarte klicken um wieder die komplette
  Weltkarte zu sehen.
  Klickt der Benutzer im gezoomten Zustand auf einen Laureaten wird er zur
- Info-Ansicht geführt.
+ Detail-Ansicht geführt.
 \end_layout
 
 \begin_layout Subsection
-Info-Ansicht
+Detail-Ansicht
 \end_layout
 
 \begin_layout Standard
@@ -1516,7 +1519,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Vergleich von Gestaltung (links) und Umsetzung (rechts) der Info-Ansicht.
+Vergleich von Gestaltung (links) und Umsetzung (rechts) der Detail-Ansicht.
 \end_layout
 
 \end_inset
@@ -1530,8 +1533,9 @@ Vergleich von Gestaltung (links) und Umsetzung (rechts) der Info-Ansicht.
 \end_layout
 
 \begin_layout Standard
-Bei der Info-Ansicht hab ich mir die Freiheit genommen die weiterführenden
- Links des Laureaten nach unten zu platzieren.
+Bei der Detail-Ansicht hab ich mich dazu entschieden die weiterführenden
+ Links des Laureaten nach unten zu platzieren, um somit die Lesbarkeit zu
+ verbessern.
 \end_layout
 
 \begin_layout Standard
@@ -1597,7 +1601,7 @@ client
  befinden sich alle Dateien, die für die Client-Entwicklung eine Rolle spielen.
  Dokumentation und Material, wie z.
  B.
- Diagramme und Bilder, das für die Dokumentation verwendet werden befinden
+ Diagramme und Bilder, das für die Dokumentation verwendet werden, befinden
  sich im Unterprojekt 
 \emph on
 docs
@@ -1700,7 +1704,7 @@ test Dieser Befehl führt die selbstgeschriebenen Unit Tests aus.
 \emph on
 karma
 \emph default
- verwendet, die einen vorgegebenen Browser öffnet in dem die Tests schließlich
+ verwendet, die einen vorgegebenen Browser öffnet, in dem die Tests schließlich
  laufen.
  
 \end_layout
@@ -1708,7 +1712,7 @@ karma
 \begin_layout Description
 build Dieser Befehl soll am Ende eine Version der Anwendung liefern, die
  im Produktionsmodus zum Einsatz kommt.
- Dazu werden Veresserungen am Quellcode vorgenommen, wie z.
+ Dazu werden Verbesserungen am Quellcode vorgenommen, wie z.
  B.
  Code-Komprimierung und es werden mehrere Dateien in einer einzelnen Datei
  zusammen gefasst.
@@ -1725,13 +1729,13 @@ In der
 package.json
 \emph default
  werden Abhängigkeiten eingetragen, die für die Client-Entwicklung existieren.
- Da es nur Abhängigkeiten für die Grunt Prozesse gibt stehen alle Abhängigkeiten
- im Feld 
+ Da es nur Abhängigkeiten für die Grunt Prozesse gibt, stehen alle Abhängigkeite
+n im Feld 
 \emph on
 devDependencies
 \emph default
 .
- Zusätzlich gibt es die Fehler 
+ Zusätzlich gibt es die Felder 
 \emph on
 name
 \emph default
@@ -1740,15 +1744,15 @@ name
 version
 \emph default
 .
- Diese Felder sind nur sinnvoll, wenn das Projekt in anderen Projekt verwendet
- werden soll.
+ Diese Felder sind nur erforderlich, wenn das Projekt in anderen Projekt
+ verwendet werden soll.
  Dies ist hier nicht der Fall.
  Die 
 \emph on
 package.json
 \emph default
- ist sinnvoll für neue Projektmitglieder.
- Nachdem diese das Projekt mit Git auf ihren Rechner kopiert haben müssen
+ ist hilfreich für neue Projektmitglieder.
+ Nachdem diese das Projekt mit Git auf ihren Rechner kopiert haben, müssen
  diese nur noch den Befehl 
 \emph on
 npm install
@@ -1767,7 +1771,7 @@ bower.json
 package.json
 \emph default
 .
- Der Unterschied ist das in der 
+ Der Unterschied ist, das in der 
 \emph on
 bower.json
 \emph default
@@ -1797,7 +1801,7 @@ karma-e2e.conf.js
 PhantomJS
 \emph default
  verwendet.
- Die zweite Datei wird für Einstellungen benötigt wenn Integrationstests
+ Die zweite Datei wird für Einstellungen benötigt, wenn Integrationstests
  durchgeführt werden sollen.
  Integrationstests gibt es in diesem Projekt nicht.
 \end_layout
@@ -1812,9 +1816,9 @@ Git benutzt zwei Dateien, zum einen
 .gitattributes
 \emph default
 .
- In der ersten können Dateien und Verzeichnisse von der Versionierung ausgeschlo
-ssen werden.
- Die zweite Datei gibt dem Pfad in dem sich die Datei befindet spezielle
+ In der ersten, können Dateien und Verzeichnisse von der Versionierung ausgeschl
+ossen werden.
+ Die zweite Datei, gibt dem Pfad in dem sich die Datei befindet spezielle
  Attribute.
  In diesem Unterprojekt gibt es nur das Attribute 
 \family typewriter
@@ -1824,7 +1828,7 @@ ssen werden.
 \end_layout
 
 \begin_layout Standard
-Desweiteren existieren noch verschiedene Ordner die kurz erklärt werden:
+Desweiteren existieren noch verschiedene Ordner, die kurz erklärt werden:
 \end_layout
 
 \begin_layout Description
@@ -1849,11 +1853,11 @@ build
 \end_layout
 
 \begin_layout Description
-node_modules Abhängigkeiten die in der 
+node_modules Abhängigkeiten, die in der 
 \emph on
 package.json
 \emph default
- angegeben sind werden hier installiert.
+ angegeben sind, werden hier installiert.
 \end_layout
 
 \begin_layout Description
@@ -1935,9 +1939,9 @@ laureates_images
  liegen alle Bilder der Laureaten ab.
  Im zweiten statischen Ordner 
 \emph on
-public
+public,
 \emph default
- liegen die Dateien ab, die dem Clien geschickt werden.
+ liegen die Dateien ab, die dem Client bereitgestellt werden.
  Im letzten Ordner 
 \emph on
 node_modules
@@ -2010,7 +2014,7 @@ Document Object Model
  bestimmen.
  
 \emph on
-Service
+Services
 \emph default
  sind Singletons, die es ermöglichen Logik auszulagern.
  In AngularJS gibt es außerdem 
@@ -2058,7 +2062,7 @@ MapCtrl: (Weltkarte-Ansicht) Liest die Koordinaten der Laureaten aus.
 \end_layout
 
 \begin_layout Itemize
-InfoCtrl: (Info-Ansicht) Sucht anhand einer id den darzustellenden Laureaten.
+InfoCtrl: (Detail-Ansicht) Sucht anhand einer id den darzustellenden Laureaten.
 \end_layout
 
 \begin_layout Standard
@@ -2176,8 +2180,8 @@ isHorizonzal(deltaX, deltaY)
  wird ein horizontales Wischen registriert.
  Erfolgt das Wischen innerhalb eines vorgegeben Zeitfenster wird in die
  entsprechende Richtung navigiert.
- Welche Ansicht rechts bzw.
- links von der momentanen Ansicht befindet wird im NavCtrl festgelegt.
+ Welche Ansicht sich rechts bzw.
+ links von der momentanen Ansicht befindet, wird im NavCtrl festgelegt.
  Die Animation, das die momentane Ansicht zur Seite bewegt wird, ist mit
  JavaScript umgesetzt.
  Eine Callback-Funktion, die die Berechnungen für die Animation durchführt,
@@ -2186,15 +2190,15 @@ isHorizonzal(deltaX, deltaY)
 requestAnimationFrame
 \family default
  als Parameter übergeben.
- Bevor der Browser einen neuen Frame render (zeichnet) werden die Callbacks,
- die mit der Funktion 
+ Bevor der Browser einen neuen Frame zeichnet werden die Callbacks, die
+ mit der Funktion 
 \family typewriter
 requestAnimationFrame
 \family default
  regristiert wurden, aufgerufen.
  Die Berechnungen erfolgen somit synchron mit dem Renderer des Browsers.
  Die Vorteile sind eine bessere Performance der Animation und wenn der Browser
- im Hintergrund läuft pausiert der Renderer und somit auch die Animation.
+ im Hintergrund läuft, pausiert der Renderer und somit auch die Animation.
 \end_layout
 
 \begin_layout Description
@@ -2206,14 +2210,14 @@ Directive
  Die Liste wird scrollbar und reagiert auf jede vertikale Touch-Bewegung.
  Jedes Listenelement besitzt dazu folgende vier Attribute.
  Eine echte und falsche Position, ein Skalierungs- und ein Verblassungswert.
- Die falsche Position, der Skalierungs- und Verblassungswert werden durch
+ Die falsche Position, der Skalierungs- und Verblassungswert werden mit
  Algorithmen durch die echte Position, die als Parameter übergeben wird,
  ermittelt.
  Diese Berechnungen werden bei jeder Bewegung ausgeführt.
- Wird die Touch-Bewegung beendet werden die sichtbaren Listenelemente auf
- bestimmte Position weiter bewegt.
- Dazu wird das Listenelement identifiziert, das sich am nähesten der echten
- Position 0 befindet.
+ Wird die Touch-Bewegung beendet, werden die sichtbaren Listenelemente auf
+ die richtige Position weiter bewegt.
+ Dazu wird das Listenelement identifiziert, das sich am nähesten der Position
+ 0 befindet.
  Die vorhandene Differenz wird mit Hilfe der 
 \family typewriter
 requestAnimationFrame
@@ -2221,7 +2225,7 @@ requestAnimationFrame
  Funktion weiter animiert.
  Sollte die Geschwindigkeit der Touch-Bewegung einen bestimmten Wert überschreit
 en wird ein Abklingen simuliert.
- dazu wird zusätzlich mit jedem Frame die Geschwindigkeit etwas reduziert.
+ Dazu wird zusätzlich mit jedem Frame die Geschwindigkeit etwas reduziert.
  Folgend stehen die Algorithmen für die Berechnungen:
 \end_layout
 
@@ -2449,9 +2453,9 @@ margin
 Click-Event
 \emph default
  registriert.
- Bei einem Klick auf das Bild wird dies hervorgehoben und Informationen
+ Bei einem Klick auf das Bild, wird dies hervorgehoben und Informationen
  zum Laureaten werden eingeblendet.
- Sollte ein anderes Bild bereits aktiv sind wird dies automatisch zurückgesetzt.
+ Sollte ein anderes Bild bereits aktiv sein, wird dies automatisch zurückgesetzt.
 \end_layout
 
 \begin_layout Description
@@ -2465,8 +2469,8 @@ kommt nur in der Weltkarte-Ansicht zum Einsatz.
 Click-Event
 \emph default
  registriert.
- Sobald ein Benutzer auf die Weltkarte klickt wird in dieser Bereich vergrößert
- und Laureaten, die sich in diesem Bereich befinden, werden dargestellt.
+ Sobald ein Benutzer auf die Weltkarte klickt, wird dieser Bereich vergrößert
+ und die Laureaten, die sich in diesem Bereich befinden, werden dargestellt.
  Ein erneuter Klick verkleinert die Ansicht wieder auf die komplette Weltkarte.
 \end_layout
 
@@ -2480,10 +2484,10 @@ Directive
 \emph on
 Directive
 \emph default
- ist es, dass sobald die Weltkarte geöffnet wird, eine Wellenanimation das
- komplette Wasser im Hintergrund befüllt.
- Eine mögliche Umsetzung einer solchen Animation habe ich auf http://codepen.io/m
-iyovanstenis/pen/BfGeK gefunden.
+ ist es, mit einer Wellenanimation das komplette Wasser im Hintergrund zu
+ befüllen, sobald die Weltkarte angezeigt wird.
+ Eine mögliche Umsetzung einer solchen Animation wurde auf http://codepen.io/miyo
+vanstenis/pen/BfGeK gefunden.
  Die Idee dahinter ist es den Hintergrund in mehrere gleichgroße Streifen
  zu unterteilen.
  Jeder Streifen bekommt die gleiche Animation, aber mit immer größerer Verzögeru
@@ -2496,7 +2500,7 @@ Test
 \end_layout
 
 \begin_layout Standard
-Es wurden nur Unit Tests für die Controller und Services geschrieben.
+Es wurden Unit Tests für die Controller und Services geschrieben.
  Für den Aufbau der Tests wird das Framework Jasmine verwendet.
 \end_layout
 
@@ -2509,11 +2513,11 @@ Unit
 \begin_inset space ~
 \end_inset
 
-Test Es wird hier geprüft ob die 
+Test Es wird hier geprüft, ob die 
 \emph on
 Controller
 \emph default
- die ihr übergebenes Array von Laureaten korrekt verarbeiten.
+, die ihr übergebenes Array von Laureaten, korrekt verarbeiten.
  Dazu wird der 
 \emph on
 Controller
@@ -2521,9 +2525,9 @@ Controller
  mit einem vorgegebenem Array initialisiert.
  Nach der Initialisierung des 
 \emph on
-Controller
+Controllers
 \emph default
- wird das übergebene Array geprüft.
+, wird das übergebene Array geprüft.
 \end_layout
 
 \begin_layout Description
@@ -2549,7 +2553,7 @@ Unit
 \begin_inset space ~
 \end_inset
 
-Test Hier wird nur getestet ob die http-Anfrage korrekt aufgebaut wird.
+Test Hier wird getestet ob die http-Anfrage korrekt aufgebaut wird.
  Dazu wird das verwendete 
 \emph on
 $http
@@ -2574,13 +2578,13 @@ Unit
 
 Test Durch die asynchrone Funktionsweise dieses 
 \emph on
-Service
+Service,
 \emph default
  ist der Aufbau der Unit Tests komplizierter als bei den anderen Unit Tests.
- Es müssen verschiedene Zustände simuliert werden, dass mit Hilfe von Mocks
- realisiert wird.
- Außerdem müssen asynchrone Funktionen in speziellen von Jasmine bereitgestellte
-n 
+ Es müssen verschiedene Zustände simuliert werden, diese werden mit Hilfe
+ von Mocks realisiert.
+ Außerdem müssen asynchrone Funktionen in speziellen, von Jasmine bereitgestellt
+en, 
 \family typewriter
 run
 \family default
@@ -2589,15 +2593,15 @@ run
 \family typewriter
 waitsFor
 \family default
- Funktion blockiert den weiteren Testablauf so lange bis ein bestimmtes
+ Funktion, blockiert den weiteren Testablauf so lange, bis ein bestimmtes
  Ereignis eintrifft oder ein Zeitlimit erreicht wurde.
- Getestet wird also hier ob sich der 
+ Getestet wird also hier, ob sich der 
 \emph on
 Service
 \emph default
- in einer bestimmten Situation entsprechend reagiert.
+ in einer bestimmten Situation korrekt reagiert.
  Am Ende sollte aber immer eine Liste von Laureaten existieren oder eine
- Fehlermeldung abgefangen sein.
+ Fehlermeldung abgefangen werden.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2694,9 +2698,9 @@ Der Server ist mit dem Framework ExpressJS realisiert.
  Bei den statischen Pfaden können die entsprechenden Dateien direkt angefragt
  werden.
  Bei der REST Schnittstelle wird die URI und die Request Methode geprüft.
- Sind URI bekannt und die Request Methode erlaubt wird eine entsprechende
- Antwort gegeben.
- Sollte die URI unbekannt sein wird als Antwort die Fehlermeldung 
+ Sind URI bekannt und die Request Methode erlaubt, wird eine Antwort im
+ JSON-Format zur einfacheren Verarbeitung im Client gegeben.
+ Sollte die URI unbekannt sein, wird als Antwort die Fehlermeldung 
 \emph on
 
 \begin_inset Quotes erd
@@ -2709,7 +2713,7 @@ REST URI is unknown.
 
 \emph default
  mit dem Statuscode 404 gesendet.
- Ist die Request Methode nicht erlaubt wird als Antwort eine Fehlermeldung
+ Ist die Request Methode nicht erlaubt, wird als Antwort eine Fehlermeldung
  mit den erlaubten Request Methoden und mit dem Statuscode 405 gesendet.
 \end_layout
 
@@ -2743,6 +2747,8 @@ http://sqliteman.com/
 \end_inset
 
  eingepflegt.
+ Mit diesem Programm lassen sich sqlite3 Datenbanken über eine grafische
+ Benutzeroberfläche bearbeiten.
  
 \begin_inset Newpage newpage
 \end_inset
@@ -2777,40 +2783,45 @@ Der nächste Schritt war die Ordnerstruktur festzulegen und die Projektstruktur
 \end_layout
 
 \begin_layout Standard
-Nachdem die Projektstruktur des Clients fertig war hab ich die Projektstruktur
+Nachdem die Projektstruktur des Clients fertig war, hab ich die Projektstruktur
  für den Server per Hand angelegt.
  Zuerst gab es nur einen statischen Ordner für die Client-Daten und eine
  JavaScript Datei, die den Server initialisiert.
  Später folgten die Datenbank und ein weiterer statischer Ordner für die
  Bilder der Laureaten.
- Ich habe mich dazu entschieden die Bilder dem Server zuzuordnen, weil ich
- wollte das die Bilder dort sind wo die Datenbank sich befindet.
- Die Bilder direkt in der Datenbank zu speichern wurde mir von Arbeitskollegen
- abgeraten.
 \end_layout
 
 \begin_layout Standard
 Die erste Ansicht, die ich umgesetzt habe, war die Liste-Ansicht.
  Problematisch bei der Umsetzung war es einen guten Algorithmus zu finden,
  der die entsprechenden Werte lieferte.
- Mit etwas rumprobieren und der Verwendung von Funktionsgraphen konnte ich
- die entsprechenden Algorithmen entwickeln.
+ Mit etwas rumprobieren und der Verwendung von Funktionsgraphen
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.walterzorn.de/grapher/grapher.htm
+\end_layout
+
+\end_inset
+
+, konnte ich entsprechende Algorithmen entwickeln.
 \end_layout
 
 \begin_layout Standard
-Bevor ich die nächste Ansicht anging habe ich den Slide-Effekt für die Navigatio
-n implementiert.
+Bevor ich die nächste Ansicht anging, habe ich den Slide-Effekt für die
+ Navigation implementiert.
  Die Umsetzung klappte gut und lieferte direkt ein gutes Ergebnis.
  Dennoch stellte sich heraus, das diese Umsetzung ein horizontales Bewegen
- in der Mobilanwendung nicht zu lies.
- Aus diesem Grund habe ich mich dazu entschieden die Bilderwand-Ansicht
+ in der Mobilanwendung nicht zuließ.
+ Aus diesem Grund habe ich mich dazu entschieden, die Bilderwand-Ansicht
  vertikal aufzubauen und die Weltkarte nur per Klick zoombar zu machen.
 \end_layout
 
 \begin_layout Standard
 Die Umsetzung der Bilderwand verlief gut.
- Meine Idee war es die Bilder ihren Höhen zu kategorisieren und feste Höhen
- zuzuweisen.
+ Meine Idee war es, die Bilder nach ihrer Höhe zu kategorisieren und ihnen
+ eine feste Höhe zuzuweisen.
  Die Differenz der Höhen wird dann als CSS-Attribute margin gesetzt.
  Mit einem Klick auf ein Bild wird dieses hervorgehoben und Information
  werden eingeblendet.
@@ -2820,21 +2831,22 @@ Die Umsetzung der Bilderwand verlief gut.
 \begin_layout Standard
 Ich wollte jetzt die Datenbank erzeugen.
  Zuerst war als Datenbank MongoDB geplant.
- Nach einem Gespräch mit einem Arbeitskollegen habe ich mich dann entschieden
+ Nach einem Gespräch mit einem Arbeitskollegen, habe ich mich dann entschieden
  sqlite als Datenbank zu nehmen.
- Gründe dafür waren MongoDB mehr bietet als ich für diese Mobilanwendung
- benötige und sqlite dagegen vollkommen ausreichend war.
- Außerdem kannte ich die SQL-Syntax wohingegen ich mir dir Syntax für MongoDB
- hätte aneignen müssen.
+ Gründe dafür waren, dass MongoDB einen größeren Funktionsumfang für diese
+ Mobilanwendung benötigen wird und sqlite für die Anforderungen vollkommen
+ ausreichend war.
+ Außerdem kannte ich die SQL-Syntax bereits, wohingegen ich mir die Syntax
+ für MongoDB, hätte erst aneignen müssen.
  Mein Betrieb besitzt für die Right Livelihood Webseite bereits eine Datenbank
  mit allen Laureaten.
  Diese habe ich als SQL Dump exportiert.
  Bis dahin gab es soweit keine Probleme.
  Problematisch war dann die Konvertierung des SQL Dump in eine Syntax, die
- sqlite versteht.
- Tools und Skripte, die ich im Internet gefunden habe, haben bei mir nicht
- richtig funktioniert.
- Ich habe dann per Hand die Syntax angepasst um die Rohdaten in meine sqlite
+ sqlite konform ist.
+ Tools und Skripte, die ich im Internet gefunden habe, haben nicht richtig
+ funktioniert.
+ Ich habe dann per Hand die Syntax angepasst, um die Rohdaten in meine sqlite
  Datenbank zu importieren.
  Dieses Vorgehen hat ziemlich viel Zeit gekostet.
 \end_layout
@@ -2856,7 +2868,7 @@ Das nächste Problem waren die Bilder.
 \begin_layout Standard
 Die Umsetzung der Weltkarte war zu Beginn kein Problem.
  Als erstes suchte ich eine passende Weltkarte im SVG Format aus, damit
- beim Zoomen keine Qualität verloren geht.
+ beim Zoomen keine Qualitätsverluste entstehen.
  Danach implementierte ich die Wellenanimation, die ein befüllen der Weltmeere
  darstellen sollte.
  Schließlich baute ich eine Zoomfunktion ein, die in den geklickten Bereich
@@ -2864,7 +2876,8 @@ Die Umsetzung der Weltkarte war zu Beginn kein Problem.
 \end_layout
 
 \begin_layout Standard
-Das Problem bei der Weltkarte waren die Koordinaten der Laureaten herauszufinden.
+Das Problem bei der Umsetzung der Weltkarte war, die Koordinaten der Laureaten
+ herauszufinden.
  Ich hatte die GPS-Koordinaten der Laureaten.
  Diese musste ich in Pixel-Koordinaten konvertieren, die auf meine Weltkarte
  passen.
@@ -2872,7 +2885,7 @@ Das Problem bei der Weltkarte waren die Koordinaten der Laureaten herauszufinden
  Aufgabe zu finden.
  Wir fanden ein paar Algorithmen, aber bei der Implementierung lieferten
  diese kein befriedigendes Ergebnis.
- Schließlich habe ich mich dazu entschieden wieder per Hand die Koordinaten
+ Schließlich habe ich mich dazu entschieden, wieder per Hand die Koordinaten
  in die Datenbank einzupflegen.
  Dazu schaute ich auf Google Maps die Positionen der Laureaten an und klickte
  entsprechend auf meine Weltkarte und lies mir die Pixel-Koordinaten ausgeben.
@@ -2882,9 +2895,8 @@ Das Problem bei der Weltkarte waren die Koordinaten der Laureaten herauszufinden
 
 \begin_layout Standard
 Zum Schluss wurde ein Refactoring der Controller und Tests durchgeführt.
- Nachdem alle Tests erfolgreich durchliefen und die Mobilanwendung einen
- guten Eindruck machte habe ich mich dazu entschieden die Umsetzung abzuschließe
-n.
+ Nachdem alle Tests erfolgreich durchgelaufen sind und die Mobilanwendung
+ einen guten Eindruck machte, konnte ich die Umsetzung abschließen.
 \end_layout
 
 \begin_layout Subsection
@@ -2892,19 +2904,18 @@ Abschließender Zeitplan
 \end_layout
 
 \begin_layout Standard
-Die Datenbank Umsetzung war eigentlich bei der Umsetzung der Module für
- den Server eingeplant.
- Da ich mit der Datenbank und den Daten größere Probleme hatte habe ich
+Die Datenbank Umsetzung war ursprünglich bei dem Modul für den Server eingeplant.
+ Da ich mit der Datenbank und den Daten größere Probleme hatte, habe ich
  eine neue Zeile für die Datenbank hinzugefügt.
  Beim Client hab ich die Umsetzung der Services unterschätzt.
  Das liegt daran das ich Logik, die eigentlich für den Controller geplant
- war, sehr oft in die Services verlegt hab um diese Funktionen besser testen
+ war, sehr oft in die Services verlegt habe um diese Funktionen besser testen
  zu können.
  Das Problem mit der Datenbank war ein Planungsfehler von mir.
  Ich hätte mich besser mit den Daten, die mir zur Verfügung standen, auseinander
  setzen müssen.
- Durch diesen Zeitverlust fielen ausführlichere Tests auf anderen mobilen
- Geräten weg.
+ Durch diesen Zeitverlust mussten ausführlichere Tests auf spezifischen
+ mobilen Geräten wegfallen, um den Zeitplan einhalten zu können.
 \end_layout
 
 \begin_layout Standard
